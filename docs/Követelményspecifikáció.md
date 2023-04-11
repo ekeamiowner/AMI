@@ -11,6 +11,7 @@ Ezek után meg kell várnia, míg a szerkesztőség elbírálja, hogy elfogadja 
 
 
 ## 2. Jelenlegi helyzet
+Az Annales Mathematicae et Informaticae – címének megfelelően – évente megjelenő periodika. Az Annales Mathematicae et Informaticae annak inditatásából jött létre, hogy az újonnan megjelenő publikációkat, folyóiratokat összegyűjtse és könnyedén biztosítja az érdeklődők felé a hozzáférést. A folyóirat szerkesztőbizottságát elismert nemzetközi, illetve hazai matematikusok és informatikusok alkotják. Ezáltal a folyóiratra csak és kizárolag ellenőrzött módon lehetséges a publikálás. A folyóiratot az EKKE Matematikai és Informatikai Intézete szerkeszti és adja ki, nyomtatott és online formában (ez utóbbi 1997-től elérhető). Online elérése ingyenes mind a publikálók, mind az olvasók szempontjából.
 
 
 
