@@ -27,7 +27,37 @@ A fejlődés, valamint a naprakészség szempontjából szeretnék tartani a lé
 
 
 ## 4. Funkcionális követelmények
+Mielőtt bármit is csinálnálunk, be kell jelentkezni, de ha még nincs fiókja, akkor szüksége lesz egy meghívó linkre. Az első bejelentkezés után meg kell változtatnod a felhasználónevedet és jelszavadat, mert a meghívó linkkel történő regisztráció után a weboldal automatikusan generál egy felhasználónevet és egy jelszót számodra.
 
+A bejelentkezés oldal (Login page):
+
+- A felhasználó E-mail és Jelszó segítségével tud bejelentkezni az oldalra. 
+
+A regisztráció oldala (Register page):
+
+- A regisztrálás csak meghívásos alapon történhet linken keresztül. A linkre kattintva létrejön a fiók generált felhasználónévvel és jelszóval, amelyet belépés után meg kell változtatni.
+
+A főoldal (The main page):
+
+- Bejelentkezés után megjelenő főoldal, tartalmi szempontból a legfrissebb kötet jelenik meg és a hozzá tartozó cikkek. A cikkek egy slide-ban jelennek meg, amelyet jobbra és balra lehet mozgatni.
+
+
+
+A kiadások oldala (The volume index page):
+
+- A kötetek megjelennek kártyaszerű felsorolásban, több oldalra felbontva. Egy kötetet kiválasztva megjelennek a hozzá tartozó cikkek felsorolás szerűen..
+
+A cikkek oldala (The article index page):
+
+- Minden cikket megjelenít több oldalra felbontva, melyek között tudunk lépkedni, vagy szűrhetünk egy kötet cikkjeire cím, szerző(k) alapján.
+
+A beküldés oldala (The submussion page (create & edit form)):
+  
+- Ezen az oldalon lehet új publikációkat feltölteni, vagy egy már feltöltött publikációkat módosítani. Ehhez szükséges az oldalon regisztrált felhasználónak lenni.
+
+Az rólunk oldal (The about us page):
+
+- Az oldalon a fejléc alatt megjelenik egy rövid leírás az oldalról, illetve a szerkesztőség tagjairól láthatunk információkat.
 
 
 ## 5. Rendszerre vonatkozó törvények, szabványok, ajánlások
