@@ -45,6 +45,11 @@
 
 
 ## 6. Jelenlegi üzleti folyamatok modellje
+A mai felgyorsult világ és a technika hihetetlen mértékű fejlődése miatt szinte elengedhetetlennek tartjuk, a már meglévő klasszikus és néhol idejét múlt módszerekkel működő oldalunk felfrissítését, rekonstrukcióját.
+Célunk, hogy az Annales Mathematicae et Informaticae, röviden AMI oldalát egy a mai weboldalakhoz hasonló korszerű megoldásokkal és modern kivitelezéssel tudjuk működtetni.
+Az oldal reformálásából fakadóan úgy hisszük, hogy mind a szerzők és mind a szerkesztő munkatársak munkáját megkönnyíthetjük és ezzel ösztönözhetjük további eredményes tevékenységekre.
+Megvalósítási tervünk aktuális státszuában a jelenleg üzemelő oldalunk továbbfejlesztett Laravel 7-es verziójából tartanánk meg a jól működő könnyen átemelhető komponenseket és egészítenénk ki az új,
+számtalan lehetőséggel bíró Laravel 9 által kínált módszerekkel.
 
 
 
