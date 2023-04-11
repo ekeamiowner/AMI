@@ -89,7 +89,7 @@ Az rólunk oldal (The about us page):
 
 
 ## 6. Jelenlegi üzleti folyamatok modellje
-A mai felgyorsult világ és a technika hihetetlen mértékű fejlődése miatt szinte elengedhetetlennek tartjuk, a már meglévő klasszikus és néhol idejét múlt módszerekkel működő oldalunk felfrissítését, rekonstrukcióját.
+Manapság már mindenki szeretné a leghamarabb megtudni, elolvasni, elsők között értesülni az újonnan megjelenő hírekről, információkról. A mi esetünkben ez nem más, mint publikációk és folyóiratok. Emiatt az indítattásból van szükség a mi projektünkre, ami online formában is elérhető. A folyóiratok fontos szerepet töltenek be az információáramlásban és a tudományos kutatásban, ezért az idő az kulcsfontosságú. Számos területen és tudományágban a legújabb kutatási eredmények és fejlemények megismeréséhez elengedhetetlenek. A projektünk lehetővé teszi az információk terjesztését a tudományos közösség és a szélesebb olvasóközönség számára. A mai felgyorsult világ és a technika hihetetlen mértékű fejlődése miatt szinte elengedhetetlennek tartjuk, a már meglévő klasszikus és néhol idejét múlt módszerekkel működő oldalunk felfrissítését, rekonstrukcióját.
 Célunk, hogy az Annales Mathematicae et Informaticae, röviden AMI oldalát egy a mai weboldalakhoz hasonló korszerű megoldásokkal és modern kivitelezéssel tudjuk működtetni.
 Az oldal reformálásából fakadóan úgy hisszük, hogy mind a szerzők és mind a szerkesztő munkatársak munkáját megkönnyíthetjük és ezzel ösztönözhetjük további eredményes tevékenységekre.
 Megvalósítási tervünk aktuális státszuában a jelenleg üzemelő oldalunk továbbfejlesztett Laravel 7-es verziójából tartanánk meg a jól működő könnyen átemelhető komponenseket és egészítenénk ki az új,
