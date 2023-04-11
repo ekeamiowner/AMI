@@ -1,6 +1,12 @@
 # Követelményspecifikáció
 
 ## 1. Áttekintés
+Az oldal célja, hogy lehetőséget biztosítson a különböző matematikai munkák, kutatások közzétételéhez.
+Abban az esetben, ha valaki hajlandó megosztani a munkáját vagy úgy gondolja, hogy ezzel segíthet másoknak, akkor az AMI (Annales Mathematicae ET Informaticae) egy tökéletes módja ennek.
+A hozzáféréshez egy regisztációra van szüksége, amit egy külön meghívóval érhet el.
+A meghívó segítségével a weboldal az ön által megadott felhasználónév mellé egy jelszót generál, amelyet az első belépést követően meg kell változtatnia.
+Amennyiben megszeretné osztani a munkáját rendkívül egyszerűen feltöltheti PDF formátumban.
+Ezek után meg kell várnia, míg a szerkesztőség elbírálja, hogy elfogadja majd közzéteszi a cikkét/munkáját vagy elutasítja azt és archiválja.
 
 
 
