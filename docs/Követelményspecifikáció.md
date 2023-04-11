@@ -15,6 +15,13 @@ Ezek után meg kell várnia, míg a szerkesztőség elbírálja, hogy elfogadja 
 
 
 ## 3. Vágyálom rendszer
+Az AMI célja egy olyan rendszer, ami kölcsönös elégedettséget biztosít mind a publikáló, mind az olvasó közönség számára.
+A feltöltő, a munkáját egy olyan helyen oszthatja meg, amely nem csak egy álatalános széleskörű népszerűségnek örvendhet, hanem eléri az adott témában érdekelt személyeket is.
+Az olvasó szemszögéből pedig egy olyan értékes cikk fórumot képvisel, amely lehetőséget biztosít a szakterület kutatására vagy tartalmának elsajátítására.
+A szerző munkájának feltöltése javát szolgálja a felhasználó-barát elrendezés és az egyértelmű kritériumok, minthogy a cikkek PDF kiterjesztésben szerepeljenek.
+Céljaink közé tartozik az is, hogy a cikkeket elbíráló bizottság részére kiépített felület minnél inkább reszponzív, letisztult legyen, hogy munkájukat nagyban elősegítse a hatékony elbírálásban.
+Ehhez kapcsolódóan elengedhetetlenek a különböző visszaigazoló státuszok a szerkesztés helyzetéről, továbbá beépített alapvető szempontok, amely alapján a bíráló érvényesíti esetlegesen elutasítja az adott cikket.
+A fejlődés, valamint a naprakészség szempontjából szeretnék tartani a lépést az új technikai változásokkal. Éppen ezért a háttérben futó keretrendszer minél inkább frissebb verizójával halad tovább a rendszerünk.
 
 
 
