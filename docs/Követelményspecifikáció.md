@@ -103,6 +103,19 @@ számtalan lehetőséggel bíró Laravel 9 által kínált módszerekkel.
 
 
 ## 8. Követelménylista
+| Modul | ID | Név | v. | Kifejtés |
+|---|---|---|---|---|
+| Jogosultság | K1 | Bejelentkezési felület | 1.0 | A felhasználó a User ID (email címe) és jelszava segítségével bejelentkezhet. Ha a megadott user id vagy jelszó nem megfelelő, akkor a felhasználó hibaüzenetet kap. |
+| Jogosultság | K2 | Regisztráció | 1.0 | A felhasználó a user id (email címe), valamint a keresztnevének megadásával és egy CAPTCHA "Nem vagyok robot" verifikációjával regisztrálja magát. Ha valamelyik adat ezek közül hiányzik vagy nem felel meg a követelményeknek, akkor a rendszer értesíti erről a felhasználót. A jelszó a regisztrációt követő emailben megkapott automatikusan legenerált, amelyet csak az első bejelentkezéshez használthat, azt követően megváltoztatásra kényszerül. |
+| Jogosultság | K3 | Kijelentkezés | 1.0 | A bejelentkezett felhasználók a kijelentkezés gombra kattintva kitudnak jelentkezni, amely a bejelentkező felületre irányíja őket. |
+| Feltöltés | K4 | Cikk feltöltése | 1.0 | Megjelenik a feltöltésre szolgáló felület, ahol a menüpontok kitöltésével kezdheti meg munkája publikálását. |
+| Feltöltés | K4.1 | Cikk feltöltése menüpontok | 1.0 | A felületen meg kell adni a szerzők számát, ebből kifolyólag a teljes nevüket. Majd a cikk címét és csatolni a PDF fájlt. Meg kell jelölni a cikk típusát, amelyek a kutatási, módszertani, vagy (Formális módszerek az informatikában) című különszámhoz készült tanulmányok egyike lehet. Végül megjelölhet olyan személyeket, akiket ajánlana a cikkje elbírálásához. |
+| Módosítás | K5 | Jelszó módosítás | 1.0 | A jelszava megváltoztatásához a kritériumoknak megfelelően meg kell adnia egy új jelszót, majd ezt megismételni. |
+| Módosítás | K6 | Adatlap módosítás | 1.0 | Az adatlapján lehetősége van további információk megadására, valamint változatatni azokat az adott mezők kitöltésének megfelelően. |
+| Keresés | K7 | Folyóírat keresés | 1.0 | Lehetősége van keresni megadott kulcsszavak alapján, amelyek meglétét személyre szabhatóan választja ki, hogy pontosan hol szerepeljen a megadott szó (szerző/cím/bárhol). |
+| Főoldal | K8 | Főoldal (Contents) | 1.0 | Itt jelenik meg tartalmi szempontból a legfrissebb kötet és a hozzátartozó cikkek. |
+| Szerkesztő bizottság | K9 | (Editorial board) | 1.0 | A szerkesztőség tagjairól olvashatunk |
+| Elbírálás | K10 | Szerkesztői nézet | 1.0 | A bírálóbizottság itt hagyja jóvá vagy utasítja el az adott cikket. | 
 
 
 
