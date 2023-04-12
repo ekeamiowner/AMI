@@ -124,5 +124,10 @@ számtalan lehetőséggel bíró Laravel 9 által kínált módszerekkel.
 
 
 ## 10. Fogalomtár
-
+- A cím magáért beszél. Itt kell leírnunk azokat a kifejezéseket, amelyek a
+programunkban fognak illetve ebben a dokumentumban már
+szerepelnek, és nem biztos, hogy érthető egy külsős embernek.
+- Példa: “Reszponzív felület - Mobilon, Tableten, PC-n igazodik a
+képernyőhöz a felület mérete, azaz több eszközön is probléma nélkül
+üzemelhet.”
 
