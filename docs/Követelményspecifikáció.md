@@ -120,7 +120,10 @@ számtalan lehetőséggel bíró Laravel 9 által kínált módszerekkel.
 
 
 ## 9. Riportok
-
+- Létezik az úgynevezett szabad riport amelyben igazából csak azt a
+kérdést tesszük fel, hogy hogyan kellene működnie az új rendszernek. A
+másik típus az irányított amely inkább egy rövid válaszokra épülő
+kérdőívnek tűnhet.
 
 
 ## 10. Fogalomtár
