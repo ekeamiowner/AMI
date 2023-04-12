@@ -9,15 +9,15 @@
 
 
 ## 3.Követelménylista
-| Modul  | ID  | Name |  Version | Explanation |
+| Modul  | ID  | Név |  Verzió | Magyarázat |
 |---|---|---|---|---|
-| Permission  | K1  | Login | 1.0  | The user can login with his E-mail and Password. If one of them is(or both are) incorrect then an error will pop up for the user.  |
-| Permission | K2 | Register |  1.0 | The user have to give a username, e-mail address and a password. If one of them is missing from the requirement, the user will be alerted about the problem. |
-| Permission | K3 | User rang |  1.0 | - Admin : Article reviewing, acces to the Admin panel |
-| | | | | - User : create articles, user modification |
-| | | | | - Guest : register, login |
-| Modify | K4 | user modification |  1.0 | Users have an option to change their username and password. If the user wants to change the password then he has to write the NEW password, the verification of the new one and the old password. |
-| Modify | K5 | Elfelejtett jelszó |  1.0 | If the user forgets his password he has an option to reset his password which will be sent to his registered E-mail address. |
+| Jogosultságok  | K1  | Bejlentkezés | 1.0  | A felhasználó be tud jelentkezni az e-mail címével és jelszavával. Ha az egyik (vagy mindkettő) helytelen, akkor hibaüzenet jelenik meg a felhasználó számára.  |
+| Jogosultságok | K2 | Regisztráció |  1.0 | A felhasználónak meg kell adnia egy felhasználónevet, e-mail címet és jelszót. Ha valamelyik hiányzik a követelmények közül, akkor a felhasználó figyelmeztetést kap a problémáról. |
+| Jogosultságok | K3 | Felhasználói rang |  1.0 | - Adminisztrátor: cikkellenőrzés, hozzáférés az adminisztrátori panelhez<br> |
+| | | | |  Felhasználó: cikkek létrehozása, felhasználói adatok módosítása<br> |
+| | | | | - Vendég: regisztráció, bejelentkezés |
+| Módosítás | K4 | felhasználói adat módosítás |  1.0 | A felhasználóknak lehetőségük van megváltoztatni a felhasználónevüket és jelszavukat. Ha a felhasználó a jelszavát akarja megváltoztatni, akkor meg kell adnia az ÚJ jelszót, annak ellenőrzését és az eredeti jelszót. |
+| Módosítás | K5 | Elfelejtett jelszó |  1.0 | Ha a felhasználó elfelejti a jelszavát, akkor lehetősége van visszaállítani a jelszavát, amelyet a regisztrált e-mail címére küldenek. |
 
 
 ## 4.Jelenlegi üzleti folyamatok modellje
