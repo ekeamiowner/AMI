@@ -9,7 +9,15 @@
 
 
 ## 3.Követelménylista
-
+| Modul  | ID  | Name |  Version | Explanation |
+|---|---|---|---|---|
+| Permission  | K1  | Login | 1.0  | The user can login with his E-mail and Password. If one of them is(or both are) incorrect then an error will pop up for the user.  |
+| Permission | K2 | Register |  1.0 | The user have to give a username, e-mail address and a password. If one of them is missing from the requirement, the user will be alerted about the problem. |
+| Permission | K3 | User rang |  1.0 | - Admin : Article reviewing, acces to the Admin panel |
+| | | | | - User : create articles, user modification |
+| | | | | - Guest : register, login |
+| Modify | K4 | user modification |  1.0 | Users have an option to change their username and password. If the user wants to change the password then he has to write the NEW password, the verification of the new one and the old password. |
+| Modify | K5 | Elfelejtett jelszó |  1.0 | If the user forgets his password he has an option to reset his password which will be sent to his registered E-mail address. |
 
 
 ## 4.Jelenlegi üzleti folyamatok modellje
