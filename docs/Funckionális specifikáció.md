@@ -41,3 +41,12 @@
 
 
 ## 11. Fogalomszótár
+
+- A fogalomszótár a dokumentációban megemlített idegen esetleg
+nem egyértelmű jelentésű szavak / szakszavak pontos
+meghatározását írja le.
+- Példa: “[web-service]:különböző programnyelveken írt és különböző
+platformokon futó szoftveralkalmazások interneten keresztül történő
+adatcseréjére használt vebszolgáltatások.
+[multiplatform]: több környezetben futtatható alkalmazás.
+[main menu]: A fő menü, amely a weboldal indulásakor megjelenik.
