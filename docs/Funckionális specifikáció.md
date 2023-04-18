@@ -24,7 +24,7 @@ A mai világban már az idő nagyon sok mindent befolyásol. Manapság már mind
 
 
 ## 5.Igényelt üzleti folyamatok modellje
-
+Azért hogy egyszerűbbé tegyük a téma iránt érdeklődők vagy(és) a publikálók helyzetét, létrehozunk egy weboldalt ami a mai kornak megfelelően helyt tud állni az elektronikai világban. A publikálóknak egyszerűbb lesz mert kényelmesen, bárhonnan feltudják tölteni a kivánt publikációkat, folyóiratokat. A weboldalra ingyenes a regisztráció, miután ezt elvégezzük, azután a bejelentkezést követően tudunk majd a böngészni a már kiadott, feltöltött publikációk, folyóiratok szerint. A weboldal könnyen kezelhető minden korosztály számára, akik a témák iránt érdeklődnek.
 
 
 ## 6. Használati esetek
