@@ -1,8 +1,7 @@
 # Funckionális specifikáció
 
 ## 1.Áttekintés
-
-
+Ez a weboldal az Annales Mathematicae et Informaticae hivatalos honlapja, amely az Eszterházy Károly Egyetem Matematika és Informatika Intézetének nemzetközi folyóirata (Eger, Magyarország), amelyet a Líceum University Press ad ki. A folyóirat nyitott a matematika és a számítástechnika tudományos publikációi előtt, ahol a számelmélet, a csoportelmélet, a konstruktív és számítógéppel segített geometria, valamint a programozási nyelvek elméleti és gyakorlati szempontjai különös hangsúlyt kapnak. Célunk, hogy kényelmes platformot biztosítsunk a felhasználóink számára. Saját fiókjuk lesz, és a munkáikat publikálhatják a weboldalunkon. Minden felhasználónak ingyenes fiókja lesz, és nagyon szép felhasználói felületen küldhetik be és tekinthetik meg cikkeiket. Minden ingyenes, és mindenki publikálhat cikkeket. Szívesen várjuk a matematikai és számítástechnikai cikkeket. A tanulmányokat angol nyelven kell benyújtani a folyóiratra. Az Szerkesztőség csak új és még publikálatlan anyagokat fogad el.
 
 ## 2.Jelenlegi helyzet  
 
