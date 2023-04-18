@@ -5,7 +5,7 @@ Ez a weboldal az Annales Mathematicae et Informaticae hivatalos honlapja, amely 
 
 ## 2.Jelenlegi helyzet  
 
-
+Az Annales Mathematicae et Informaticae – címének megfelelően – évente megjelenő periodika. Kivételes esetben (konferenciák special issue számaként) plusz egy kötet jelenhet meg. A publikációk kizárólagos nyelve az angol, a folyóirat saját LaTeX formátumot használ. A folyóirat szerkesztőbizottságát elismert nemzetközi, illetve hazai matematikusok és informatikusok alkotják. A folyóiratot az EKKE Matematikai és Informatikai Intézete szerkeszti és adja ki, nyomtatott és online formában (ez utóbbi 1997-től elérhető). Online elérése ingyenes mind a publikálók, mind az olvasók szempontjából (úgynevezett „gold open access" folyóirat). A folyóirat elvben a matematika és az informatika bármely területéről fogad be kéziratokat, de kiemeltként kezeli az Intézetben folyó kutatások területeit (pl. számelmélet, csoportelmélet, számítógéppel segített geometriai tervezés, programozási nyelvek). A folyóirat módszertani publikációknak is helyet ad mindkét szakterületen. A folyóiratot több releváns tudományos adatbázis indexeli: Clarivate Analytics (korábban Thomson Reuters), Scopus, Zentralblatt für Mathematik, MathSciNet, EBSCO. A módszertani cikkeket a MathEduc adatbázis referálja. A folyóirat az MTMT-ben jelenleg Q2-es besorolású.
 
 ## 3.Követelménylista
 | Modul  | ID  | Név |  Verzió | Magyarázat |
