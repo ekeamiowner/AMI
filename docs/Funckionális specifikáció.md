@@ -20,7 +20,7 @@ Az Annales Mathematicae et Informaticae – címének megfelelően – évente m
 
 
 ## 4.Jelenlegi üzleti folyamatok modellje
-
+A mai világban már az idő nagyon sok mindent befolyásol. Manapság már mindenki szeretné a leghamarabb megtudni, elolvasni, elsők között értesülni az újonnan megjelenő hírekről, információkról. A mi esetünkben ez nem más, mint publikációk és folyóiratok. Emiatt az indítattásból van szükség a mi projektünkre, ami online formában is elérhető. A folyóiratok fontos szerepet töltenek be az információáramlásban és a tudományos kutatásban, ezért az idő az kulcsfontosságú. Számos területen és tudományágban a legújabb kutatási eredmények és fejlemények megismeréséhez elengedhetetlenek. A projektünk lehetővé teszi az információk terjesztését a tudományos közösség és a szélesebb olvasóközönség számára. Összességében a folyóiratok nélkülözhetetlenek a tudományos kutatás és az információáramlás szempontjából, és hozzájárulnak a tudományos közösség fejlődéséhez.
 
 
 ## 5.Igényelt üzleti folyamatok modellje
