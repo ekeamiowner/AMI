@@ -127,10 +127,18 @@ kérdőívnek tűnhet.
 
 
 ## 10. Fogalomtár
-- A cím magáért beszél. Itt kell leírnunk azokat a kifejezéseket, amelyek a
-programunkban fognak illetve ebben a dokumentumban már
-szerepelnek, és nem biztos, hogy érthető egy külsős embernek.
-- Példa: “Reszponzív felület - Mobilon, Tableten, PC-n igazodik a
-képernyőhöz a felület mérete, azaz több eszközön is probléma nélkül
-üzemelhet.”
+- Perodika: folyóirat
+- Reszponzív: a lehetőségekhez igazodó, rugalmasan alkalmazkodó. Reszponzív például az a weboldal, amely valamennyi eszközhöz és kijelzőmérethez rugalmasan alkalmazkodik és egyformán esztétikus és funkcionális.
+- Keretrendszer: Önmagában közvetlenül nem használható, de bizonyos tipikus feladatok elvégzését nagy mértékben segítő, egységes módon megszerkesztett "építőkockákat" komponenseket tartalmazó halmaz. A keretrendszerek lényege, hogy a különböző alkalmazásokban leggyakrabban használt elemeket egyetlen helyre gyűjtik össze, és készen kínálják a fejlesztők valamint a programok számára, amelyek így rengeteg elvégzendő munkától mentesülnek.
+- PHP: a PHP egy általános szerveroldali szkriptnyelv dinamikus weblapok készítésére.
+- HTML: HyperText Markup Language, „hiperszöveges jelölőnyelv”) egy leíró nyelv, melyet weboldalak készítéséhez fejlesztettek ki, és mára már internetes szabvánnyá vált a W3C (World Wide Web Consortium) támogatásával.
+-  CSS:  a CSS (Cascading Style Sheets, magyarul: „lépcsőzetes stíluslapok”) a számítástechnikában egy stílusleíró nyelv, mely a HTML vagy XHTML típusú strukturált dokumentumok megjelenését írja le.
+- Javascript: a JavaScript programozási nyelv egy objektumorientált, prototípus-alapú szkriptnyelv, amelyet weboldalakon elterjedten használnak.
+- MySQL: a MySQL egy többfelhasználós, többszálú, SQL-alapú relációs adatbázis-kezelő szerver.
+- GDPR: a General Data Protection Regulation kezdőbetűiből képzett mozaikszó, magyarul általános adatvédelmi rendelet.
+- Git Kanban: A kanban (magyarul „kártya”, „tábla”, „bizonylat”) a termelés vezérlésének a Pull-Prinzip (azaz húzó- vagy hívóelv) és kizárólag egy fogyasztási helyen fellépő igény kielégítésére koncentrál. A kanban rendszerben egy (kanban) mennyiség fogyása alapján irányítjuk a gyártást vagy beszerzést.
+- Visual Studio Code vagy PhpStorm: a kódoláshoz használt integrált fejlesztési környezet
+- Sublime Text: szövegszerkesztő
+- Uizard prototype:  UI prototípuskészítő eszköz. Gyorsan lehet a segítségével prototípusokat tervezni. Gyors alkalmazás-, web- és UI prototípus készítésre is képes.
+- CAPTCHA: Completely Automated Public Turing test to tell Computers and Humans Apart, aminek a jelentése „teljesen automatizált nyilvános Turing-teszt a számítógép és az ember megkülönböztetésére”
 
