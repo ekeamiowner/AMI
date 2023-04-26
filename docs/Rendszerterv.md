@@ -1,1 +1,35 @@
-
+## 5. Funkcionális terv
+- Leírja a felhasználói szerepköröket, és hogy milyen feladatokat
+tudnak csinálni.
+- Rendszerszereplők:
+  - Admin
+  - Diák
+- Rendszerhasználati esetek és lefutásaik:
+  - ADMIN:
+    - Beléphet bármilyen szereplőként teljes hozzáférése van a rendszerhez
+    - A felhasználói adatokat látják, változtathatják
+    - Felhasználó hozzáadására, törlésére van lehetőségük
+    - Feladatlétrehozás mint a Tanárok
+    - Diákok jegymódosítása
+    - Üzenetküldés bárkinek vagy globálisan
+    - Felhasználói adatok módosítása
+    - Tesztek létrehozása, törlése, módosítása
+    - Kvízek létrehozása, törlése, módosítása
+  - DIÁK:
+    - Képes kvízt kitölteni, aminek végén pontot szerez
+    - Képes üzenetet küldeni más diákoknak, tanároknak vagy diákoknak
+    - El tudja érni az órarendjét
+    - Teszt felület elérése, ami egy kvízhez hasonló felület ahol eredményjegyet szerezhet a diák.
+- Menü-hierarchiák:
+  - BEJELENTKEZÉS
+    - Bejelentkezés
+    - Regisztráció
+    - Help
+  - MAIN MENÜ
+    - Kvíz
+    - Feladatlétrehozás (Tanároknak)
+    - Órarend megtekintés (Diákoknak)
+    - E-naplo elérése
+    - Személyes adatok
+    - Toplist
+    - Kijelentkezés
