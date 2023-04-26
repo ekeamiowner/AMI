@@ -51,55 +51,55 @@ eszközökre(okostelefonok,táblagépek) készül, reszponzivitás figyelembevé
 teljes vizsgálata, ellenőrzése, a rendszer által megvalósított üzleti
 szolgáltatások verifikálása.
 Tesztelési eljárások
-### Alfa teszt:
+  ### Alfa teszt:
 
-  A teszt elsődleges célja: az eddig meglévő funkcióknak a különböző
-  böngészőkkel, és androidokkal való kompatibilitásának tesztelése. A tesztet a
-  fejlesztők végzik.
-  Az eljárás sikeres, ha különböző böngészőkben és különböző androidokon is
-  megfelelően működnek a különböző funkciók. A teszt időtartama egy hét.
+    A teszt elsődleges célja: az eddig meglévő funkcióknak a különböző
+    böngészőkkel, és androidokkal való kompatibilitásának tesztelése. A tesztet a
+    fejlesztők végzik.
+    Az eljárás sikeres, ha különböző böngészőkben és különböző androidokon is
+    megfelelően működnek a különböző funkciók. A teszt időtartama egy hét.
   
-### Beta teszt:
-  - Ezt a tesztet nem a fejlesztők végzik.
-  - Tesztelendő böngészők:
-    - Opera
-    - Firefox
-    - Google Chrome
-    - Safari
-    - Edge
+  ### Beta teszt:
+     - Ezt a tesztet nem a fejlesztők végzik.
+      - Tesztelendő böngészők:
+        - Opera
+         - Firefox
+         - Google Chrome
+         - Safari
+        - Edge
  
-- Tesztelendő android rendszerek:
-  - 6.0.0(minimum), vagy újabbak
+    - Tesztelendő android rendszerek:
+     - 6.0.0(minimum), vagy újabbak
 
-### Tesztelendő kijelző méretek:
-- 1280x720 (minimum)
-- 1366x768
-- 1920x1080
+  ### Tesztelendő kijelző méretek:
+    - 1280x720 (minimum)
+    - 1366x768
+    - 1920x1080
 
-- A teszt időtartama kb. egy hét.
-- A tesztelés alatt a tesztelő felhasználók visszajelzéseket küldhetnek a
-fejlesztőknek, probléma/hiba felmerülése esetén.
-- Ha hiba lép fel, a fejlesztők kijavítják a lehető leghamarabb. Sok hiba esetén
-a tesztelés ideje elhúzódhat plusz egy héttel.
+    - A teszt időtartama kb. egy hét.
+    - A tesztelés alatt a tesztelő felhasználók visszajelzéseket küldhetnek a
+    fejlesztőknek, probléma/hiba felmerülése esetén.
+    - Ha hiba lép fel, a fejlesztők kijavítják a lehető leghamarabb. Sok hiba esetén
+    a tesztelés ideje elhúzódhat plusz egy héttel.
 
-### Tesztelendő funkciók
+  ### Tesztelendő funkciók
 
 
- - Android
-    - Login felület:
+    - Android
+       - Login felület:
 
-- A login/regisztrációs felület elrendezésének ellenőrzése:
-  -  Elvárt működés: 
-      a funkcionális specifikációban szereplő képernyőtervnek megfelelően kell
-      kinéznie, a képernyő méretétől függetlenül.
-  - Regisztrációs felület:
-      A meghívást követően regisztrációs felületnek elérhetőnek kell lennie a
-      kezdőképernyőn a bejelentkezési lehetőség mellett. Amennyiben a
-      felhasználó még nincs regisztrálva az itt található gombra kattintva kell
-      átirányítani a regisztrációs felületre. Ezen felületen a megfelelő adatok
-      megadása mellett a megerősítés gombra kattintva a felhasználó
-      regisztrációjának a funkcionális specifikációban leírtak szerint végbe kell
-      mennie, majd elérhetővé kell tenni a bejelentkezést a felhasználó számára.
+    - A login/regisztrációs felület elrendezésének ellenőrzése:
+      -  Elvárt működés: 
+         a funkcionális specifikációban szereplő képernyőtervnek megfelelően kell
+         kinéznie, a képernyő méretétől függetlenül.
+     - Regisztrációs felület:
+         A meghívást követően regisztrációs felületnek elérhetőnek kell lennie a
+         kezdőképernyőn a bejelentkezési lehetőség mellett. Amennyiben a
+         felhasználó még nincs regisztrálva az itt található gombra kattintva kell
+          átirányítani a regisztrációs felületre. Ezen felületen a megfelelő adatok
+          megadása mellett a megerősítés gombra kattintva a felhasználó
+          regisztrációjának a funkcionális specifikációban leírtak szerint végbe kell
+          mennie, majd elérhetővé kell tenni a bejelentkezést a felhasználó számára.
 
-- Hibás regisztrációs adatok megadásakor hibaüzenetet kell kapjon a
-felhasználó.”
+    - Hibás regisztrációs adatok megadásakor hibaüzenetet kell kapjon a
+    felhasználó.”
