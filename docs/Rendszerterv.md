@@ -34,6 +34,21 @@ tudnak csinálni.
     - Toplist
     - Kijelentkezés
 
+## 12.Telepítési terv
+- Androidos alkalmazás:
+  - Töltse le az alkalmazást a Google áruházból, adja meg a szükséges
+engedélyeket és telepítse a programot!
+  - Amennyiben nem az áruházból kívánja telepíteni az alkalmazást, úgy
+engedélyezze készülékén az úgynevezett "Harmadik féltől származó
+tartalmakat" a beállításoknál!
+  - Helyezze az ".apk" kiterjesztésű elemet a készülékére, majd futtassa
+azt!
+- Webes alkalmazás
+  - A szoftver webes felületéhez csak egy ajánlott böngésző telepítése
+szükséges (Google Chrome, Firefox, Opera, Safari), külön szoftver
+nem kell hozzá. A webszerverre közvetlenül az internetről
+kapcsolódnak rá a kliensek.
+
 ## 13.Karbantartási terv
 Cél: Az alkalmazás folyamatosan üzemeltetése és karbantartása, mely
 magában foglalja a programhibák elhárítását, a belső igények változása miatti
