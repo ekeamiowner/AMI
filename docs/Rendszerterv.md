@@ -1,4 +1,40 @@
 
+
+
+
+
+## Rendszerterv
+
+## 1. A rendszer célja
+- Leírja hogy mit szeretne megoldani a rendszer.
+- Példa: “A rendszer célja, hogy a felhasználó játékos körülmények között tud
+tanulni, különböző feladatokat megoldani. A felhasználó pontszámokat kap
+arról, hogyan sikerült megoldania a feladatokat. Fontos, hogy a felhasználó
+könnyen el tudjon igazodni a felületeken ezért minimalista felhasználói
+felületet kap a program. A tanár szerepkörrel rendelkező felhasználók
+feltölthetnek feladatsorokat az adatbázisba. A rendszer használható
+Androidos eszközökön, alkalmazás formájában, valamint webes felületen is
+elérhető. A rendszer az adatokat egy Web Service segítségével kapja az
+adatbázisból. Mivel az alkalmazást csak webes felületen, és Android
+alkalmazásban szeretnénk elérhetővé tenni, nem célunk hogy más, például
+IOS operációs rendszerrel rendelkező eszközön fusson. A felhasználó a
+feladatsorok megoldása után pontszámokat kap. Teljesítményét a toplistán is
+megtekintheti.”
+
+## 2. Projektterv
+- Leírja a szerepköröket, kik vannak a csapatban és min dolgoznak. Ide
+kerül az ütemterv és általában mérföldköveket tartalmaz.
+- Példa: ”
+Projektszerepkörök, felelőségek:
+Scrum master: Dr. Tajti Tibor Gábor
+Product owner: Dr. Tajti Tibor Gábor
+Projektmunkások és felelőségek:
+Backend munkálatok: (csapat tagjai)
+Feladatuk az adatok tárolásához szükséges adatszerkezetek kialakítása,
+funkciók létrehozása, a különböző platformok kiszolgálása adatokkal.
+
+## 4. Követelmények 
+
 ## 5. Funkcionális terv
 - Leírja a felhasználói szerepköröket, és hogy milyen feladatokat
 tudnak csinálni.
@@ -34,73 +70,6 @@ tudnak csinálni.
     - Személyes adatok
     - Toplist
     - Kijelentkezés
-
-## 12.Telepítési terv
-- Androidos alkalmazás:
-  - Töltse le az alkalmazást a Google áruházból, adja meg a szükséges
-engedélyeket és telepítse a programot!
-  - Amennyiben nem az áruházból kívánja telepíteni az alkalmazást, úgy
-engedélyezze készülékén az úgynevezett "Harmadik féltől származó
-tartalmakat" a beállításoknál!
-  - Helyezze az ".apk" kiterjesztésű elemet a készülékére, majd futtassa
-azt!
-- Webes alkalmazás
-  - A szoftver webes felületéhez csak egy ajánlott böngésző telepítése
-szükséges (Google Chrome, Firefox, Opera, Safari), külön szoftver
-nem kell hozzá. A webszerverre közvetlenül az internetről
-kapcsolódnak rá a kliensek.
-
-## 13.Karbantartási terv
-Cél: Az alkalmazás folyamatosan üzemeltetése és karbantartása, mely
-magában foglalja a programhibák elhárítását, a belső igények változása miatti
-módosításokat, valamint a környezeti feltételek változása miatt
-megfogalmazott program-, illetve állomány módosítási igényeket.
-Ellenőrizni
-kell, hogy a jövőben kiadott Android verziókkal kompatibilis-e az alkalmazás.
-Idő elteltével új kategóriákat kell hozzáadni a játékhoz, hogy fent tartsuk az
-érdeklődési szintet.
-- Karbantartás:
-  - Corrective Maintenance: A felhasználók által felfedezett és "user reportban"
-elküldött hibák kijavítása.
-  - Adaptive Maintenance: A program naprakészen tartása és finomhangolása.
-  - Perfective Maintenance: A szoftver hosszútávú használata érdekében végzett
-módosítások, új funkciók, a szoftver teljesítményének és működési
-megbízhatóságának javítása.
-  - Preventive Maintenance: Olyan problémák elhárítása, amelyek még nem
-tűnnek fontosnak, de később komoly problémákat okozhatnak.
-
-## Rendszerterv
-
-## 1. A rendszer célja
-- Leírja hogy mit szeretne megoldani a rendszer.
-- Példa: “A rendszer célja, hogy a felhasználó játékos körülmények között tud
-tanulni, különböző feladatokat megoldani. A felhasználó pontszámokat kap
-arról, hogyan sikerült megoldania a feladatokat. Fontos, hogy a felhasználó
-könnyen el tudjon igazodni a felületeken ezért minimalista felhasználói
-felületet kap a program. A tanár szerepkörrel rendelkező felhasználók
-feltölthetnek feladatsorokat az adatbázisba. A rendszer használható
-Androidos eszközökön, alkalmazás formájában, valamint webes felületen is
-elérhető. A rendszer az adatokat egy Web Service segítségével kapja az
-adatbázisból. Mivel az alkalmazást csak webes felületen, és Android
-alkalmazásban szeretnénk elérhetővé tenni, nem célunk hogy más, például
-IOS operációs rendszerrel rendelkező eszközön fusson. A felhasználó a
-feladatsorok megoldása után pontszámokat kap. Teljesítményét a toplistán is
-megtekintheti.”
-
-## 2. Projektterv
-- Leírja a szerepköröket, kik vannak a csapatban és min dolgoznak. Ide
-kerül az ütemterv és általában mérföldköveket tartalmaz.
-- Példa: ”
-Projektszerepkörök, felelőségek:
-Scrum master: Dr. Tajti Tibor Gábor
-Product owner: Dr. Tajti Tibor Gábor
-Projektmunkások és felelőségek:
-Backend munkálatok: (csapat tagjai)
-Feladatuk az adatok tárolásához szükséges adatszerkezetek kialakítása,
-funkciók létrehozása, a különböző platformok kiszolgálása adatokkal.
-
-## 4. Követelmények 
-
 
 ## 6. Fizikai környezet
 
@@ -174,4 +143,36 @@ Tesztelési eljárások
 
     - Hibás regisztrációs adatok megadásakor hibaüzenetet kell kapjon a
     felhasználó.”
+## 12.Telepítési terv
+- Androidos alkalmazás:
+  - Töltse le az alkalmazást a Google áruházból, adja meg a szükséges
+engedélyeket és telepítse a programot!
+  - Amennyiben nem az áruházból kívánja telepíteni az alkalmazást, úgy
+engedélyezze készülékén az úgynevezett "Harmadik féltől származó
+tartalmakat" a beállításoknál!
+  - Helyezze az ".apk" kiterjesztésű elemet a készülékére, majd futtassa
+azt!
+- Webes alkalmazás
+  - A szoftver webes felületéhez csak egy ajánlott böngésző telepítése
+szükséges (Google Chrome, Firefox, Opera, Safari), külön szoftver
+nem kell hozzá. A webszerverre közvetlenül az internetről
+kapcsolódnak rá a kliensek.
 
+## 13.Karbantartási terv
+Cél: Az alkalmazás folyamatosan üzemeltetése és karbantartása, mely
+magában foglalja a programhibák elhárítását, a belső igények változása miatti
+módosításokat, valamint a környezeti feltételek változása miatt
+megfogalmazott program-, illetve állomány módosítási igényeket.
+Ellenőrizni
+kell, hogy a jövőben kiadott Android verziókkal kompatibilis-e az alkalmazás.
+Idő elteltével új kategóriákat kell hozzáadni a játékhoz, hogy fent tartsuk az
+érdeklődési szintet.
+- Karbantartás:
+  - Corrective Maintenance: A felhasználók által felfedezett és "user reportban"
+elküldött hibák kijavítása.
+  - Adaptive Maintenance: A program naprakészen tartása és finomhangolása.
+  - Perfective Maintenance: A szoftver hosszútávú használata érdekében végzett
+módosítások, új funkciók, a szoftver teljesítményének és működési
+megbízhatóságának javítása.
+  - Preventive Maintenance: Olyan problémák elhárítása, amelyek még nem
+tűnnek fontosnak, de később komoly problémákat okozhatnak.
