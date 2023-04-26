@@ -28,3 +28,17 @@ Backend munkálatok: (csapat tagjai)
 Feladatuk az adatok tárolásához szükséges adatszerkezetek kialakítása,
 funkciók létrehozása, a különböző platformok kiszolgálása adatokkal.
 
+## 4. Követelmények 
+
+
+## 6. Fizikai környezet
+
+- Az alkalmazás web platformra, hordozható
+eszközökre(okostelefonok,táblagépek) készül, reszponzivitás figyelembevételével.
+- Nincsenek megvásárolt komponenseink.
+- Fejlesztői eszközök:
+  - VS Code
+  - PHP Storm
+  - Notepad++
+  - MySQL Workbench
+  - XAMPP
