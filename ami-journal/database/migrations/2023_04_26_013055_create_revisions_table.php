@@ -8,12 +8,11 @@ class CreateRevisionsTable extends Migration {
 	public function up()
 	{
 		Schema::create('revisions', function(Blueprint $table) {
-			$table->id();
+			$table->integer('id', true);
 			$table->string('article_id');
 			$table->text('note');
 			$table->string('pdf_path');
-			$table->timestamp('deleted_at')->nullable()->default(null);
-			$table->timestamps();
+			$table->timestamp('deleted_at')->nullable(null);
 		});
 	}
 
