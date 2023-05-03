@@ -8,11 +8,10 @@ class CreateVolumesTable extends Migration {
 	public function up()
 	{
 		Schema::create('volumes', function(Blueprint $table) {
-			$table->id();
-			$table->string('title_str')->nullable();
-			$table->year('release_year');
+			$table->integer('id', true)->unsigned();
+			$table->string('title')->nullable()->default(null);
 			$table->text('description');
-			$table->timestamps();
+			$table->year('release_year');
 		});
 	}
 

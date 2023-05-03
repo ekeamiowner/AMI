@@ -8,6 +8,26 @@ class CreateForeignKeys extends Migration {
 
 	public function up()
 	{
+		Schema::table('articles', function(Blueprint $table) {
+			$table->foreign('user_id')->references('id')->on('users')
+						->onDelete('cascade')
+						->onUpdate('cascade');
+		});
+		Schema::table('articles', function(Blueprint $table) {
+			$table->foreign('editor_id')->references('id')->on('users')
+						->onDelete('cascade')
+						->onUpdate('cascade');
+		});
+		Schema::table('articles', function(Blueprint $table) {
+			$table->foreign('type_id')->references('id')->on('types')
+						->onDelete('cascade')
+						->onUpdate('cascade');
+		});
+		Schema::table('revisions', function(Blueprint $table) {
+			$table->foreign('article_id')->references('id')->on('articles')
+						->onDelete('cascade')
+						->onUpdate('cascade');
+		});
 		Schema::table('category_article', function(Blueprint $table) {
 			$table->foreign('category_id')->references('id')->on('categories')
 						->onDelete('cascade')
@@ -29,6 +49,12 @@ class CreateForeignKeys extends Migration {
 						->onUpdate('cascade');
 		});
 		Schema::table('reviews', function(Blueprint $table) {
+			$table->foreign('user_id')->references('id')->on('users')
+						->onDelete('cascade')
+						->onUpdate('cascade');
+		});
+		Schema::table('reviews', function(Blueprint $table) {
+			$table->foreign('revision_id')->references('id')->on('revisions')
 			$table->foreign('user_id')->references('user_id')->on('articles')
 						->onDelete('cascade')
 						->onUpdate('cascade');
@@ -37,6 +63,18 @@ class CreateForeignKeys extends Migration {
 
 	public function down()
 	{
+		Schema::table('articles', function(Blueprint $table) {
+			$table->dropForeign('articles_user_id_foreign');
+		});
+		Schema::table('articles', function(Blueprint $table) {
+			$table->dropForeign('articles_editor_id_foreign');
+		});
+		Schema::table('articles', function(Blueprint $table) {
+			$table->dropForeign('articles_type_id_foreign');
+		});
+		Schema::table('revisions', function(Blueprint $table) {
+			$table->dropForeign('revisions_article_id_foreign');
+		});
 		Schema::table('category_article', function(Blueprint $table) {
 			$table->dropForeign('category_article_category_id_foreign');
 		});
@@ -51,6 +89,9 @@ class CreateForeignKeys extends Migration {
 		});
 		Schema::table('reviews', function(Blueprint $table) {
 			$table->dropForeign('reviews_user_id_foreign');
+		});
+		Schema::table('reviews', function(Blueprint $table) {
+			$table->dropForeign('reviews_revision_id_foreign');
 		});
 	}
 }
