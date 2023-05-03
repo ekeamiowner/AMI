@@ -14,17 +14,15 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
+            $table->string('id')->primary();
+            $table->string('full_name');
+            $table->string('email');
             $table->string('password');
-            $table->string('api_key')->nullable();
-            $table->rememberToken();
-            $table->integer('appointed_as_reviewer')->default(0);
+            $table->string('remember_token');
+            $table->integer('appointed_as_reviwer')->default(0);
             $table->integer('accepted_reviewer')->default(0);
-            $table->integer('completed_reviewer')->default(0);
-            $table->timestamps();
+            $table->integer('completed_review')->default(0);
+            $table->timestamp('deteled_at')->default(null);
         });
     }
 

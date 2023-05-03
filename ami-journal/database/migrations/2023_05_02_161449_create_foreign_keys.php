@@ -55,6 +55,7 @@ class CreateForeignKeys extends Migration {
 		});
 		Schema::table('reviews', function(Blueprint $table) {
 			$table->foreign('revision_id')->references('id')->on('revisions')
+			$table->foreign('user_id')->references('user_id')->on('articles')
 						->onDelete('cascade')
 						->onUpdate('cascade');
 		});

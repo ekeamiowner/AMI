@@ -8,10 +8,11 @@ class CreateReviewsTable extends Migration {
 	public function up()
 	{
 		Schema::create('reviews', function(Blueprint $table) {
-			$table->id();
+			$table->integer('id', true)->unsigned();
+			$table->string('user_id');
+			$table->integer('revision_id');
+			$table->tinyInteger('state')->nullable()->default(0);
 			$table->text('content');
-			$table->boolean('public')->default(false);
-			$table->timestamps();
 		});
 	}
 
