@@ -8,10 +8,9 @@ class CreateTypesTable extends Migration {
 	public function up()
 	{
 		Schema::create('types', function(Blueprint $table) {
-			$table->id();
+			$table->integer('id', true)->unsigned();
 			$table->string('name');
-			$table->boolean('active')->default(true);
-			$table->timestamps();
+			$table->boolean('active')->default(1);
 		});
 	}
 
