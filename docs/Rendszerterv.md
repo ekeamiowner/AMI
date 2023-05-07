@@ -176,3 +176,6 @@ módosítások, új funkciók, a szoftver teljesítményének és működési
 megbízhatóságának javítása.
   - Preventive Maintenance: Olyan problémák elhárítása, amelyek még nem
 tűnnek fontosnak, de később komoly problémákat okozhatnak.
+
+## 14. Adatbázis terv
+  ![Adatbázis terv](https://github.com/ekeamiowner/AMI/blob/BenkeBal%C3%A1zs/docs/database_plan.png)
