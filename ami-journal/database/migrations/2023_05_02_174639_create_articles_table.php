@@ -8,9 +8,9 @@ class CreateArticlesTable extends Migration {
 	public function up()
 	{
 		Schema::create('articles', function(Blueprint $table) {
-			$table->string('id')->primary();
-			$table->string('user_id');
-			$table->string('editor_id')->nullable()->default(null);
+			$table->integer('id', true)->unsigned();
+			$table->integer('user_id')->unsigned();
+			$table->integer('editor_id')->nullable()->unsigned()->default(null);
 			$table->string('title');
 			$table->text('abstract');
 			$table->enum('state', array('SUBMITTED', 'UNDER_REVIEW', 'ACCEPTED', 'REJECTED'));
