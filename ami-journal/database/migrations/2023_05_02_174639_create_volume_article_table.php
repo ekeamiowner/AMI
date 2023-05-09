@@ -9,9 +9,9 @@ class CreateVolumeArticleTable extends Migration {
 	{
 		Schema::create('volume_article', function(Blueprint $table) {
 			$table->integer('volume_id')->unsigned();
-			$table->integer('article_id')->unsigned();
+			$table->string('article_id');
 			$table->integer('from_page')->unsigned();
-			$table->integer('to_page');
+			$table->integer('to_page')->unsigned();
 		});
 	}
 
