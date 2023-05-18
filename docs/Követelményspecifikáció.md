@@ -118,12 +118,31 @@ számtalan lehetőséggel bíró Laravel 9 által kínált módszerekkel.
 | Elbírálás | K10 | Szerkesztői nézet | 1.0 | A bírálóbizottság itt hagyja jóvá vagy utasítja el az adott cikket. | 
 
 
-
 ## 9. Riportok
-- Létezik az úgynevezett szabad riport amelyben igazából csak azt a
-kérdést tesszük fel, hogy hogyan kellene működnie az új rendszernek. A
-másik típus az irányított amely inkább egy rövid válaszokra épülő
-kérdőívnek tűnhet.
+### Irányított riport kérdések
+1.	**Mi a célja az AMI-nak?**
+...
+
+2.	**Bárki regisztrálhat az oldalra?**
+...
+
+3.	**Kinek/kiknek ajánlaná publikáló szerepet?**
+...
+
+4.	**Milyen formában lehet benyújtani új cikket?**
+...
+
+5.	**Milyen cikkeket lehet publikálni az oldalon?**
+...
+
+6.	**Az elbírálás után, a publikálónak mennyi ideje van javítani a felmerülő hibákat?**
+...
+
+7.	**Ha a felhasználó nem jelentkezik be az oldalra adott időközönként, akkor megkell szüntetni a hozzáférését az oldalhoz?**
+...
+
+8.	**Milyen lehetőségei vannak a bírálóknak?**
+...
 
 
 ## 10. Fogalomtár
