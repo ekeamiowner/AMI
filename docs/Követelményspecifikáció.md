@@ -3,8 +3,8 @@
 ## 1. Áttekintés
 Az oldal célja, hogy lehetőséget biztosítson a különböző matematikai munkák, kutatások közzétételéhez.
 Abban az esetben, ha valaki hajlandó megosztani a munkáját vagy úgy gondolja, hogy ezzel segíthet másoknak, akkor az AMI (Annales Mathematicae ET Informaticae) egy tökéletes módja ennek.
-A hozzáféréshez egy regisztációra van szüksége, amit egy külön meghívóval érhet el.
-A meghívó segítségével a weboldal az ön által megadott felhasználónév mellé egy jelszót generál, amelyet az első belépést követően meg kell változtatnia.
+A hozzáféréshez mindössze egy regisztációra van szüksége.
+A regisztráció után a weboldal az ön által megadott felhasználónév mellé egy jelszót generál, amelyet az első belépést követően meg kell változtatnia.
 Amennyiben megszeretné osztani a munkáját rendkívül egyszerűen feltöltheti PDF formátumban.
 Ezek után meg kell várnia, míg a szerkesztőség elbírálja, hogy elfogadja majd közzéteszi a cikkét/munkáját vagy elutasítja azt és archiválja.
 
@@ -27,7 +27,7 @@ A fejlődés, valamint a naprakészség szempontjából szeretnék tartani a lé
 
 
 ## 4. Funkcionális követelmények
-Mielőtt bármit is csinálnálunk, be kell jelentkezni, de ha még nincs fiókja, akkor szüksége lesz egy meghívó linkre. Az első bejelentkezés után meg kell változtatnod a felhasználónevedet és jelszavadat, mert a meghívó linkkel történő regisztráció után a weboldal automatikusan generál egy felhasználónevet és egy jelszót számodra.
+Mielőtt bármit is csinálnánk, be kell jelentkezni, de ha még nincs fiókja, akkor szüksége lesz egy regisztrációra. Az első bejelentkezés után meg kell változtatnia a jelszavát, mert a regisztráció után az automatikusan generált jelszó csak az első alkalomra biztosít lehetőséget.
 
 A bejelentkezés oldal (Login page):
 
@@ -35,7 +35,7 @@ A bejelentkezés oldal (Login page):
 
 A regisztráció oldala (Register page):
 
-- A regisztrálás csak meghívásos alapon történhet linken keresztül. A linkre kattintva létrejön a fiók generált felhasználónévvel és jelszóval, amelyet belépés után meg kell változtatni.
+- A regisztrálás az oldalon egyértelműen történik. Email és felhasználónév megadásával, az emailben kapott generált jelszóval tud bejelentkezni, amelyet az első belépés után meg kell változtatni.
 
 A főoldal (The main page):
 
@@ -98,7 +98,7 @@ számtalan lehetőséggel bíró Laravel 9 által kínált módszerekkel.
 
 
 ## 7. Igényelt üzleti folyamatok
-![Kövspec - 7. Igényelt üzleti folyamatok](https://cdn.discordapp.com/attachments/323508728508710913/1095101365757423757/Kovspec_7_-_Igenyelt_uzleti_folyamatok.png)
+![Kövspec - 7. Igényelt üzleti folyamatok](https://cdn.discordapp.com/attachments/323508728508710913/1108853759783743580/image.png)
 
 
 
@@ -128,17 +128,5 @@ kérdőívnek tűnhet.
 
 ## 10. Fogalomtár
 - Perodika: folyóirat
-- Reszponzív: a lehetőségekhez igazodó, rugalmasan alkalmazkodó. Reszponzív például az a weboldal, amely valamennyi eszközhöz és kijelzőmérethez rugalmasan alkalmazkodik és egyformán esztétikus és funkcionális.
-- Keretrendszer: Önmagában közvetlenül nem használható, de bizonyos tipikus feladatok elvégzését nagy mértékben segítő, egységes módon megszerkesztett "építőkockákat" komponenseket tartalmazó halmaz. A keretrendszerek lényege, hogy a különböző alkalmazásokban leggyakrabban használt elemeket egyetlen helyre gyűjtik össze, és készen kínálják a fejlesztők valamint a programok számára, amelyek így rengeteg elvégzendő munkától mentesülnek.
-- PHP: a PHP egy általános szerveroldali szkriptnyelv dinamikus weblapok készítésére.
-- HTML: HyperText Markup Language, „hiperszöveges jelölőnyelv”) egy leíró nyelv, melyet weboldalak készítéséhez fejlesztettek ki, és mára már internetes szabvánnyá vált a W3C (World Wide Web Consortium) támogatásával.
--  CSS:  a CSS (Cascading Style Sheets, magyarul: „lépcsőzetes stíluslapok”) a számítástechnikában egy stílusleíró nyelv, mely a HTML vagy XHTML típusú strukturált dokumentumok megjelenését írja le.
-- Javascript: a JavaScript programozási nyelv egy objektumorientált, prototípus-alapú szkriptnyelv, amelyet weboldalakon elterjedten használnak.
-- MySQL: a MySQL egy többfelhasználós, többszálú, SQL-alapú relációs adatbázis-kezelő szerver.
-- GDPR: a General Data Protection Regulation kezdőbetűiből képzett mozaikszó, magyarul általános adatvédelmi rendelet.
-- Git Kanban: A kanban (magyarul „kártya”, „tábla”, „bizonylat”) a termelés vezérlésének a Pull-Prinzip (azaz húzó- vagy hívóelv) és kizárólag egy fogyasztási helyen fellépő igény kielégítésére koncentrál. A kanban rendszerben egy (kanban) mennyiség fogyása alapján irányítjuk a gyártást vagy beszerzést.
-- Visual Studio Code vagy PhpStorm: a kódoláshoz használt integrált fejlesztési környezet
-- Sublime Text: szövegszerkesztő
-- Uizard prototype:  UI prototípuskészítő eszköz. Gyorsan lehet a segítségével prototípusokat tervezni. Gyors alkalmazás-, web- és UI prototípus készítésre is képes.
-- CAPTCHA: Completely Automated Public Turing test to tell Computers and Humans Apart, aminek a jelentése „teljesen automatizált nyilvános Turing-teszt a számítógép és az ember megkülönböztetésére”
+
 

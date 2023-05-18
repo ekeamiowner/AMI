@@ -1,7 +1,7 @@
 # Funckionális specifikáció
 
 ## 1.Áttekintés
-Ez a weboldal az Annales Mathematicae et Informaticae hivatalos honlapja, amely az Eszterházy Károly Egyetem Matematika és Informatika Intézetének nemzetközi folyóirata (Eger, Magyarország), amelyet a Líceum University Press ad ki. A folyóirat nyitott a matematika és a számítástechnika tudományos publikációi előtt, ahol a számelmélet, a csoportelmélet, a konstruktív és számítógéppel segített geometria, valamint a programozási nyelvek elméleti és gyakorlati szempontjai különös hangsúlyt kapnak. Célunk, hogy kényelmes platformot biztosítsunk a felhasználóink számára. Saját fiókjuk lesz, és a munkáikat publikálhatják a weboldalunkon. Minden felhasználónak ingyenes fiókja lesz, és nagyon szép felhasználói felületen küldhetik be és tekinthetik meg cikkeiket. Minden ingyenes, és mindenki publikálhat cikkeket. Szívesen várjuk a matematikai és számítástechnikai cikkeket. A tanulmányokat angol nyelven kell benyújtani a folyóiratra. Az Szerkesztőség csak új és még publikálatlan anyagokat fogad el.
+A weboldal az Annales Mathematicae et Informaticae hivatalos honlapja, amely az Eszterházy Károly Egyetem Matematika és Informatika Intézetének nemzetközi folyóirata (Eger, Magyarország), amelyet a Líceum University Press ad ki. A folyóirat nyitott a matematika és a számítástechnika tudományos publikációi előtt, ahol a számelmélet, a csoportelmélet, a konstruktív és számítógéppel segített geometria, valamint a programozási nyelvek elméleti és gyakorlati szempontjai különös hangsúlyt kapnak. Célunk, hogy kényelmes platformot biztosítsunk a felhasználóink számára. Saját fiókjuk lesz, és a munkáikat publikálhatják a weboldalunkon. Modern és letisztult felhasználói felületen küldhetik be és tekinthetik meg cikkeiket. Minden ingyenes, és mindenki publikálhat cikkeket. Szívesen várjuk a matematikai és számítástechnikai cikkeket. A tanulmányokat angol nyelven kell benyújtani a folyóiratra. Az Szerkesztőség csak új és még publikálatlan anyagokat fogad el.
 
 ## 2.Jelenlegi helyzet  
 
@@ -11,11 +11,11 @@ Az Annales Mathematicae et Informaticae – címének megfelelően – évente m
 | Modul  | ID  | Név |  Verzió | Magyarázat |
 |---|---|---|---|---|
 | Jogosultságok  | K1  | Bejlentkezés | 1.0  | A felhasználó be tud jelentkezni az e-mail címével és jelszavával. Ha az egyik (vagy mindkettő) helytelen, akkor hibaüzenet jelenik meg a felhasználó számára.  |
-| Jogosultságok | K2 | Regisztráció |  1.0 | A felhasználónak meg kell adnia egy felhasználónevet, e-mail címet és jelszót. Ha valamelyik hiányzik a követelmények közül, akkor a felhasználó figyelmeztetést kap a problémáról. |
+| Jogosultságok | K2 | Regisztráció |  1.0 | A felhasználónak meg kell adnia egy e-mail címet (felhasználónévként) és egy jelszót. Ha valamelyik hiányzik a követelmények közül, akkor a felhasználó figyelmeztetést kap a problémáról. |
 | Jogosultságok | K3 | Felhasználói rang |  1.0 | - Adminisztrátor: cikkellenőrzés, hozzáférés az adminisztrátori panelhez<br> |
 | | | | |  Felhasználó: cikkek létrehozása, felhasználói adatok módosítása<br> |
 | | | | | - Vendég: regisztráció, bejelentkezés |
-| Módosítás | K4 | felhasználói adat módosítás |  1.0 | A felhasználóknak lehetőségük van megváltoztatni a felhasználónevüket és jelszavukat. Ha a felhasználó a jelszavát akarja megváltoztatni, akkor meg kell adnia az ÚJ jelszót, annak ellenőrzését és az eredeti jelszót. |
+| Módosítás | K4 | felhasználói adat módosítás |  1.0 | Az adatlapján lehetősége van további információk megadására, valamint változatatni azokat az adott mezők kitöltésének megfelelően. |
 | Módosítás | K5 | Elfelejtett jelszó |  1.0 | Ha a felhasználó elfelejti a jelszavát, akkor lehetősége van visszaállítani a jelszavát, amelyet a regisztrált e-mail címére küldenek. |
 
 
@@ -50,12 +50,16 @@ Azért hogy egyszerűbbé tegyük a téma iránt érdeklődők vagy(és) a publi
 
 
 ## 11. Fogalomszótár
-
-- A fogalomszótár a dokumentációban megemlített idegen esetleg
-nem egyértelmű jelentésű szavak / szakszavak pontos
-meghatározását írja le.
-- Példa: “[web-service]:különböző programnyelveken írt és különböző
-platformokon futó szoftveralkalmazások interneten keresztül történő
-adatcseréjére használt vebszolgáltatások.
-[multiplatform]: több környezetben futtatható alkalmazás.
-[main menu]: A fő menü, amely a weboldal indulásakor megjelenik.
+- Reszponzív: a lehetőségekhez igazodó, rugalmasan alkalmazkodó. Reszponzív például az a weboldal, amely valamennyi eszközhöz és kijelzőmérethez rugalmasan alkalmazkodik és egyformán esztétikus és funkcionális.
+- Keretrendszer: Önmagában közvetlenül nem használható, de bizonyos tipikus feladatok elvégzését nagy mértékben segítő, egységes módon megszerkesztett "építőkockákat" komponenseket tartalmazó halmaz. A keretrendszerek lényege, hogy a különböző alkalmazásokban leggyakrabban használt elemeket egyetlen helyre gyűjtik össze, és készen kínálják a fejlesztők valamint a programok számára, amelyek így rengeteg elvégzendő munkától mentesülnek.
+- PHP: a PHP egy általános szerveroldali szkriptnyelv dinamikus weblapok készítésére.
+- HTML: HyperText Markup Language, „hiperszöveges jelölőnyelv”) egy leíró nyelv, melyet weboldalak készítéséhez fejlesztettek ki, és mára már internetes szabvánnyá vált a W3C (World Wide Web Consortium) támogatásával.
+-  CSS:  a CSS (Cascading Style Sheets, magyarul: „lépcsőzetes stíluslapok”) a számítástechnikában egy stílusleíró nyelv, mely a HTML vagy XHTML típusú strukturált dokumentumok megjelenését írja le.
+- Javascript: a JavaScript programozási nyelv egy objektumorientált, prototípus-alapú szkriptnyelv, amelyet weboldalakon elterjedten használnak.
+- MySQL: a MySQL egy többfelhasználós, többszálú, SQL-alapú relációs adatbázis-kezelő szerver.
+- GDPR: a General Data Protection Regulation kezdőbetűiből képzett mozaikszó, magyarul általános adatvédelmi rendelet.
+- Git Kanban: A kanban (magyarul „kártya”, „tábla”, „bizonylat”) a termelés vezérlésének a Pull-Prinzip (azaz húzó- vagy hívóelv) és kizárólag egy fogyasztási helyen fellépő igény kielégítésére koncentrál. A kanban rendszerben egy (kanban) mennyiség fogyása alapján irányítjuk a gyártást vagy beszerzést.
+- Visual Studio Code vagy PhpStorm: a kódoláshoz használt integrált fejlesztési környezet
+- Sublime Text: szövegszerkesztő
+- Uizard prototype:  UI prototípuskészítő eszköz. Gyorsan lehet a segítségével prototípusokat tervezni. Gyors alkalmazás-, web- és UI prototípus készítésre is képes.
+- CAPTCHA: Completely Automated Public Turing test to tell Computers and Humans Apart, aminek a jelentése „teljesen automatizált nyilvános Turing-teszt a számítógép és az ember megkülönböztetésére”
