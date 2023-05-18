@@ -1,8 +1,3 @@
-
-
-
-
-
 ## Rendszerterv
 
 ## 1. A rendszer célja
@@ -85,6 +80,9 @@ eszközökre(okostelefonok,táblagépek) készül, reszponzivitás figyelembevé
 
 ## 8. Architekturális terv
 
+## 9. Adatbázis terv
+![Rendszerterv - 9. Adatbázis terv](https://cdn.discordapp.com/attachments/323508728508710913/1108854313016643584/image.png)
+
 ## 11. Tesztterv
 
 - Példa:” A tesztelések célja a rendszer és komponensei funkcionalitásának
@@ -123,8 +121,6 @@ Tesztelési eljárások
     a tesztelés ideje elhúzódhat plusz egy héttel.
 
   ### Tesztelendő funkciók
-
-
     - Android
        - Login felület:
 
@@ -143,6 +139,7 @@ Tesztelési eljárások
 
     - Hibás regisztrációs adatok megadásakor hibaüzenetet kell kapjon a
     felhasználó.”
+
 ## 12.Telepítési terv
 - Androidos alkalmazás:
   - Töltse le az alkalmazást a Google áruházból, adja meg a szükséges
