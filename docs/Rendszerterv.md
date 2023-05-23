@@ -29,6 +29,16 @@ Feladatuk az adatok tárolásához szükséges adatszerkezetek kialakítása,
 funkciók létrehozása, a különböző platformok kiszolgálása adatokkal.
 
 ## 4. Követelmények 
+  - Funkcionális követelmények:
+    - Felhasználók adatainak tárolása.
+    - Újraméretezhetés
+    - Androidon és webes környezeten való működés
+    - Egyszerűen frissíthető felület
+    - Biztonságos és fejleszthető adatbázis architektúra
+  - Nem funkcionális követelmények: 
+    - A felhasználók nem juthatnak hozzá más felhasználók személyes adataihoz a nevükön és azonosítóikon kívül.
+  - Törvényi előírások, szabványok: 
+    -  GDPR-nek való megfelelés.
 
 ## 5. Funkcionális terv
 - Leírja a felhasználói szerepköröket, és hogy milyen feladatokat
