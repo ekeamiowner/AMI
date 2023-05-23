@@ -19,14 +19,22 @@ megtekintheti.”
 ## 2. Projektterv
 - Leírja a szerepköröket, kik vannak a csapatban és min dolgoznak. Ide
 kerül az ütemterv és általában mérföldköveket tartalmaz.
-- Példa: ”
-Projektszerepkörök, felelőségek:
-Scrum master: Dr. Tajti Tibor Gábor
-Product owner: Dr. Tajti Tibor Gábor
-Projektmunkások és felelőségek:
-Backend munkálatok: (csapat tagjai)
-Feladatuk az adatok tárolásához szükséges adatszerkezetek kialakítása,
-funkciók létrehozása, a különböző platformok kiszolgálása adatokkal.
+- Projektszerepkörök, felelőségek:
+    - Scrum master: Dr. Tajti Tibor Gábor
+    - Product owner: Dr. Tajti Tibor Gábor
+    - Projektmunkások és felelőségek:
+      - Backend munkálatok: 
+        - 1. csoport:
+          - Vámos Ákos
+          - Vámos Márton
+          - Verebélyi Valentin
+        - 2. csoport:
+          - Benke Balázs
+          - Réz Levente
+          - Stanga Péter
+        - Senior:
+          - Bagoly Gábor 
+        - Feladatuk az adatok tárolásához szükséges adatszerkezetek kialakítása, funkciók létrehozása, a különböző platformok kiszolgálása adatokkal.
 
 ## 4. Követelmények 
   - Funkcionális követelmények:
