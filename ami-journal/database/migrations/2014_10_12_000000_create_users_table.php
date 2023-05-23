@@ -22,7 +22,7 @@ return new class extends Migration
           $table->integer('appointed_as_reviwer')->default(0);
           $table->integer('accepted_reviewer')->default(0);
           $table->integer('completed_review')->default(0);
-          $table->timestamp('deteled_at')->default(null);
+          $table->timestamp('deleted_at')->nullable();
         });
     }
 
