@@ -1,24 +1,12 @@
 ## Rendszerterv
 
 ## 1. A rendszer célja
-- Leírja hogy mit szeretne megoldani a rendszer.
-- A rendszer célja, hogy a felhasználó játékos körülmények között tud
-tanulni, különböző feladatokat megoldani.
-- A cél 
-- A felhasználó pontszámokat kap arról, hogyan sikerült megoldania a feladatokat. Fontos, hogy a felhasználó
-könnyen el tudjon igazodni a felületeken ezért minimalista felhasználói
-felületet kap a program.
-- A tanár szerepkörrel rendelkező felhasználók
-feltölthetnek feladatsorokat az adatbázisba. A rendszer használható
-Androidos eszközökön, alkalmazás formájában, valamint webes felületen is
-elérhető.
--A rendszer az adatokat egy Web Service segítségével kapja az
-adatbázisból.
-- Mivel az alkalmazást csak webes felületen, és Android
-alkalmazásban szeretnénk elérhetővé tenni, nem célunk hogy más, például
-IOS operációs rendszerrel rendelkező eszközön fusson. A felhasználó a
-feladatsorok megoldása után pontszámokat kap. Teljesítményét a toplistán is
-megtekintheti.”
+- A rendszer célja az hogy az Eszterházy Károly Katolikus Egyetem informatikai és matematikai publikációit egy publikusan elérhető oldalon megjelenítse.
+- A cél az hogy akár a diákok, akár az intézménnyel kapcsolatban nem álló személyek is hozzáférjenek bizonyos egyetemi cikkekhez, folyóiratokhoz.
+- Bizonyos szerkesztői/admin jogokkal ellátott személyek mellett bárki képes legyen feltölteni dokumentumokat, és azokat könnyen publikussá tudja tenni.
+- A fentemlített funkciókhoz egy felhasználói rendszert alakítunk ki, ami viszonylag kevés információt tartalmaz a felhasználók személyes információriról. Ehelyett inkább a felhasználók közötti kapcsolatok tárolására helyezzük a hangsúlyt, ez azt jelenti, hogy a felhasználóknak bizonyos kontrollja van a saját "feedjük" felett, valamint részben azt is meg tudják határozni hogy mely felhasználóknak legyen hozzáférése bizonyos dokumentumaikhoz.
+- Olyan rendszer kialakítása a cél, ami publikáló és olvasó barát is, ehhez elengedhetetlen hogy olyan backendet hozzunk létre, ami könnyen fejleszthető, skálázható; valamint az emlitett backendnek egy olyan lényegretörő, ergonomikus elrendezésű frontendet kell kiegészítenie, amit a felhasználók szívesen használnak.
+- Az olvasókon kívül a többi szerepkört betöltő személyek számára is letisztult felületet kell biztosítani, mint például a cikkeket elbíráló bizottság.
 
 ## 2. Projektterv
 - Leírja a szerepköröket, kik vannak a csapatban és min dolgoznak. Ide
