@@ -8,7 +8,7 @@ class CreateRevisionsTable extends Migration {
 	public function up()
 	{
 		Schema::create('revisions', function(Blueprint $table) {
-			$table->increments('id');
+			$table->integer('id', true)->unsigned();
 			$table->integer('article_id')->unsigned();
 			$table->text('note');
 			$table->string('pdf_path');

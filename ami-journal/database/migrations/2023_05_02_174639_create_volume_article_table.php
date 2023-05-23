@@ -11,7 +11,7 @@ class CreateVolumeArticleTable extends Migration {
 			$table->integer('volume_id')->unsigned();
 			$table->integer('article_id')->unsigned();
 			$table->integer('from_page')->unsigned();
-			$table->integer('to_page');
+			$table->integer('to_page')->unsigned();
 		});
 	}
 
