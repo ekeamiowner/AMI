@@ -1,34 +1,44 @@
 ## Rendszerterv
 
 ## 1. A rendszer célja
-- Leírja hogy mit szeretne megoldani a rendszer.
-- Példa: “A rendszer célja, hogy a felhasználó játékos körülmények között tud
-tanulni, különböző feladatokat megoldani. A felhasználó pontszámokat kap
-arról, hogyan sikerült megoldania a feladatokat. Fontos, hogy a felhasználó
-könnyen el tudjon igazodni a felületeken ezért minimalista felhasználói
-felületet kap a program. A tanár szerepkörrel rendelkező felhasználók
-feltölthetnek feladatsorokat az adatbázisba. A rendszer használható
-Androidos eszközökön, alkalmazás formájában, valamint webes felületen is
-elérhető. A rendszer az adatokat egy Web Service segítségével kapja az
-adatbázisból. Mivel az alkalmazást csak webes felületen, és Android
-alkalmazásban szeretnénk elérhetővé tenni, nem célunk hogy más, például
-IOS operációs rendszerrel rendelkező eszközön fusson. A felhasználó a
-feladatsorok megoldása után pontszámokat kap. Teljesítményét a toplistán is
-megtekintheti.”
+- A rendszer célja az hogy az Eszterházy Károly Katolikus Egyetem informatikai és matematikai publikációit egy publikusan elérhető oldalon megjelenítse.
+- A cél az hogy akár a diákok, akár az intézménnyel kapcsolatban nem álló személyek is hozzáférjenek bizonyos egyetemi cikkekhez, folyóiratokhoz.
+- Bizonyos szerkesztői/admin jogokkal ellátott személyek mellett bárki képes legyen feltölteni dokumentumokat, és azokat könnyen publikussá tudja tenni.
+- A fentemlített funkciókhoz egy felhasználói rendszert alakítunk ki, ami viszonylag kevés információt tartalmaz a felhasználók személyes információriról. Ehelyett inkább a felhasználók közötti kapcsolatok tárolására helyezzük a hangsúlyt, ez azt jelenti, hogy a felhasználóknak bizonyos kontrollja van a saját "feedjük" felett, valamint részben azt is meg tudják határozni hogy mely felhasználóknak legyen hozzáférése bizonyos dokumentumaikhoz.
+- Olyan rendszer kialakítása a cél, ami publikáló és olvasó barát is, ehhez elengedhetetlen hogy olyan backendet hozzunk létre, ami könnyen fejleszthető, skálázható; valamint az emlitett backendnek egy olyan lényegretörő, ergonomikus elrendezésű frontendet kell kiegészítenie, amit a felhasználók szívesen használnak.
+- Az olvasókon kívül a többi szerepkört betöltő személyek számára is letisztult felületet kell biztosítani, mint például a cikkeket elbíráló bizottság.
 
 ## 2. Projektterv
 - Leírja a szerepköröket, kik vannak a csapatban és min dolgoznak. Ide
 kerül az ütemterv és általában mérföldköveket tartalmaz.
-- Példa: ”
-Projektszerepkörök, felelőségek:
-Scrum master: Dr. Tajti Tibor Gábor
-Product owner: Dr. Tajti Tibor Gábor
-Projektmunkások és felelőségek:
-Backend munkálatok: (csapat tagjai)
-Feladatuk az adatok tárolásához szükséges adatszerkezetek kialakítása,
-funkciók létrehozása, a különböző platformok kiszolgálása adatokkal.
+- Projektszerepkörök, felelőségek:
+    - Scrum master: Dr. Tajti Tibor Gábor
+    - Product owner: Dr. Tajti Tibor Gábor
+    - Projektmunkások és felelőségek:
+      - Backend munkálatok: 
+        - 1. csoport:
+          - Vámos Ákos
+          - Vámos Márton
+          - Verebélyi Valentin
+        - 2. csoport:
+          - Benke Balázs
+          - Réz Levente
+          - Stanga Péter
+        - Senior:
+          - Bagoly Gábor 
+        - Feladatuk az adatok tárolásához szükséges adatszerkezetek kialakítása, funkciók létrehozása, a különböző platformok kiszolgálása adatokkal.
 
 ## 4. Követelmények 
+  - Funkcionális követelmények:
+    - Felhasználók adatainak tárolása.
+    - Újraméretezhetés
+    - Androidon és webes környezeten való működés
+    - Egyszerűen frissíthető felület
+    - Biztonságos és fejleszthető adatbázis architektúra
+  - Nem funkcionális követelmények: 
+    - A felhasználók nem juthatnak hozzá más felhasználók személyes adataihoz a nevükön és azonosítóikon kívül.
+  - Törvényi előírások, szabványok: 
+    -  GDPR-nek való megfelelés.
 
 ## 5. Funkcionális terv
 - Leírja a felhasználói szerepköröket, és hogy milyen feladatokat
@@ -81,7 +91,7 @@ eszközökre(okostelefonok,táblagépek) készül, reszponzivitás figyelembevé
 ## 8. Architekturális terv
 
 ## 9. Adatbázis terv
-![Rendszerterv - 9. Adatbázis terv](https://cdn.discordapp.com/attachments/323508728508710913/1108854313016643584/image.png)
+![Rendszerterv - 9. Adatbázis terv](db_architecture.png)
 
 ## 11. Tesztterv
 
