@@ -29,8 +29,25 @@ Azért hogy egyszerűbbé tegyük a téma iránt érdeklődők vagy(és) a publi
 
 ## 6. Használati esetek
 - Ez a fejezet leírja pl. melyik felhasználó milyen funkciókat tud használni. 
-- Példa: “ADMIN: Az ADMIN beléphet mindegyik más szerepkörbe, hogy az hibamentes működését ellenőrizhesse. Az Admin(ok) feladata a rendszer problémamentes működése. Ez egyben jár azzal, hogy az egész rendszerhez van hozzáférésük. Az Admin(ok)nak hozzá kell tudni férniük a felhasználók listájához, ahol mindent átváltoztathatnak egy felhasználó profilján. Tudniuk kell a felhasználók jogosultságait, szerepkörét, jelszavát, és felhasználónevét módosítani. Továbbá képesnek kell lenniük arra, hogy felhasználókat vegyenek fel rendszerbe és, hogy rakjanak le belőle. Fontos, hogy ők is képesek feladatok létrehozni, mint a tanárok. Képesek üzenetet küldeni az összes felhasználónak, valamint globális üzeneteket, amelyet mindenki megkap egyszerre. A Diák jegyeit csak ők tudják módosítani, miután a Tanár adott neki.”
-
+- A ülönböző felhasználók szerepkörei:
+  - Admin:
+    - Összes szerepkör betöltéséhez jogosultsága van
+    - Felhasználói adatokat változtathatja, látja
+    - Adatbázis többi részéhez is hozzáférése van
+    - Kvízeket hozhat létre
+  - Diák:
+    - Kvízeket kitölthet
+    - Más diák felhasználókkal üzeneteket válthat
+    - Saját órarendjét megtekintheti
+    - Dokumentumokat tölthet fel
+  - Tanár:
+    - Kvízeket adhat ki
+    - Saját maga által kiadott kvízekhez, dokumentumokhoz a többi felhasználóknak hozzáférését változtathatja  
+    - Publikálhat
+    - Publikációkat bírálhat
+  - Nem regisztrált felhasználó:
+    - Bizonyos (publikus) dokumentumokat megtekinthet
+ - A fent említett szerepkörök (kivéve a nem regisztrált felhasználót) betöltéséhez belépés, egyes esetekben regisztráció is szükséges.
 
 ## 7. Megfeleltetés, hogyan fedik le a használati esetek a követelményeket
 
