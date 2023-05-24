@@ -91,7 +91,7 @@ eszközökre(okostelefonok,táblagépek) készül, reszponzivitás figyelembevé
 ## 8. Architekturális terv
 
 ## 9. Adatbázis terv
-![Rendszerterv - 9. Adatbázis terv](db_architecture.png)
+![Rendszerterv - 9. Adatbázis terv](img/db_architecture.png)
 
 ## 11. Tesztterv
 
