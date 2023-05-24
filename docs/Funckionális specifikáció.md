@@ -59,7 +59,17 @@ Azért hogy egyszerűbbé tegyük a téma iránt érdeklődők vagy(és) a publi
 
 ## 9. Forgatókönyv
 - A forgatókönyvek a rendszer egy-egy tipikus felhasználását mutatják be. A forgatókönyvnek általában van egy célja, például egy iktató rendszerben: Levél érkeztetése, címzett értesítése, dokumentumtárba helyezés. A forgatókönyv bemutatja, milyen funkciókat kell használni, milyen sorrendben a kívánt cél elérése érdekében. Ilyen értelem egy telepítési útmutatóhoz hasonlítanak.
-- Példa: “Szereplők: Futási időben három szereplő figyelhető meg. Az első szereplő maga a futó alkalmazás. (weben/androidon) Bejelentkezve kilehet választani a kívánt játékot. Megjelenik a timer a segítségek, és a játékos feladat. Ezzel van interakcióban a második szereplő, maga a felhasználó, aki kitölti a tesztet, úgy hogy az időn ne lépjen túl, és ha szüksége van akkor igénybe veheti a segítségek egyikét. A harmadik szereplő egy web-service, ami a tesztekhez szükséges adatokat szolgáltatja az alkalmazásnak egy adatbázisból.”
+- Diák:
+  - Belépés után meg tudja tekinteni a számára elérhetővé tett dokumentumokat. Ha éppen van kitöltendő kvíze, akkor azt ki tudja tölteni, majd arra pontot kap. Tanulmányi problémákkal kapcsolatban segítséget tud kérni a rendszer többi felhasználójától.
+  - Szintén belépés után meg tudja tekinteni az órarendjét, más felhasználók tevékenységét, ezzel elősegítve a saját tanulmányait.
+- Tanár:
+  - Belépés után dokumentumot tölthet fel akár diákok, akár tanárok számára. Kolegáival egyeztethet a publikációkról, stb.
+  - Kvízt tölthet fel a diákjainak, majd a kiltöltésekről eredményt kap. Ezekhez az eredményekhez a későbbiekben is hozzáférést kap. Bizonyos anyagokhoz időkeretes hozzáférést is biztosíthat felhasználóknak (beleértve a kvízeket).
+  - Rendszer adminoknak üzenetet küldhet felmerülő problémák miatt.
+- Admin:
+  - Karbantartás vagy bármilyen megoldandó probléma megoldásához lép be. Hozzáfér az adatbázishoz valamint módosítási joga is van effelett. Az adatbázis tartalmának megváltoztatásával az esetlegesen felmerülő problémák jelentős része orvosolható, de ezenkívül frontendes problémákon is tud segíteni.
+  - Ha a rendszert szeretné frissíteni, azt is tudja, mivel van jogosultsága mindenhez
+  - Akár a tanárok által megosztott publikációkat is megtekintheti bejelentkezés után.    
 
 
 ## 10. Funkció, követelmény megfeleltetés
