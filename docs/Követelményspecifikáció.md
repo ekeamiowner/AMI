@@ -98,7 +98,7 @@ számtalan lehetőséggel bíró Laravel 9 által kínált módszerekkel.
 
 
 ## 7. Igényelt üzleti folyamatok
-![Kövspec - 7. Igényelt üzleti folyamatok](https://cdn.discordapp.com/attachments/323508728508710913/1108853759783743580/image.png)
+![Kövspec - 7. Igényelt üzleti folyamatok](/img/model_of_requeired_business_processes.png)
 
 
 
