@@ -28,6 +28,9 @@ kerül az ütemterv és általában mérföldköveket tartalmaz.
           - Bagoly Gábor 
         - Feladatuk az adatok tárolásához szükséges adatszerkezetek kialakítása, funkciók létrehozása, a különböző platformok kiszolgálása adatokkal.
 
+## 3. Üzleti folyamatok modellje
+...
+
 ## 4. Követelmények 
   - Funkcionális követelmények:
     - Felhasználók adatainak tárolása.
