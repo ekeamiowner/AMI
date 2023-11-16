@@ -1,0 +1,22 @@
+.nav{
+    margin: none;
+    width: 100%;
+    overflow: hidden;
+    background-color: #f2ffb0;
+    position: fixed;
+}
+.nav a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+
+}
+.nav a:hover{
+    background-color: #e3ff54;
+    color: black;
+}
+
+.nav a:visited{
+    color: black;
+}
