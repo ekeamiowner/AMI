@@ -7,8 +7,11 @@
         <link rel="stylesheet" href="/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/styles.min.css">
         <link rel="stylesheet" href="/css/aos.min.css">
+        <link rel="stylesheet" href="/css/navbar.css">
     </head>
     <body>
+        @include('layouts.navbar')
+        
         @include('layouts.header')
 
         <main class="container">
