@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,4 @@ Route::get('/login',function () {
 Route::get('/admin', function() {
     return view('adminpanel.adminpanel');
 });
+Route::get('/register', [AuthController::class, 'register'])->name('register');
