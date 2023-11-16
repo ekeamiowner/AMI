@@ -24,3 +24,5 @@ Route::get('/admin', function() {
     return view('adminpanel.adminpanel');
 });
 Route::get('/register', [AuthController::class, 'register'])->name('register');
+Route::post('/register', [AuthController::class, 'registerPost'])->name('register');
+Route::get('/login', [AuthController::class, 'login'])->name('login');
