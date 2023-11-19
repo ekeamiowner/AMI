@@ -26,3 +26,8 @@ Route::get('/admin', function() {
 Route::get('/about', function() {
     return view('pages.about');
 });
+Route::get('/register', function () {
+    return view('register.register');
+})->name('register');
+
+
