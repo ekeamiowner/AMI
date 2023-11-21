@@ -21,7 +21,10 @@
                                 <div class="mb-3" style="padding-top: 2vw;">
                                     <button class="btn btn-primary d-block w-100" type="submit" style="background: #003447;">Register</button>
                                 </div>
-                            </form>
+                                <div class="mb-3" style="padding-top: 2vw;">
+                                <p style="color: white; margin-top: 1vw;">Already have an account?</p>
+                                    <a href="{{ asset('login') }}" class="btn btn-secondary d-block w-100" style="background: #003447;">Login</a>
+                                </div> 
                         </div>
                     </div>
                 </div>
