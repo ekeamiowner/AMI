@@ -36,6 +36,20 @@
                             <div class="d-grid">
                                 <button class="btn btn-primary">Login</button>
                             </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6 col-xl-4">
+                    <div class="card mb-5" style="border-width: 0px;">
+                        <div class="card-body d-flex flex-column align-items-center" style="background: #004863;border-radius: 25px;"><img class="img-fluid" src="/img/unknown.png" style="margin-bottom: 2vw;padding-right: 2vw;padding-left: 2vw;padding-top: 4vw;">
+                            <form class="text-center" method="post">
+                                <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Email"></div>
+                                <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="Password"></div>
+                                <div class="mb-3" style="padding-top: 2vw;"><button class="btn btn-primary d-block w-100" type="submit" style="background: #003447;">Login</button></div>
+                                <div class="mb-3" style="padding-top: 2vw;">
+                                    <p class="text-white">Don't have an account? Register here!</p>
+                                    <a href="{{ route('register') }}" class="btn btn-secondary d-block w-100" style="background: #003447;">Register</a>
+                                </div>
+                            </form>
                         </div>
                     </form>
                 </div>
@@ -44,4 +58,5 @@
     </div>
 </body>
 </html>
+@endsection
 @endsection
