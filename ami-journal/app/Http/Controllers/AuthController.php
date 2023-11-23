@@ -45,4 +45,11 @@ class AuthController extends Controller
  
         return back()->with('error', 'Error Email or Password');
     }
+
+    public function logout()
+    {
+        Auth::logout();
+ 
+        return redirect()->route('login');
+    }
 }
