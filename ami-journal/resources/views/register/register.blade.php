@@ -12,7 +12,7 @@
 <body>
 <div class="row justify-content-center mt-5">
         <div class="col-lg-4">
-            <div class="card">
+            <div class="card" style="position: inherit;">
                 <div class="card-header">
                     <h1 class="card-title">Register</h1>
                 </div>
