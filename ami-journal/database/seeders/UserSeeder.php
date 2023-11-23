@@ -10,15 +10,15 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         User::factory([
-            'full_name' => 'Site Admin',
+            'name' => 'Site Admin',
             'email' => 'admin@test.com',
          ])->create();
         User::factory([
-                          'full_name' => 'Test Editor',
+                          'name' => 'Test Editor',
                           'email' => 'editor@test.com',
                       ])->create();
         User::factory([
-                          'full_name' => 'Test Technical Editor',
+                          'name' => 'Test Technical Editor',
                           'email' => 'technical@test.com',
                       ])->create();
         User::factory(50)->create();
