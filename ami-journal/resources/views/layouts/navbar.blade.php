@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/navbar.css">
 <div class="nav">
         <a href="http://127.0.0.1:8000/">Home</a>
         <a>Browse</a>

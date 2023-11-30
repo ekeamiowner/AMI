@@ -3,10 +3,11 @@
     width: 100%;
     overflow: hidden;
     background-color: #f2ffb0;
+    margin-bottom: 50px;
     position: fixed;
 }
 .nav a{
-    color: white;
+    color: black;
     text-decoration: none;
     padding: 10px 20px;
     display: inline-block;
