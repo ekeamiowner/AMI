@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\SubmissionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,4 +39,8 @@ Route::get('/about', function() {
 Route::get('/register', function () {
     return view('register.register');
 })->name('register');
+
+Route::get('/submissions', function () {
+    return view('pages.submissions');
+});
 
