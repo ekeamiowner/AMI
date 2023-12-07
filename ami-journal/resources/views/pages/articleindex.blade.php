@@ -10,7 +10,20 @@
     <title>Articles</title>
 </head>
 <body>
+    <h1>Articles</h1>
     
+    <ul>
+        @foreach($articles as $article)
+            <li>
+                <strong>Title:</strong> {{ $article->title }}<br>
+                <strong>Author:</strong> {{ $article->user->name }}<br>
+                <strong>Editor:</strong> {{ $article->editor->name }}<br>
+                <strong>Abstract:</strong> {{ $article->abstract }}<br>
+                <strong>Language:</strong> {{ $article->language }}<br>
+            </li>
+            <hr>
+        @endforeach
+    </ul>
 </body>
 </html>
 @endsection
