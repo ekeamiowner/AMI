@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/navbar.css">
-<div class="nav">
+<div class="nav" id="navbar">
     <a href="http://127.0.0.1:8000/">Home</a>
     <a>Browse</a>
     <a href="http://127.0.0.1:8000/submissions">Submissions</a>
@@ -22,3 +22,18 @@
         </form>
     @endguest
 </div>
+
+<script>
+        window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    var navbar = document.querySelector(".nav");
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        navbar.classList.add("fixed");
+    } else {
+        navbar.classList.remove("fixed");
+    }
+}
+</script>
