@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\SubmissionController;
 use App\Http\Controllers\SubmissionCreateController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,3 +54,4 @@ Route::get('/submissions/create', function () {
     return view('pages.submissionscreate');
 });
 
+Route::get('/articles', [ArticleController::class, 'index'])->name('pages.articleindex');
