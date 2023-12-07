@@ -10,7 +10,18 @@
     <title>Articles</title>
 </head>
 <body>
+    <h1>Articles</h1>
     
+    <ul>
+        @foreach($articles as $article)
+            <li>
+                <strong>Title:</strong> {{ $article->title }}<br>
+                <strong>Author:</strong> {{ $article->user->name }}<br>
+                <!-- Itt megjelenítheted további cikkinformációkat vagy a szükséges adatokat -->
+            </li>
+            <hr>
+        @endforeach
+    </ul>
 </body>
 </html>
 @endsection
