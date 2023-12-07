@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\SubmissionController;
+use App\Http\Controllers\SubmissionCreateController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,5 +48,8 @@ Route::get('/register', function () {
 
 Route::get('/submissions', function () {
     return view('pages.submissions');
+});
+Route::get('/submissions/create', function () {
+    return view('pages.submissionscreate');
 });
 
