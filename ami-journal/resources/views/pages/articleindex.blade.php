@@ -17,7 +17,9 @@
             <li>
                 <strong>Title:</strong> {{ $article->title }}<br>
                 <strong>Author:</strong> {{ $article->user->name }}<br>
-                <!-- Itt megjelenítheted további cikkinformációkat vagy a szükséges adatokat -->
+                <strong>Editor:</strong> {{ $article->editor->name }}<br>
+                <strong>Abstract:</strong> {{ $article->abstract }}<br>
+                <strong>Language:</strong> {{ $article->language }}<br>
             </li>
             <hr>
         @endforeach
