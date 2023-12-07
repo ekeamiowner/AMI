@@ -2,36 +2,33 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Traits\ApiKey;
+use App\Traits\ApiResource;
+use App\Traits\UUID;
+use DateTime;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
+use Silber\Bouncer\Database\HasRolesAndAbilities;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasFactory, Notifiable, ApiResource, UUID, HasRolesAndAbilities, ApiKey;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
     protected $fillable = [
-        'name',
-        'email',
-        'password'
+        'name', 'email', 'password',
     ];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
     protected $hidden = [
-        'password',
-        'remember_token'
+        'password', 'remember_token', 'api_key'
     ];
 
-    public $timestamps = false;
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
+
+    public function reviews() : HasMany {
+        return $this->hasMany(Revision::class)->withPivot(['state', 'content']);
+    }
 }
