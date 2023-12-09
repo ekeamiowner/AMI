@@ -14,18 +14,12 @@ class Article extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
-        'user_id',
-        'editor_id',
         'title',
         'abstract',
-        'state',
-        'page_count',
+        'type',
         'note',
-        'language',
-        'doi',
         'source',
-        'type_id',
-        'latex_path',
+        'latex_path'
     ];
 
     protected $casts = [

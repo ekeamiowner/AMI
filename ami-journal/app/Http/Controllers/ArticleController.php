@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Article;
+use App\Models\Type;
+use Illuminate\Support\Facades\Validator;
 
 class ArticleController extends Controller 
 {
@@ -24,10 +26,12 @@ class ArticleController extends Controller
    *
    * @return Response
    */
-  public function create()
-  {
-    
-  }
+public function create()
+{
+    $types = Type::all();
+    return view('article.create', ['types' => $types]);
+}
+
 
   /**
    * Store a newly created resource in storage.
@@ -35,15 +39,36 @@ class ArticleController extends Controller
    * @return Response
    */
   public function store(Request $request)
-  {
-    
-  }
+{
+    \Log::info('Request Data:', $request->all());
+    // Validate the form data
+    $request->validate([
+      'title' => 'required',
+      'summary' => 'required',
+      'type' => 'required',
+      'note' => 'nullable',
+      'upload' => 'nullable|mimes:pdf|max:2048',
+      'upload2' => 'nullable|mimes:tex|max:2048',
+  ]);
+  
+    $pdfPath = $request->file('upload')->store('pdfs', 'public');
+
+    $latexPath = null;
+    if ($request->hasFile('upload2')) {
+        $latexPath = $request->file('upload2')->store('latex', 'public');
+    }
+
+    return redirect()->route('home')->with('success', 'Article submitted successfully!');
+}
+  
+  
+
 
   /**
    * Display the specified resource.
    *
    * @param  int  $id
-   * @return Response
+   * @return Response 
    */
   public function show($id)
   {

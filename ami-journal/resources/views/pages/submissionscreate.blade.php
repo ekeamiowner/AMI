@@ -11,34 +11,37 @@
 </head>
 <body>
     <div class="createSubmission">
-    <form method="POST" action="register.php">
-        <table style="margin-left: auto; margin-right: auto;">
-            <tr>
-                <td style="background: #CECECE; height: 50px;"><label style="margin-left: 20px;">Create Article Form</label></td>
-            </tr>
-            <tr>
-                <td><input type="text" name="name" id="name" placeholder="Name"></td>
-            </tr>
-            <tr>
-                <td><input type="text" name="summary" id="summary" placeholder="Summary"></td>
-            </tr>
-            <tr>
-                <td><input type="text" name="type" id="type" placeholder="Type"></td>
-            </tr>
-            <tr>
-                <td><input type="text" name="note" id="note" placeholder="Note"></td>
-            </tr>
-            <tr>
-                <td><input type="file" name="upload" id="upload">Upload PDF file</td>
-            </tr>
-            <tr>
-                <td><input type="file" name="upload2" id="upload2">Upload LaTeX file</td>
-            </tr>
-            <tr>
-                <td><button type="submit" class="btn btn-primary">Submit</button></td>
-            </tr>
-        </table>
-    </form>
+    <form method="POST" action="{{ route('articles.store') }}" enctype="multipart/form-data">
+    @csrf 
+    @method('POST')
+    <table style="margin-left: auto; margin-right: auto;">
+        <tr>
+            <td style="background: #CECECE; height: 50px;"><label style="margin-left: 20px;">Create Article Form</label></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="title" id="title" placeholder="Title"></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="abstract" id="abstract" placeholder="Abstract"></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="type" id="type" placeholder="Type"></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="note" id="note" placeholder="Note"></td>
+        </tr>
+        <tr>
+            <td><input type="file" name="upload" id="upload">Upload PDF file</td>
+        </tr>
+        <tr>
+            <td><input type="file" name="upload2" id="upload2">Upload LaTeX file</td>
+        </tr>
+        <tr>
+            <td><button type="submit" class="btn btn-primary">Submit</button></td>
+        </tr>
+    </table>
+</form>
+
     </div>
 </body>
 </html>
