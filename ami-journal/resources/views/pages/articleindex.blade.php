@@ -16,14 +16,18 @@
         @foreach($articles as $article)
             <li>
                 <strong>Title:</strong> {{ $article->title }}<br>
-                <strong>Author:</strong> {{ $article->user->name }}<br>
-                <strong>Editor:</strong> {{ $article->editor->name }}<br>
+                <strong>Author:</strong> {{ optional($article->user)->name }}<br>
+                <strong>Editor:</strong> {{ optional($article->editor)->name }}<br>
                 <strong>Abstract:</strong> {{ $article->abstract }}<br>
                 <strong>Language:</strong> {{ $article->language }}<br>
             </li>
             <hr>
         @endforeach
     </ul>
+
+    <div class="pagination">
+        {{ $articles->links() }}
+    </div>
 </body>
 </html>
 @endsection
