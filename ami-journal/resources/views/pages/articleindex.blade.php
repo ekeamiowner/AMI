@@ -11,7 +11,11 @@
 </head>
 <body>
     <h1>Articles</h1>
-    
+    <form action="{{ route('pages.articleindex') }}" method="GET">
+        <input type="text" name="search" placeholder="Search articles">
+        <button type="submit">Search</button>
+    </form>
+
     <ul>
         @foreach($articles as $article)
             <li>

@@ -12,12 +12,20 @@ class ArticleController extends Controller
    * Display a listing of the resource.
    *
    * @return Response
+   * @param  Request
    */
-  public function index()
+  public function index(Request $request)
   {
-    $articles = Article::paginate(1); 
-    return view('pages.articleindex', ['articles' => $articles]);
+      $search = $request->input('search');
+      $query = Article::query();
+      if ($search) {
+          $query->where('title', 'like', "%$search%")
+                ->orWhere('abstract', 'like', "%$search%");
+      }
 
+      $articles = $query->paginate(1);
+
+      return view('pages.articleindex', ['articles' => $articles]);
   }
 
   /**
