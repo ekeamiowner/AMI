@@ -4,7 +4,6 @@
     overflow: hidden;
     background-color: #f2ffb0;
     margin-bottom: 50px;
-    position: fixed;
 }
 .nav a{
     color: black;
@@ -32,4 +31,10 @@
 
 .navbar{
     position: inherit;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
 }

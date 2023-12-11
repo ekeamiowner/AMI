@@ -6,35 +6,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/submissionform.css">
     <title>Submissions</title>
 </head>
-<style>
-    .createSubmission {
-        margin-top: 50px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-        border: 1px solid black;
-        border-radius: 10px;
-        padding: 10px;
-    }
-    .createSubmission input {
-        width: 100%;
-        padding: 10px;
-        margin-top: 10px;
-    }
-    .createSubmission button {
-        width: 100%;
-        padding: 10px;
-        margin-top: 10px;
-    }
-    .createSubmission label {
-        font-size: 20px;
-    }
-    .createSubmission table {
-        width: 100%;
-    }
-</style>
 <body>
     <div class="createSubmission">
     <form method="POST" action="register.php">
@@ -55,10 +29,10 @@
                 <td><input type="text" name="note" id="note" placeholder="Note"></td>
             </tr>
             <tr>
-                <td><input type="file" name="upload" id="upload"></td>
+                <td><input type="file" name="upload" id="upload">Upload PDF file</td>
             </tr>
             <tr>
-                <td><input type="file" name="upload2" id="upload2"></td>
+                <td><input type="file" name="upload2" id="upload2">Upload LaTeX file</td>
             </tr>
             <tr>
                 <td><button type="submit" class="btn btn-primary">Submit</button></td>
