@@ -3,15 +3,15 @@
 <div class="nav" id="navbar">
     <a href="http://127.0.0.1:8000/">Home</a>
     <a href="http://127.0.0.1:8000/articles">Browse</a>
-    <a href="http://127.0.0.1:8000/submissions">Submissions</a>
-    <a href="http://127.0.0.1:8000/about">About</a>
-    <input style="height: 30px; margin-top: auto; margin-bottom: auto; margin-left: auto;"></input>
-    
+
     @guest
         <a href="http://127.0.0.1:8000/login">Submissions</a>
     @else
         <a href="http://127.0.0.1:8000/submissions">Submissions</a>
     @endguest
+    <a href="http://127.0.0.1:8000/about">About</a>
+
+    <input style="height: 30px; margin-top: auto; margin-bottom: auto; margin-left: auto;"></input>
 
     @guest
         <a href="{{ route('login') }}" style="margin-left: auto;">Login</a>
