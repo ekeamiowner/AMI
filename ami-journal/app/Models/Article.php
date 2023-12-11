@@ -19,7 +19,8 @@ class Article extends Model
         'type',
         'note',
         'source',
-        'latex_path'
+        'latex_path',
+        'state'
     ];
 
     protected $casts = [

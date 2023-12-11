@@ -45,7 +45,7 @@ public function create()
     $request->validate([
       'title' => 'required',
       'summary' => 'required',
-      'type' => 'required',
+      'type' => 'nullable|exists:types,id',
       'note' => 'nullable',
       'upload' => 'nullable|mimes:pdf|max:2048',
       'upload2' => 'nullable|mimes:tex|max:2048',

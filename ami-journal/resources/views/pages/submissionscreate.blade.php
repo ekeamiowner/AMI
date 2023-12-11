@@ -37,6 +37,16 @@
             <td><input type="file" name="upload2" id="upload2">Upload LaTeX file</td>
         </tr>
         <tr>
+                    <td>
+                        <label for="state">State:</label>
+                        <select name="state" id="state">
+                            <option value="SUBMITTED">Submitted</option>
+                            <option value="UNDER_REVIEW">Under Review</option>
+                            <option value="ACCEPTED">Accepted</option>
+                            <option value="REJECTED">Rejected</option>
+                        </select>
+                    </td>
+                </tr>
             <td><button type="submit" class="btn btn-primary">Submit</button></td>
         </tr>
     </table>
