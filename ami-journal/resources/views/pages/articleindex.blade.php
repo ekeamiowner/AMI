@@ -24,7 +24,7 @@
 
         .abstract-section 
         {
-            background-color: #e3ff54;
+            background-color: #feff99;
             padding: 10px;
             border-radius: 0 0 20px 20px;
         }
