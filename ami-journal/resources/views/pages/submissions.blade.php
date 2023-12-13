@@ -17,7 +17,9 @@
 </style>
 <body>
     <table class="btn">
-        <button type="submit" class="btn btn-primary" onclick="window.location.href='http://127.0.0.1:8000/submissions/create'">Create new submission</button>
+        <button type="submit" class="btn btn-primary" onclick="window.location.href='http://127.0.0.1:8000/submissions/create'">Create New Submission</button>
+        <br></br>
+        <button type="submit" class="btn btn-primary" onclick="window.location.href='http://127.0.0.1:8000/articles'">Search In The Journal</button>
     </table>
 </body>
 </html>

@@ -23,9 +23,9 @@ class ArticleController extends Controller
                 ->orWhere('abstract', 'like', "%$search%");
       }
 
-      $articles = $query->paginate(1);
+      $articles = $query->paginate(10);
 
-      return view('pages.articleindex', ['articles' => $articles]);
+      return view('pages.articleindex', ['articles' => $articles , 'search' => $search]);
   }
 
   /**
