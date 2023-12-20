@@ -21,8 +21,8 @@ class Type extends Model
 
     protected $fillable = ['name', 'active'];
 
-    public function article(): BelongsTo{
-        return $this->belongsTo(Article::class);
-    }
+    public function article(): BelongsTo {
+        return $this->belongsTo(Article::class, 'type_id');
+    }    
 
 }
