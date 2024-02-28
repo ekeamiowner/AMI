@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Type;
 use App\Models\Article;
+use Illuminate\Support\Facades\Auth; 
 
 class SubmissionController extends Controller
 {
@@ -26,7 +27,8 @@ class SubmissionController extends Controller
             'upload2' => 'file|mimes:latex|max:2048',
         ]);
 
-        $user_id = auth()->id();
+
+        $user_id = Auth::id();
         $editor_id = null;
         $title = $request->input('title');
         $abstract = $request->input('abstract');

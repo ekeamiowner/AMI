@@ -8,8 +8,8 @@ class CreateArticlesTable extends Migration {
 	public function up()
 	{
 		Schema::create('articles', function(Blueprint $table) {
-			$table->integer('id', true)->unsigned()->nullable();
-			$table->integer('user_id')->unsigned()->nullable();
+			$table->integer('id', true)->unsigned();
+			$table->integer('user_id')->unsigned();
 			$table->integer('editor_id')->nullable()->unsigned()->default(null);
 			$table->string('title')->nullable();
 			$table->text('abstract')->nullable();

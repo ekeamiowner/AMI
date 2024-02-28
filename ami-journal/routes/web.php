@@ -48,10 +48,10 @@ Route::get('/admin', function() {
 
 Route::group(['middleware' => 'auth'], function () {
     Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::get('/submissions/create', [SubmissionController::class, 'create'])->name('submissions.create');
+    Route::post('/submissions/store', [SubmissionController::class, 'store'])->name('submissions.store');
 });
 
-Route::get('/submissions/create', [SubmissionController::class, 'create'])->name('submissions.create');
-Route::post('/submissions/store', [SubmissionController::class, 'store'])->name('submissions.store');
 
 
 

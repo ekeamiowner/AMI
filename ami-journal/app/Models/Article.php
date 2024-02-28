@@ -14,6 +14,8 @@ class Article extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
+        'user_id',
+        'editor_id',
         'title',
         'abstract',
         'type_id',
