@@ -14,7 +14,6 @@
             </div>
         </div>
     </div>
-    <div class="container d-sm-flex d-xl-flex justify-content-sm-center align-items-sm-center justify-content-xl-center align-items-xl-center" style="padding-top: 6vw;"><img class="img-fluid" data-aos="fade" data-aos-duration="1000" data-aos-once="true" src="/img/EKU.png"></div>
     <div class="container" data-aos="fade" data-aos-duration="1000" data-aos-once="true" style="padding-right: 0;padding-left: 0;">
         <nav class="navbar navbar-light navbar-expand-md py-3" style="background: #004863;border-top-left-radius: 15px;border-top-right-radius: 15px;margin-left: 0;margin-top: 5vw;margin-right: 0;margin-bottom: 0;padding-right: 0;padding-left: 0;">
             <div class="container"><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-3"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
@@ -86,6 +85,7 @@
             </div>
         </div>
     </div>
+    <div class="container d-sm-flex d-xl-flex justify-content-sm-center align-items-sm-center justify-content-xl-center align-items-xl-center" style="padding-top: 6vw;"><img class="img-fluid" data-aos="fade" data-aos-duration="1000" data-aos-once="true" src="/img/EKU.png"></div>
     <div class="container" style="padding-top: 12vw;text-align: center;">
         <div class="row" data-aos="fade" data-aos-duration="1800" data-aos-delay="50" data-aos-once="true">
             <div class="col-md-12">

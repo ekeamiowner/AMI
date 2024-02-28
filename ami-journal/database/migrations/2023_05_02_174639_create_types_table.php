@@ -11,6 +11,7 @@ class CreateTypesTable extends Migration {
 			$table->integer('id', true)->unsigned();
 			$table->string('name');
 			$table->boolean('active')->default(1);
+			$table->timestamps();
 		});
 	}
 

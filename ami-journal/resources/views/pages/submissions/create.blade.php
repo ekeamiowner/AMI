@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="createSubmission">
-    <form method="POST" action="{{ route('articles.store') }}" enctype="multipart/form-data">
+    <form method="POST" action="{{ route('submissions.store') }}" enctype="multipart/form-data">
     @csrf 
     @method('POST')
     <table style="margin-left: auto; margin-right: auto;">
@@ -22,13 +22,20 @@
             <td><input type="text" name="title" id="title" placeholder="Title"></td>
         </tr>
         <tr>
-            <td><input type="text" name="abstract" id="abstract" placeholder="Abstract"></td>
+            <td><textarea name="abstract" id="abstract" placeholder="Abstract"></textarea></td>
         </tr>
         <tr>
-            <td><input type="text" name="type" id="type" placeholder="Type"></td>
+            <td>
+                <label for="type_id">Select Type:</label>
+                <select name="type_id" id="type_id">
+                    @foreach ($types as $type)
+                        <option value="{{ $type->id }}">{{ $type->name }}</option>
+                    @endforeach
+                </select>
+            </td>
         </tr>
         <tr>
-            <td><input type="text" name="note" id="note" placeholder="Note"></td>
+            <td><textarea name="note" id="note" placeholder="Note"></textarea></td>
         </tr>
         <tr>
             <td><input type="file" name="upload" id="upload">Upload PDF file</td>
@@ -37,21 +44,10 @@
             <td><input type="file" name="upload2" id="upload2">Upload LaTeX file</td>
         </tr>
         <tr>
-                    <td>
-                        <label for="state">State:</label>
-                        <select name="state" id="state">
-                            <option value="SUBMITTED">Submitted</option>
-                            <option value="UNDER_REVIEW">Under Review</option>
-                            <option value="ACCEPTED">Accepted</option>
-                            <option value="REJECTED">Rejected</option>
-                        </select>
-                    </td>
-                </tr>
             <td><button type="submit" class="btn btn-primary">Submit</button></td>
         </tr>
     </table>
-</form>
-
+    </form>
     </div>
 </body>
 </html>

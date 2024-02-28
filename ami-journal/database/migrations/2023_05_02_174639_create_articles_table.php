@@ -22,6 +22,7 @@ class CreateArticlesTable extends Migration {
 			$table->integer('type_id')->unsigned()->nullable();
 			$table->string('latex_path')->nullable()->default(null);
 			$table->timestamp('deleted_at')->nullable()->default(null);
+			$table->timestamps();
 		}); 
 	}
 

@@ -13,6 +13,7 @@ class CreateRevisionsTable extends Migration {
 			$table->text('note');
 			$table->string('pdf_path');
 			$table->timestamp('deleted_at')->nullable(null);
+			$table->timestamps();
 		});
 	}
 

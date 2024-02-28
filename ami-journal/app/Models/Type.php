@@ -19,6 +19,8 @@ class Type extends Model
 {
     use HasFactory, ApiResource;
 
+    protected $primaryKey = 'id';
+
     protected $fillable = ['name', 'active'];
 
     public function article(): BelongsTo {

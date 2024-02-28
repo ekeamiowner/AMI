@@ -12,6 +12,7 @@ class CreateVolumesTable extends Migration {
 			$table->string('title')->nullable()->default(null);
 			$table->text('description');
 			$table->year('release_year');
+			$table->timestamps();
 		});
 	}
 

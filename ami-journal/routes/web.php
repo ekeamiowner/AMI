@@ -5,7 +5,6 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\SubmissionController;
-use App\Http\Controllers\SubmissionCreateController;
 use App\Http\Controllers\ArticleController;
 
 /*
@@ -19,42 +18,42 @@ use App\Http\Controllers\ArticleController;
 |
 */
 
+//Navbaron lévő routeok
 Route::get('/', function () {
-    return view('pages.welcome');
-});
-Route::get('/login',function () {
-    return view('login.login');
-});
-Route::get('/admin', function() {
-    return view('adminpanel.adminpanel');
-});
+    return view('pages.welcome.index');
+})->name('welcome.index');
 
+Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
+
+Route::get('/submissions', function () {
+    return view('pages.submissions.index');
+})->name('submissions');
+
+Route::get('/about', function() {
+    return view('pages.about.index');
+})->name('about.index');
+
+
+//Autentikáció
 Route::group(['middleware' => 'guest'], function () {
     Route::get('/register', [AuthController::class, 'register'])->name('register');
     Route::post('/register', [AuthController::class, 'registerPost'])->name('register');
     Route::get('/login', [AuthController::class, 'login'])->name('login');
     Route::post('/login', [AuthController::class, 'loginPost'])->name('login');
 });
- 
+
+Route::get('/admin', function() {
+    return view('adminpanel.adminpanel');
+});
+
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/home', [HomeController::class, 'index']);
     Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
 });
-Route::get('/about', function() {
-    return view('pages.about');
-});
-Route::get('/register', function () {
-    return view('register.register');
-})->name('register');
 
-Route::get('/submissions', function () {
-    return view('pages.submissions');
-});
-Route::get('/submissions/create', function () {
-    return view('pages.submissionscreate');
-});
+Route::get('/submissions/create', [SubmissionController::class, 'create'])->name('submissions.create');
+Route::post('/submissions/store', [SubmissionController::class, 'store'])->name('submissions.store');
 
-Route::get('/articles', [ArticleController::class, 'index'])->name('pages.articleindex');
-Route::get('/articles/create', [ArticleController::class, 'create'])->name('articles.create');
-Route::post('/articles', [ArticleController::class, 'store'])->name('articles.store');
-Route::post('/articles/store', [ArticleController::class, 'store'])->name('articles.store');
+
+
+
+

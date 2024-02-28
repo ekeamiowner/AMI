@@ -6,50 +6,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/submissionform.css">
+    <link rel="stylesheet" href="/css/articleindex.css">
     <title>Articles</title>
-    <style>
-        .article-container 
-        {
-        border: 1px solid #ccc;
-        border-radius: 20px;
-        }
-
-        .header-section 
-        {
-            background-color: #f2f2f2;
-            padding: 10px;
-            border-radius: 20px 20px 0 0;
-        }
-
-        .abstract-section 
-        {
-            background-color: #feff99;
-            padding: 10px;
-            border-radius: 0 0 20px 20px;
-        }
-
-        .language 
-        {
-            font-weight: bold;
-        }
-
-        .author-reviewer 
-        {
-        margin-top: 5px;
-        }
-
-        .author,
-        .reviewer 
-        {
-        display: inline-block;
-        margin-right: 10px;
-        }
-    </style>
 </head>
 <body>
     <h1>Articles</h1>
-    <form action="{{ route('pages.articleindex') }}" method="GET" class="form-inline">
+    <form action="{{ route('articles.index') }}" method="GET" class="form-inline">
         <div class="input-group">
             <input type="text" name="search" class="form-control" placeholder="Search articles" value="{{ $search }}">
             <div class="input-group-append">

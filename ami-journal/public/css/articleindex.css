@@ -1,0 +1,36 @@
+.article-container 
+{
+border: 1px solid #ccc;
+border-radius: 20px;
+}
+
+.header-section 
+{
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 20px 20px 0 0;
+}
+
+.abstract-section 
+{
+    background-color: #feff99;
+    padding: 10px;
+    border-radius: 0 0 20px 20px;
+}
+
+.language 
+{
+    font-weight: bold;
+}
+
+.author-reviewer 
+{
+margin-top: 5px;
+}
+
+.author,
+.reviewer 
+{
+display: inline-block;
+margin-right: 10px;
+}

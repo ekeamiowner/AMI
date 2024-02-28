@@ -13,6 +13,7 @@ class CreateReviewsTable extends Migration {
 			$table->integer('revision_id')->unsigned();
 			$table->tinyInteger('state')->nullable()->default(0);
 			$table->text('content');
+			$table->timestamps();
 		});
 	}
 
