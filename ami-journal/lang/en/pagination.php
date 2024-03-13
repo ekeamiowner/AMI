@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'previous' => 'Előző oldal',
-    'next' => 'Következő oldal',
+    'previous' => 'Previous',
+    'next' => 'Next',
 
 ];
