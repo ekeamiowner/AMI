@@ -44,6 +44,17 @@
             <td><input type="file" name="upload2" id="upload2">Upload LaTeX file</td>
         </tr>
         <tr>
+            <td>
+                <label for="reviewer_id">Select reviewer (optional):</label>
+                <select name="reviewer_id" id="reviewer_id">
+                    <option value="-1">No preference</option>
+                    @foreach ($reviewers as $reviewer)
+                        <option value="{{ $reviewer->id }}">{{ $reviewer->name }}</option>
+                    @endforeach
+                </select>
+            </td>
+        </tr>
+        <tr>
             <td><button type="submit" class="btn btn-primary">Submit</button></td>
         </tr>
     </table>

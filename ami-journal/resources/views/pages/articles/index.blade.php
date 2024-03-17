@@ -10,6 +10,16 @@
     <title>Articles</title>
 </head>
 <body>
+    @if(Session::has('success'))
+    <div class="alert alert-success">
+        {{ Session::get('success') }}
+    </div>
+@endif
+@if(Session::has('error'))
+    <div class="alert alert-danger">
+        {{ Session::get('error') }}
+    </div>
+@endif
     <h1>Articles</h1>
     <form action="{{ route('articles.index') }}" method="GET" class="form-inline">
         <div class="input-group">

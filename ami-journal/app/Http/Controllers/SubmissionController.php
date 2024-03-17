@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Type;
 use App\Models\Article;
+use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth; 
+use Illuminate\Support\Facades\Session;
 
 class SubmissionController extends Controller
 {
@@ -13,7 +15,8 @@ class SubmissionController extends Controller
     public function create()
     {
         $types = Type::where('active', 1)->get();
-        return view('pages.submissions.create', ['types' => $types]);
+        $reviewers = User::where('accepted_reviewer', 1)->get();
+        return view('pages.submissions.create', ['types' => $types], ['reviewers' => $reviewers]);
     }
 
 
@@ -56,6 +59,10 @@ class SubmissionController extends Controller
             'latex_path' => $latex_path,
         ]);
 
+        if($article)
+            Session::flash('success', 'A cikket sikeresen feltöltötte, a szerkesztők hamarosan felülvizsgálják');
+        else
+            Session::flash('error', 'Hiba történt a feltöltés során');
         return redirect()->route('articles.index');
     }
 }
