@@ -15,7 +15,7 @@
         </div>
     </div>
     <div class="container" data-aos="fade" data-aos-duration="1000" data-aos-once="true" style="background: #003144;padding-bottom: 2vw;border-radius: 10px;padding-right: 0;padding-left: 0;border-top-left-radius: 15px;border-top-right-radius: 15px;">
-        <div class="row" style="padding: 2vw;margin-left: 0;margin-right: 0; margin-top: 2vw;padding-right: 0;padding-left: 0;">
+        <div class="row" style="padding: 2vw;margin-left: 0;margin-right: 0; margin-top: 3vw;padding-right: 0;padding-left: 0;">
             <div class="col-lg-11" style="width: 388px;">
                 <h1 style="font-size: 24px;color: var(--bs-light);">Browse volumes or latest articles:</h1>
             </div>
@@ -72,31 +72,51 @@
             </div>
         </div>
     </div>
-    <div class="container d-sm-flex d-xl-flex justify-content-sm-center align-items-sm-center justify-content-xl-center align-items-xl-center" style="padding-top: 6vw;"><img class="img-fluid" data-aos="fade" data-aos-duration="1000" data-aos-once="true" src="/img/EKU.png"></div>
-    <div class="container" style="padding-top: 12vw;text-align: center;">
+    <div class="container d-sm-flex d-xl-flex justify-content-sm-center align-items-sm-center justify-content-xl-center align-items-xl-center" style="padding-top: 4vw;">
+        <img class="img-fluid" data-aos="fade" data-aos-duration="1000" data-aos-once="true" src="/img/EKU.png" style="width: 350px;">
+    </div>
+    <div class="container" style="padding-top: 5vw;text-align: center;">
         <div class="row" data-aos="fade" data-aos-duration="1800" data-aos-delay="50" data-aos-once="true">
             <div class="col-md-12">
                 <h2 style="color: rgb(72,15,15);font-weight: bold;"><span style="color: rgb(0, 72, 99);">Abstracting / Indexing</span></h2>
             </div>
         </div>
-        <div class="row" style="padding-top: 2vw;margin-top: 3vw;">
-            <div class="col-md-3 d-xl-flex flex-column justify-content-xl-center align-items-xl-center" data-aos="fade" data-aos-duration="2000" data-aos-delay="100" data-aos-once="true">
-                <p style="font-size: 12px;"><span style="color: rgb(0, 72, 99);">Clarivate Analytics (formerly Thomson Reuters) Emerging Sources Citation Index</span><br></p><img class="img-fluid" src="/img/clarivate.png">
+        <div class="row" style="padding-top: 2vw; margin-top: 3vw;">
+            <div class="col d-flex flex-column align-items-center" data-aos="fade" data-aos-duration="2000" data-aos-delay="100" data-aos-once="true">
+                <p style="font-size: 12px; text-align: center;"><span style="color: rgb(0, 72, 99);">Clarivate Analytics (formerly Thomson Reuters) Emerging Sources Citation Index</span><br></p>
+                <div class="d-flex justify-content-center align-items-center" style="width: 100%; height: 100%;">
+                    <img class="img-fluid" src="/img/clarivate.png">
+                 </div>
             </div>
-            <div class="col-md-3 d-xl-flex flex-column justify-content-xl-center align-items-xl-center" data-aos="fade" data-aos-duration="2000" data-aos-delay="150" data-aos-once="true">
-                <p style="font-size: 12px;"><span style="color: rgb(0, 72, 99);">Scopus</span><br></p><img class="img-fluid" src="/img/scopus.gif" width="198" height="198">
+            <div class="col d-flex flex-column align-items-center" data-aos="fade" data-aos-duration="2000" data-aos-delay="150" data-aos-once="true">
+                <p style="font-size: 12px; text-align: center;"><span style="color: rgb(0, 72, 99);">Scopus</span><br></p>
+                <div class="d-flex justify-content-center align-items-center" style="width: 100%; height: 100%;">
+                    <img class="img-fluid" src="/img/scopus.gif" width="198" height="198">
+                </div>
             </div>
-            <div class="col-md-3 d-xl-flex flex-column justify-content-xl-start align-items-xl-center" data-aos="fade" data-aos-duration="2000" data-aos-delay="200" data-aos-once="true">
-                <p style="font-size: 12px;"><span style="color: rgb(0, 72, 99);">Zentralblatt für Mathematik</span><br></p><img class="img-fluid" src="/img/Zentralblatt.png">
+            <div class="col d-flex flex-column align-items-center" data-aos="fade" data-aos-duration="2000" data-aos-delay="200" data-aos-once="true">
+                <p style="font-size: 12px; text-align: center;"><span style="color: rgb(0, 72, 99);">Zentralblatt für Mathematik</span><br></p>
+                <div class="d-flex justify-content-center align-items-center" style="width: 100%; height: 100%;">
+                    <img class="img-fluid" src="/img/Zentralblatt.png">
+                </div>
             </div>
-            <div class="col-md-3 d-xl-flex flex-column justify-content-xl-start align-items-xl-center" data-aos="fade" data-aos-duration="2000" data-aos-delay="250" data-aos-once="true">
-                <p style="font-size: 12px;"><span style="color: rgb(0, 72, 99);">Mathematical Reviews</span><br></p><img class="img-fluid" src="/img/MathReviews.png" width="261" height="79">
+            <div class="col d-flex flex-column align-items-center" data-aos="fade" data-aos-duration="2000" data-aos-delay="250" data-aos-once="true">
+                <p style="font-size: 12px; text-align: center;"><span style="color: rgb(0, 72, 99);">Mathematical Reviews</span><br></p>
+                <div class="d-flex justify-content-center align-items-center" style="width: 100%; height: 100%;">
+                    <img class="img-fluid" src="/img/MathReviews.png" width="261" height="79">
+                </div>
             </div>
-            <div class="col-md-6 col-lg-4 col-xl-4 offset-lg-1 offset-xl-1 d-xl-flex flex-column justify-content-xl-center align-items-xl-center" data-aos="fade" data-aos-duration="2000" data-aos-delay="300" data-aos-once="true" style="padding-top: 3vw;">
-                <p style="font-size: 12px;"><span style="color: rgb(0, 72, 99);">EBSCO Academic Search Ultimate</span><br></p><img class="img-fluid" src="/img/EBSCO.png" width="261" height="79">
+            <div class="col d-flex flex-column align-items-center" data-aos="fade" data-aos-duration="2000" data-aos-delay="300" data-aos-once="true">
+                <p style="font-size: 12px; text-align: center;"><span style="color: rgb(0, 72, 99);">EBSCO Academic Search Ultimate</span><br></p>
+                <div class="d-flex justify-content-center align-items-center" style="width: 100%; height: 100%;">
+                    <img class="img-fluid" src="/img/EBSCO.png" width="261" height="79">
+                </div>
             </div>
-            <div class="col-md-6 col-lg-4 col-xl-4 offset-lg-2 offset-xl-2 d-xl-flex flex-column justify-content-xl-center align-items-xl-center" data-aos="fade" data-aos-duration="2000" data-aos-delay="350" data-aos-once="true" style="padding-top: 3vw;">
-                <p style="font-size: 12px;"><span style="color: rgb(0, 72, 99);">Methodological papers are indexed by Zentralblatt MathEduc</span><br></p><img class="img-fluid" src="/img/MathEduclogo.gif" width="261" height="79">
+            <div class="col d-flex flex-column align-items-center" data-aos="fade" data-aos-duration="2000" data-aos-delay="350" data-aos-once="true">
+                <p style="font-size: 12px; text-align: center;"><span style="color: rgb(0, 72, 99);">Methodological papers are indexed by Zentralblatt MathEduc</span><br></p>
+                <div class="d-flex justify-content-center align-items-center" style="width: 100%; height: 100%;">
+                    <img class="img-fluid" src="/img/MathEduclogo.gif" width="261" height="79">
+                </div>
             </div>
         </div>
     </div>
