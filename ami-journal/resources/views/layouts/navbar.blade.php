@@ -5,9 +5,9 @@
             <td style="border-right: 2px solid black;"><a href="{{ route('welcome.index') }}">Home</a></td>
             <!-- <td style="border-right: 2px solid black;"><a href="{/{ route('articles.index') }}">Browse</a></td> -->     <!-- to operate change the "{/{" to two pieces of '{'  -->
             <td style="border-right: 2px solid black;">@guest
-                <a href="{{ route('login') }}">Submissions</a>
+                <a href="{{ route('login') }}">New submission</a>
                 @else
-                <a href="{{ route('submissions') }}">Submissions</a>
+                <a href="{{ route('articles.create') }}">New submission</a>
                 @endguest
             </td>
             <td><a href="{{ route('about.index') }}">About</a></td>
