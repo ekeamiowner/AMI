@@ -7,7 +7,7 @@
             <td style="border-right: 2px solid black;">@guest
                 <a href="{{ route('login') }}">New submission</a>
                 @else
-                <a href="{{ route('submissions.create') }}">New submission</a>
+                <a href="{{ route('articles.create') }}">New submission</a>
                 @endguest
             </td>
             <td><a href="{{ route('about.index') }}">About</a></td>

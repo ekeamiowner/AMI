@@ -25,9 +25,9 @@ Route::get('/', function () {
 
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
 
-Route::get('/submissions', function () {
-    return view('pages.submissions.index');
-})->name('submissions');
+/*Route::get('/articles', function () {
+    return view('pages.articles.index');
+})->name('articles'); */
 
 Route::get('/about', function() {
     return view('pages.about.index');
@@ -48,8 +48,8 @@ Route::get('/admin', function() {
 
 Route::group(['middleware' => 'auth'], function () {
     Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
-    Route::get('/submissions/create', [SubmissionController::class, 'create'])->name('submissions.create');
-    Route::post('/submissions/store', [SubmissionController::class, 'store'])->name('submissions.store');
+    Route::get('/articles/create', [ArticleController::class, 'create'])->name('articles.create');
+    Route::post('/articles/store', [ArticleController::class, 'store'])->name('articles.store');
 });
 
 

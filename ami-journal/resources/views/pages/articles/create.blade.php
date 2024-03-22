@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="createSubmission">
-    <form method="POST" action="{{ route('submissions.store') }}" enctype="multipart/form-data">
+    <form method="POST" action="{{ route('articles.store') }}" enctype="multipart/form-data">
     @csrf 
     @method('POST')
     <table style="margin-left: auto; margin-right: auto;">
@@ -45,11 +45,11 @@
         </tr>
         <tr>
             <td>
-                <label for="reviewer_id">Select reviewer (optional):</label>
-                <select name="reviewer_id" id="reviewer_id">
-                    <option value="-1">No preference</option>
-                    @foreach ($reviewers as $reviewer)
-                        <option value="{{ $reviewer->id }}">{{ $reviewer->name }}</option>
+                <label for="recommented_editor_id">Select reviewer (optional):</label>
+                <select name="recommented_editor_id" id="recommented_editor_id">
+                    <option value="">No preference</option>
+                    @foreach ($recommented_editors as $editor)
+                        <option value="{{ $editor->id }}">{{ $editor->name }}</option>
                     @endforeach
                 </select>
             </td>
