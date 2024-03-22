@@ -14,21 +14,8 @@
             </div>
         </div>
     </div>
-    <div class="container" data-aos="fade" data-aos-duration="1000" data-aos-once="true" style="padding-right: 0;padding-left: 0;">
-        <nav class="navbar navbar-light navbar-expand-md py-3" style="background: #004863;border-top-left-radius: 15px;border-top-right-radius: 15px;margin-left: 0;margin-top: 5vw;margin-right: 0;margin-bottom: 0;padding-right: 0;padding-left: 0;">
-            <div class="container"><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-3"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navcol-3">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item"><a class="nav-link active" href="#" style="font-weight: bold;color: rgb(255,255,255);border-color: rgb(255,255,255);font-size: 20px;">CONTENT</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="#" style="font-weight: bold;color: rgb(255,255,255);font-size: 20px;">SUBMISSIONS</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="#" style="color: rgb(255,255,255);font-weight: bold;font-size: 20px;">EDITORIAL BOARD</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <div class="container" data-aos="fade" data-aos-duration="1000" data-aos-once="true" style="background: #003144;padding-bottom: 2vw;border-radius: 10px;padding-right: 0;padding-left: 0;border-top-left-radius: 0;border-top-right-radius: 0;">
-        <div class="row" style="padding: 2vw;margin-left: 0;margin-right: 0;padding-right: 0;padding-left: 0;">
+    <div class="container" data-aos="fade" data-aos-duration="1000" data-aos-once="true" style="background: #003144;padding-bottom: 2vw;border-radius: 10px;padding-right: 0;padding-left: 0;border-top-left-radius: 15px;border-top-right-radius: 15px;">
+        <div class="row" style="padding: 2vw;margin-left: 0;margin-right: 0; margin-top: 2vw;padding-right: 0;padding-left: 0;">
             <div class="col-lg-11" style="width: 388px;">
                 <h1 style="font-size: 24px;color: var(--bs-light);">Browse volumes or latest articles:</h1>
             </div>
