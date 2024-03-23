@@ -1,40 +1,26 @@
-.nav{
+.nav, .navbar {
     margin: none;
     width: 100%;
     overflow: hidden;
     background-color: #feff99;
-    margin-bottom: 50px;
 }
-.nav a{
+
+.nav a {
     color: black;
     text-decoration: none;
     padding: 10px 20px;
     display: inline-block;
-
 }
-.nav a:hover{
+
+.nav a:hover {
     background-color: #e3ff54;
     color: black;
 }
 
-.nav a:visited{
+.nav a:visited {
     color: black;
 }
 
-.card{
+.card, .dropdown, .navbar {
     position: inherit;
-}
-
-.dropdown{
-    position: inherit;
-}
-
-.navbar{
-    position: inherit;
-}
-
-.fixed {
-    position: fixed;
-    top: 0;
-    width: 100%;
 }
