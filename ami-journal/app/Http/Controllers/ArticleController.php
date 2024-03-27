@@ -25,6 +25,7 @@ class ArticleController extends Controller
     $query = Article::query();
     if ($search) {
         $query->where('title', 'like', "%$search%")
+                ->where('state', 'ACCEPTED')
               ->orWhere('abstract', 'like', "%$search%");
     }
 

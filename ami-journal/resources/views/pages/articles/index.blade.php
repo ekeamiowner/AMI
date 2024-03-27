@@ -30,7 +30,7 @@
         </div>
     </form>
     <br></br>
-        @foreach($articles as $article)
+        @foreach($articles->where('state', 'ACCEPTED') as $article)
             <div class="article-container">
                 <div class="header-section">
                     <h3> {{ $article->title }}</h3>
