@@ -6,6 +6,8 @@
     border: 1px solid black;
     border-radius: 10px;
     padding: 10px;
+    background-color: #F2F2F2;
+    
 }
 .createSubmission input {
     width: 100%;
@@ -16,10 +18,19 @@
     width: 100%;
     padding: 10px;
     margin-top: 10px;
+    background-color: grey;
+    color: black;
+    border: 0px;
 }
 .createSubmission label {
     font-size: 20px;
 }
 .createSubmission table {
     width: 100%;
+    background: #feff99;
+}
+.createSubmission header {
+    background-color: #f2f2f2;
+    font-size: 30px;
+    text-align: center;
 }
