@@ -24,6 +24,7 @@ Route::get('/', function () {
 })->name('welcome.index');
 
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
+Route::get('/editor', [ArticleController::class, 'index'])->name('editor.index');
 
 /*Route::get('/articles', function () {
     return view('pages.articles.index');

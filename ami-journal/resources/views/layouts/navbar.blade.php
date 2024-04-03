@@ -11,6 +11,11 @@
                 @endguest
             </td>
             <td><a href="{{ route('about.index') }}">About</a></td>
+            <!-- @ can('editor') -->
+            <td style="border-left: 2px solid black;">
+                <a href="{{ route('editor.index') }}">Editor Page</a>
+            <!-- @ endcan -->
+            </td>
         </tr>
     </table>
 
