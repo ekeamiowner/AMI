@@ -15,9 +15,7 @@
     @csrf 
     @method('POST')
     <table style="margin-left: auto; margin-right: auto;">
-        <tr>
-            <td style="background: #CECECE; height: 50px;"><label style="margin-left: 20px;">Create Article Form</label></td>
-        </tr>
+        <header style="height: 50px">Create Article Form</header>
         <tr>
             <td><input type="text" name="title" id="title" placeholder="Title"></td>
         </tr>
