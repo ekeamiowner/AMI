@@ -12,6 +12,7 @@ class UserSeeder extends Seeder
         User::factory([
             'name' => 'Site Admin',
             'email' => 'admin@test.com',
+            'accepted_reviewer' => '1',
          ])->create();
         User::factory([
                           'name' => 'Test Editor',
