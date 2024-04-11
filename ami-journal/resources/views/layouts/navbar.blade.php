@@ -11,6 +11,7 @@
                 @endguest
             </td>
             <td><a href="{{ route('about.index') }}">About</a></td>
+            <td><a href="{{ route('usermanagement.index') }}">Usermanagement</a></td>
         </tr>
     </table>
 

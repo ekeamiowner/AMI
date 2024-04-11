@@ -3,9 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\AboutController;
-use App\Http\Controllers\SubmissionController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\SubmissionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,7 @@ Route::get('/', function () {
 })->name('welcome.index');
 
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
+Route::get('/usermanagement', [UserController::class, 'index'])->name('usermanagement.index');
 
 /*Route::get('/articles', function () {
     return view('pages.articles.index');
