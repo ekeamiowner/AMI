@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\SubmissionController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\EditorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,10 +25,7 @@ Route::get('/', function () {
 })->name('welcome.index');
 
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
-
-Route::get('/editor', function() {
-    return view('pages.editor.index');
-})->name('editor.index');
+Route::get('/editor', [EditorController::class, 'index'])->name('editor.index');
 
 /*Route::get('/articles', function () {
     return view('pages.articles.index');
