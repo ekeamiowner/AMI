@@ -10,12 +10,24 @@
                 <a href="{{ route('articles.create') }}">New submission</a>
                 @endguest
             </td>
-            <td><a href="{{ route('about.index') }}">About</a></td>
-            <!-- @ can('editor') -->
+
+            <td style="border-right: 2px solid black;"><a href="{{ route('about.index') }}">About</a></td>
+            
+            @auth
+                @if(Auth::user()->accepted_reviewer > 0)
+                    <td style="border-right: 2px solid black;">
+                        <td><a href="{{ route('about.index') }}">About</a></td>
+            
             <td style="border-left: 2px solid black;">
                 <a href="{{ route('editor.index') }}">Editor Page</a>
-            <!-- @ endcan -->
+            
             </td>
+                    </td>
+                    <td style="border-right: 2px solid black;">
+                        <a>User Management</a>
+                    </td>
+                @endif
+            @endauth
         </tr>
     </table>
 

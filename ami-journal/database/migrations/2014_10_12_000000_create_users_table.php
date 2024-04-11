@@ -19,7 +19,6 @@ return new class extends Migration
           $table->string('email');
           $table->string('password');
           $table->string('remember_token')->nullable();
-          $table->integer('appointed_as_reviwer')->default(0);
           $table->integer('accepted_reviewer')->default(0);
           $table->integer('completed_review')->default(0);
           $table->timestamp('deleted_at')->nullable();

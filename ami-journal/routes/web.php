@@ -53,6 +53,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/articles/create', [ArticleController::class, 'create'])->name('articles.create');
     Route::post('/articles/store', [ArticleController::class, 'store'])->name('articles.store');
 });
+Route::get('navbar', function () {
+    return view('navbar')->middleware('accepted.reviewer');
+});
+
 
 
 
