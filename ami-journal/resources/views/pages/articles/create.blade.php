@@ -43,10 +43,10 @@
         </tr>
         <tr>
             <td>
-                <label for="recommented_editor_id">Select reviewer (optional):</label>
-                <select name="recommented_editor_id" id="recommented_editor_id">
+                <label for="recommended_editor_id">Select reviewer (optional):</label>
+                <select name="recommended_editor_id" id="recommended_editor_id">
                     <option value="">No preference</option>
-                    @foreach ($recommented_editors as $editor)
+                    @foreach ($recommended_editors as $editor)
                         <option value="{{ $editor->id }}">{{ $editor->name }}</option>
                     @endforeach
                 </select>

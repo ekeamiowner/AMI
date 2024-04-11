@@ -25,7 +25,7 @@ Route::get('/', function () {
 })->name('welcome.index');
 
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
-Route::get('/editor', [EditorController::class, 'index'])->name('editor.index');
+
 
 /*Route::get('/articles', function () {
     return view('pages.articles.index');
@@ -34,7 +34,6 @@ Route::get('/editor', [EditorController::class, 'index'])->name('editor.index');
 Route::get('/about', function() {
     return view('pages.about.index');
 })->name('about.index');
-
 
 //Autentikáció
 Route::group(['middleware' => 'guest'], function () {
@@ -52,13 +51,12 @@ Route::group(['middleware' => 'auth'], function () {
     Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('/articles/create', [ArticleController::class, 'create'])->name('articles.create');
     Route::post('/articles/store', [ArticleController::class, 'store'])->name('articles.store');
-});
-Route::get('navbar', function () {
-    return view('navbar')->middleware('accepted.reviewer');
+    Route::get('/editor', [EditorController::class, 'index'])->name('editor.index');
 });
 
-
-
+Route::group(['middleware' =>'auth'], function () {
+    Route::get('/editor', [EditorController::class, 'index'])->name('editor.index');
+});
 
 
 

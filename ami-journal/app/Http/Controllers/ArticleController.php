@@ -39,11 +39,11 @@ class ArticleController extends Controller
    *
    * @return Response
    */
-  public function create()
+    public function create()
     {
         $types = Type::where('active', 1)->get();
-        $recommented_editors = User::where('accepted_reviewer', 1)->get();
-        return view('pages.articles.create', ['types' => $types], ['recommented_editors' => $recommented_editors]);
+        $recommended_editors = User::where('accepted_reviewer', 1)->get();
+        return view('pages.articles.create', ['types' => $types], ['recommended_editors' => $recommended_editors]);
     }
 
 
@@ -55,13 +55,13 @@ class ArticleController extends Controller
             'type_id' => 'required|exists:types,id,active,1',
             'upload' => 'file|mimes:pdf|max:2048',
             'upload2' => 'file|mimes:latex|max:2048',
-            'recommented_editor_id' => 'nullable',
+            'recommended_editor_id' => 'nullable',
         ]);
 
 
         $user_id = Auth::id();
         $editor_id = null;
-        $recommented_editor_id = $request->input('recommented_editor_id');
+        $recommended_editor_id = $request->input('recommended_editor_id');
         $title = $request->input('title');
         $abstract = $request->input('abstract');
         $state = 'SUBMITTED';
@@ -76,7 +76,7 @@ class ArticleController extends Controller
         $article = Article::create([
             'user_id' => $user_id,
             'editor_id' => $editor_id,
-            'recommented_editor_id' => $recommented_editor_id,
+            'recommended_editor_id' => $recommended_editor_id,
             'title' => $title,
             'abstract' => $abstract,
             'state' => $state,

@@ -23,7 +23,7 @@ class Article extends Model
         'source',
         'latex_path',
         'state',
-        'recommented_editor_id'
+        'recommended_editor_id'
     ];
 
     protected $casts = [
@@ -39,9 +39,10 @@ class Article extends Model
     {
         return $this->belongsTo(User::class, 'editor_id');
     }
-    public function recommented_editor()
+
+    public function recommended_editor()
     {
-        return $this->belongsTo(User::class, 'recommented_editor_id');
+        return $this->belongsTo(User::class, 'recommended_editor_id');
     }
 
     public function type()
