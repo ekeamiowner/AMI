@@ -23,7 +23,14 @@ class EditorController extends Controller
    */
   public function index(Request $request)
   {
-    $status="*";
+    if (isset($_GET['status']))
+    {
+        $status = $_GET['status'];
+    }
+    else
+    {
+        $status = "SUBMITTED";
+    }
     $search = $request->input('search');
     $query = Article::query();
     if ($search) {
