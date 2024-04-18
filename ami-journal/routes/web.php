@@ -27,6 +27,7 @@ Route::get('/', function () {
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
 
 
+
 /*Route::get('/articles', function () {
     return view('pages.articles.index');
 })->name('articles'); */
@@ -57,6 +58,9 @@ Route::group(['middleware' => 'auth'], function () {
 Route::group(['middleware' =>'auth'], function () {
     Route::get('/editor', [EditorController::class, 'index'])->name('editor.index');
 });
+
+
+
 
 
 
