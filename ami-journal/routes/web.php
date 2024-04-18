@@ -55,10 +55,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/editor', [EditorController::class, 'index'])->name('editor.index');
 });
 
-Route::group(['middleware' =>'auth'], function () {
-    Route::get('/editor', [EditorController::class, 'index'])->name('editor.index');
-});
-
 
 
 

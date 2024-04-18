@@ -88,11 +88,12 @@ class ArticleController extends Controller
             'latex_path' => $latex_path,
         ]);
 
-        if ($article)
+        if ($article) {
             Session::flash('success', 'A cikket sikeresen feltöltötte, a szerkesztők hamarosan felülvizsgálják');
-        else
+        } else {
             Session::flash('error', 'Hiba történt a feltöltés során');
-    
+        }
+        
         return redirect()->route('articles.index');
     }
 
