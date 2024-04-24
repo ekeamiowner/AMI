@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Validator;
 
 class ArticleController extends Controller 
 {
-
+    
   /**
    * Display a listing of the resource.
    *
@@ -39,11 +39,11 @@ class ArticleController extends Controller
    *
    * @return Response
    */
-  public function create()
+    public function create()
     {
         $types = Type::where('active', 1)->get();
-        $recommented_editors = User::where('accepted_reviewer', 1)->get();
-        return view('pages.articles.create', ['types' => $types], ['recommented_editors' => $recommented_editors]);
+        $recommended_editors = User::where('accepted_reviewer', 1)->get();
+        return view('pages.articles.create', ['types' => $types], ['recommended_editors' => $recommended_editors]);
     }
 
 
@@ -53,15 +53,14 @@ class ArticleController extends Controller
             'title' => 'required',
             'abstract' => 'required',
             'type_id' => 'required|exists:types,id,active,1',
-            'upload' => 'file|mimes:pdf|max:2048',
-            'upload2' => 'file|mimes:latex|max:2048',
-            'recommented_editor_id' => 'nullable',
+            'upload' => 'required|file|mimes:pdf|max:102400',
+            'upload2' => 'required|file|mimes:tex|max:102400', 
+            'recommended_editor_id' => 'nullable',
         ]);
-
 
         $user_id = Auth::id();
         $editor_id = null;
-        $recommented_editor_id = $request->input('recommented_editor_id');
+        $recommended_editor_id = $request->input('recommended_editor_id');
         $title = $request->input('title');
         $abstract = $request->input('abstract');
         $state = 'SUBMITTED';
@@ -69,14 +68,14 @@ class ArticleController extends Controller
         $note = $request->input('note');
         $language = 'en';
         $doi = null;
-        $source = $request->file('upload') ? $request->file('upload')->store('pdf') : null;
+        $source = $request->file('upload')->store('pdf');
         $type_id = $request->input('type_id');
-        $latex_path = $request->file('upload2') ? $request->file('upload2')->store('latex') : null;
+        $latex_path = $request->file('upload2')->store('latex');
 
         $article = Article::create([
             'user_id' => $user_id,
             'editor_id' => $editor_id,
-            'recommented_editor_id' => $recommented_editor_id,
+            'recommended_editor_id' => $recommended_editor_id,
             'title' => $title,
             'abstract' => $abstract,
             'state' => $state,
@@ -89,10 +88,12 @@ class ArticleController extends Controller
             'latex_path' => $latex_path,
         ]);
 
-        if($article)
+        if ($article) {
             Session::flash('success', 'A cikket sikeresen feltöltötte, a szerkesztők hamarosan felülvizsgálják');
-        else
+        } else {
             Session::flash('error', 'Hiba történt a feltöltés során');
+        }
+        
         return redirect()->route('articles.index');
     }
 
@@ -101,7 +102,6 @@ class ArticleController extends Controller
    *
    * @return Response
    */
- 
     
   /**
    * Display the specified resource.
@@ -146,7 +146,12 @@ class ArticleController extends Controller
   {
     
   }
+
+
+
   
 }
+
+
 
 ?>
