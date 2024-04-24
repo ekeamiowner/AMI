@@ -19,10 +19,11 @@
                         <a href="{{ route('editor.index') }}">Editor Page</a>
                     </td>
                     <td style="border-left: 2px solid black;">
-                        <a>User Management</a>
+                        <a href="{{ route('usermanagement.index') }}">Usermanagement</a>
                     </td>
                 @endif
             @endauth
+              
         </tr>
     </table>
 
