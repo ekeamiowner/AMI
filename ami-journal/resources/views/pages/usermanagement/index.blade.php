@@ -33,7 +33,24 @@
         @foreach($users as $user)
             <div class="user-container">
                 <div class="username"><h3> {{ $user->name }}</h3></div>
-                <div class="accepted_reviewer">{{ $user->accepted_reviewer }}</div>
+                <div class="accepted_reviewer">
+                    @if($user->accepted_reviewer)
+                        <span class="accepted">Reviewer</span>
+                    @else
+                        <span class="not-accepted">Not reviewer</span>
+                    @endif
+                    <form method="POST" action="{{ route('usermanagement.update') }}">
+                        <input type="hidden" name="user" value="{{$user->id}}">
+                        @csrf
+                        <button type="submit">
+                            @if($user->accepted_reviewer)
+                                Withdraw
+                            @else
+                                Promote
+                            @endif
+                        </button>
+                    </form>
+                </div>
             </div>
             <hr>
         @endforeach

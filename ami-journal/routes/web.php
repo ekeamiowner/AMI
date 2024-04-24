@@ -26,6 +26,7 @@ Route::get('/', function () {
 
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
 Route::get('/usermanagement', [UserController::class, 'index'])->name('usermanagement.index');
+Route::post('/usermanagement', [UserController::class, 'update'])->name('usermanagement.update');
 
 /*Route::get('/articles', function () {
     return view('pages.articles.index');
