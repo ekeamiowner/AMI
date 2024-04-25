@@ -27,7 +27,7 @@
         </div>
         <div class="row" style="background: #004863;padding: 0;margin-right: 0;margin-left: 0;">
             <div class="col" style="padding-right: 0;padding-left: 0;">
-                <h1 style="text-align: center;color: var(--bs-white);">Annales Mathematicae et Iformaticae 54 (2021)</h1>
+                <h1 style="text-align: center;color: var(--bs-white);">Annales Mathematicae et Informaticae 54 (2021)</h1>
             </div>
         </div>
         <div class="row" style="padding: 2vw;margin-right: 0;margin-left: 0;padding-left: 0;padding-right: 0;">

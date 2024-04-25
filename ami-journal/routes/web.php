@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
@@ -49,10 +48,3 @@ Route::group(['middleware' => 'auth'], function () {
 Route::get('/admin', function() {
     return view('adminpanel.adminpanel');
 });
-
-
-
-
-
-
-

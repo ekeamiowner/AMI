@@ -16,10 +16,10 @@
             @auth
                 @if(Auth::user()->accepted_reviewer > 0)
                     <td style="border-left: 2px solid black;">
-                        <a href="{{ route('editor.index') }}">Editor Page</a>
+                        <a href="{{ route('editor.index') }}">Editor</a>
                     </td>
                     <td style="border-left: 2px solid black;">
-                        <a href="{{ route('usermanagement.index') }}">Usermanagement</a>
+                        <a href="{{ route('usermanagement.index') }}">Users</a>
                     </td>
                 @endif
             @endauth

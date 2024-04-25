@@ -25,7 +25,7 @@
                         <h3 class="aboutcardheader">Aims and Scope</h3>
                     </div>
                     <div class="aboutcardcontent">
-                        <p class="aboutcardtxt">This journal is open for scientific publications in mathematics and computer science, where the field of number theory, group theory, constructive and computer aided geometry as well as theoretical and practical aspects of programming languages receive particular emphasis. Methodological papers are also welcome. Papers submitted to the journal should be written in English. The Editorial Board can accept only new and unpublished material.y</p>
+                        <p class="aboutcardtxt">This journal is open for scientific publications in mathematics and computer science, where the field of number theory, group theory, constructive and computer aided geometry as well as theoretical and practical aspects of programming languages receive particular emphasis. Methodological papers are also welcome. Papers submitted to the journal should be written in English. The Editorial Board can accept only new and unpublished material.</p>
                     </div>
                 </div>
                 <div  class="contactcard">
