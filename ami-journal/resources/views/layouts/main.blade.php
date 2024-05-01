@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="/css/styles.min.css">
         <link rel="stylesheet" href="/css/aos.min.css">
         <link rel="stylesheet" href="/css/navbar.css">
+        @vite('resources/css/app.css')
     </head>
     <body>
         @include('layouts.navbar')
