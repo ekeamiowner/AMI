@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/submissionform.css">
     <title>Submissions</title>
-    @vite('resources/css/app.css')
+    <!-- @vite('resources/css/app.css') -->
 </head>
 <body>
     @if ($errors->any())
