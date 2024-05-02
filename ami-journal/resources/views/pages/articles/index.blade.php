@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/articleindex.css">
     <title>Articles</title>
-    @vite('resources/views/css/app.css')
 </head>
 <body>
     @if(Session::has('success'))
@@ -44,7 +43,7 @@
             <hr>
         @endforeach
     <div class="pagination">
-        {{ $articles->links() }}
+        {{ $articles->appends(['search' => $search])->links() }}
     </div>
 </body>
 </html>

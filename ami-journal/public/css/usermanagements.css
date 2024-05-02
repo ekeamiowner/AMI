@@ -1,0 +1,38 @@
+.user-container {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.username {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 20px 20px 0 0;
+}
+
+.user-info {
+    background-color: #feff99;
+    padding: 10px;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-name {
+    font-size: 18px;
+}
+
+.action-button {
+    padding: 8px 15px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.action-button:hover {
+    background-color: #45a049;
+}

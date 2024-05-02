@@ -58,7 +58,8 @@
 @endforeach
 
 <div class="pagination">
-    {{ $articles->links() }}
+    {{ $articles->appends(['search' => $search, 'status' => $status])->links() }}
 </div>
+
 
 @endsection
