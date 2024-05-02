@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/styles.min.css">
         <link rel="stylesheet" href="/css/aos.min.css">
-        <!-- @vite('resources/css/app.css') -->
+        @vite('resources/views/css/app.css')
     </head>
     <body>
         <main class="container">
