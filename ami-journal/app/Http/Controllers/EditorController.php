@@ -24,6 +24,8 @@ class EditorController extends Controller
     {
         $status = $request->input('status', 'SUBMITTED');
         $search = $request->input('search');
+        $sortField = $request->input('sort', 'title');
+        $sortDirection = $request->input('direction', 'asc');
 
         $query = Article::query();
 
@@ -36,6 +38,13 @@ class EditorController extends Controller
 
         if ($status != 'ALL') {
             $query->where('state', $status);
+        }
+
+        if ($sortField === 'recommended_editor') {
+            $query->join('users', 'users.id', '=', 'articles.recommended_editor_id')
+                  ->orderBy('users.name', $sortDirection);
+        } else {
+            $query->orderBy($sortField, $sortDirection);
         }
 
         $articles = $query->paginate(10);
