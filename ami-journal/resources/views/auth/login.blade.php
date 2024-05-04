@@ -1,7 +1,8 @@
 @extends('layouts.main')
 
 @section('content')
-<div class="min-h-screen flex items-center justify-center bg-gray-100">
+<x-guest-layout>
+<div class="flex items-center justify-center">
     <div class="max-w-md w-full">
         <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />
@@ -37,16 +38,23 @@
             </div>
 
             <div class="flex items-center justify-between mt-4">
-                @if (Route::has('password.request'))
+                <!-- @if (Route::has('password.request'))
                     <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
                         {{ __('Forgot your password?') }}
                     </a>
-                @endif
+                @endif -->
+
+                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('register') }}">
+                    {{ __('Don\'t have an account yet?') }}
+                </a>
+                
                 <x-primary-button>
                     {{ __('Log in') }}
                 </x-primary-button>
             </div>
+
         </form>
     </div>
 </div>
+</x-guest-layout>
 @endsection

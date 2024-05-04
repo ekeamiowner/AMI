@@ -14,8 +14,8 @@
         <!-- Scripts -->
         @vite(['resources/views/css/app.css', 'public/js/app.js'])
     </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
+    <body>
+        <div class="min-h-screen">
 
             <!-- Page Heading -->
             @if (isset($header))

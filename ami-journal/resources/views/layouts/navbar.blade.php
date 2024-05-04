@@ -75,4 +75,3 @@
     @endguest
 </div>
 
-<script src="/js/navbarscript.js"></script>
