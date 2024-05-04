@@ -32,10 +32,10 @@
     </div>
 </form>
 <div class="sorting-links" style="padding-top: 10px;">
-    <a href="{{ route('editor.index', ['sort' => 'title', 'direction' => 'asc'] + request()->all()) }}">Sort by Title Ascending ↑</a>
-    <a href="{{ route('editor.index', ['sort' => 'title', 'direction' => 'desc'] + request()->all()) }}">Sort by Title Descending ↓</a>
-    <a href="{{ route('editor.index', ['sort' => 'recommended_editor', 'direction' => 'asc'] + request()->all()) }}">Sort by Recommended Editor Ascending ↑</a>
-    <a href="{{ route('editor.index', ['sort' => 'recommended_editor', 'direction' => 'desc'] + request()->all()) }}">Sort by Recommended Editor Descending ↓</a>
+    <a href="{{ route('editor.index', ['sort' => 'title', 'direction' => 'asc'] + request()->all()) }}" class="sort-link">Sort by Title ↑</a>
+    <a href="{{ route('editor.index', ['sort' => 'title', 'direction' => 'desc'] + request()->all()) }}" class="sort-link">Sort by Title ↓</a>
+    <a href="{{ route('editor.index', ['sort' => 'recommended_editor', 'direction' => 'asc'] + request()->all()) }}" class="sort-link">Sort by Recommended Editor ↑</a>
+    <a href="{{ route('editor.index', ['sort' => 'recommended_editor', 'direction' => 'desc'] + request()->all()) }}" class="sort-link">Sort by Recommended Editor ↓</a>
 </div>
 
 <br><br>

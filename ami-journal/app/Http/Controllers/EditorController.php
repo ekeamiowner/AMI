@@ -41,8 +41,8 @@ class EditorController extends Controller
         }
 
         if ($sortField === 'recommended_editor') {
-            $query->join('users', 'users.id', '=', 'articles.recommended_editor_id')
-                  ->orderBy('users.name', $sortDirection);
+            $query->leftJoin('users', 'users.id', '=', 'articles.recommended_editor_id')
+                ->orderByRaw('ISNULL(articles.recommended_editor_id), users.name ' . $sortDirection);
         } else {
             $query->orderBy($sortField, $sortDirection);
         }
@@ -51,6 +51,7 @@ class EditorController extends Controller
 
         return view('pages.editor.index', compact('articles', 'search', 'status'));
     }
+
 }
 
 ?>
