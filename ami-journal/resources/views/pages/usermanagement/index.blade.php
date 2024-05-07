@@ -26,7 +26,7 @@
         <input type="text" name="search" class="form-input rounded-l-lg border-gray-300 py-2 px-4 focus:outline-none focus:border-blue-400" placeholder="Search users" value="{{ $search }}">
         <button type="submit" class="btn btn-primary rounded-r-lg py-2 px-4 ml-2 bg-blue-500 hover:bg-blue-600 text-white font-bold">Search</button>
     </form>
-
+    
     <div class="user-list">
         @foreach($users as $user)
             <div class="user-container bg-white rounded-lg shadow-md mb-4 p-4">
