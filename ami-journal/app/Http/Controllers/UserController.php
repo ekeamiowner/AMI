@@ -46,7 +46,7 @@ class UserController extends Controller
         if($user->accepted_reviewer){
             session()->flash('success', "$user->name successfully promoted to reviewer.");
         }
-        else session()->flash('success', "$user->name's rights successfully withdrawn.");
+        else session()->flash('success', "$user->name's rights successfully demoted.");
         
 
         $users = User::paginate(10);
