@@ -42,13 +42,17 @@
                     <form method="POST" action="{{ route('usermanagement.update') }}">
                         @csrf
                         <input type="hidden" name="user" value="{{$user->id}}">
-                        <button type="submit" class="action-button bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-2">
-                            @if($user->accepted_reviewer)
-                                Withdraw
-                            @else
-                                Promote
+                        @auth
+                            @if(Auth::user()->id !== $user->id)
+                                <button type="submit" class="action-button bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-2">
+                                    @if($user->accepted_reviewer)
+                                        Demote
+                                    @else
+                                        Promote
+                                    @endif
+                                </button>
                             @endif
-                        </button>
+                        @endauth
                     </form>
                 </div>
             </div>
