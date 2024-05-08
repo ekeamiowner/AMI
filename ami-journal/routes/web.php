@@ -7,6 +7,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\SubmissionController;
 use App\Http\Controllers\EditorController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +20,8 @@ use App\Http\Controllers\EditorController;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.welcome.index');
-})->name('welcome.index');
+
+Route::get('/', [HomeController::class, 'index'])->name('welcome.index');
 
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
 

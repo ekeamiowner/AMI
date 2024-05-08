@@ -1,5 +1,19 @@
 @extends('layouts.main')
 
+@php
+
+$dispnum=5;
+/*
+
+$dispnum=null;
+if (!$dispnum){
+Session::put('disp', '5');
+}
+else{Session::put('disp', $dispnum);}
+
+*/
+@endphp
+
 @section('content')
 <body style="background: rgb(255,255,255);border-bottom-width: 3px;border-bottom-style: none;">
     <div class="container" data-aos="fade" data-aos-duration="1000" data-aos-once="true" style="padding-top: 5vw;">
@@ -16,15 +30,52 @@
     </div>
     <div class="container" data-aos="fade" data-aos-duration="1000" data-aos-once="true" style="background: #003144;padding-bottom: 2vw;border-radius: 10px;padding-right: 0;padding-left: 0;border-top-left-radius: 15px;border-top-right-radius: 15px;">
         <div class="row" style="padding: 2vw;margin-left: 0;margin-right: 0; margin-top: 3vw;padding-right: 0;padding-left: 0;">
-            <div class="col-lg-11" style="width: 388px;">
-                <h1 style="font-size: 24px;color: var(--bs-light);">Browse volumes or latest articles:</h1>
+            <div class="col-lg-11" style="width: 407px;">
+                <h1 style="font-size: 24px;color: var(--bs-light); margin-left:1vw">Browse volumes or latest articles:</h1>
             </div>
             <div class="col">
-                <div class="dropdown"><button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button" style="background: var(--bs-body-bg);color: #004863;font-weight: bold;">Latest articles</button>
-                    <div class="dropdown-menu"><a class="dropdown-item" href="#">First Item</a><a class="dropdown-item" href="#">Second Item</a><a class="dropdown-item" href="#">Third Item</a></div>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" type="button" style="background: var(--bs-body-bg); color: #004863; font-weight: bold;">
+                        Latest articles
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">First Item</a>
+                        <a class="dropdown-item" href="#">Second Item</a>
+                        <a class="dropdown-item" href="#">Third Item</a>
+                    </div>
                 </div>
             </div>
-        </div>
+            
+        
+        {{-- Number of displayed articles ($dispnum) --}}
+        {{-- 
+        <form action="{{ route('welcome.index') }}" method="GET" class="form-inline">
+            <div class="row">
+                <div class="col px-0">
+                    <h1 style="font-size: 24px; color: var(--bs-light); margin-left:1.5vw">Amount of articles in one page:</h1>
+                </div>
+                <div class="col px-0">
+                    <div class="input-group" style="width:8vw;">
+                        <select name="dispnum" class="form-select" aria-label="Status" style="width: 7%; border-left:2px solid lightgray;">
+                            @foreach(['5', '25', '50', '100', 'ALL'] as $option)
+                                <option value="{{ $option }}" {{ $dispnum == $option ? 'selected' : '' }}>{{ ucfirst(strtolower($option)) }}</option>
+                            @endforeach
+                        </select>
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-primary">Reload</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col px-0" style="margin-left: 2vw"></div>
+            </div>
+            
+        </form>
+        
+        --}}
+        
+     </div> {{--  section end --}}
+
+        
         <div class="row" style="background: #004863;padding: 0;margin-right: 0;margin-left: 0;">
             <div class="col" style="padding-right: 0;padding-left: 0;">
                 <h1 style="text-align: center;color: var(--bs-white);">Annales Mathematicae et Informaticae 54 (2021)</h1>
@@ -55,6 +106,7 @@
                 </div>
             </div>
         </div>
+<!--  
         <div class="row" style="background: #004863;padding: 1vw;margin-right: 0;margin-left: 0;border-top-width: 1px;border-top-style: none;border-bottom-style: none;padding-right: 0;padding-left: 0;">
             <div class="col">
                 <p style="margin-bottom: 0px;color: var(--bs-white);font-size: 18px;">Surfaces with constant extrinsically Gaussian curvature in the Heisenberg group<br></p>
@@ -63,6 +115,7 @@
                 <p style="margin-bottom: 0px;color: var(--bs-white);">DOI: 10.33039/ami.2019.01.001<br></p>
             </div>
         </div>
+
         <div class="row" style="background: #004863;padding: 1vw;margin-right: 0;margin-left: 0;padding-right: 0;padding-left: 0;border-top-width: 3px;border-top-style: solid;border-bottom-style: solid;">
             <div class="col">
                 <p style="margin-bottom: 0px;color: var(--bs-white);font-size: 18px;">Surfaces with constant extrinsically Gaussian curvature in the Heisenberg group<br></p>
@@ -72,9 +125,40 @@
             </div>
         </div>
     </div>
+    -->
+
+
+    {{-- Articles --}}
+           @foreach($articles->where('state', 'ACCEPTED') as $article)
+           <div class="article-container-h">
+           <div class="row mx-1">
+                <div class="col">   
+            <div class="header-section-h">
+                   <h3> {{ $article->title }}</h3>
+                   <div class="author-reviewer">
+                       <span class="author">by {{ optional($article->user)->name }}</span> 
+                       {{-- <span class="editor">Editor: {{ optional($article->editor)->name }}</span> --}}
+                   </div>
+               </div>
+               <div class="abstract-section">
+                   <div class="abstract-content-h">{{ $article->abstract }}</div>
+                   <div class="language">{{ $article->language }}</div>
+               </div>
+           </div>
+        </div>
+    </div>
+           <hr>
+       @endforeach
+       <div class="pagination justify-content-center px-5">
+        {{ $articles->links() }}
+    </div>
+ </div>  {{--    container end    --}}
+
     <div class="container d-sm-flex d-xl-flex justify-content-sm-center align-items-sm-center justify-content-xl-center align-items-xl-center" style="padding-top: 4vw;">
         <img class="img-fluid" data-aos="fade" data-aos-duration="1000" data-aos-once="true" src="/img/EKCU.png" style="width: 50%;">
     </div>
+
+
     <div class="container" style="padding-top: 5vw;text-align: center;">
         <div class="row" data-aos="fade" data-aos-duration="1800" data-aos-delay="50" data-aos-once="true">
             <div class="col-md-12">
