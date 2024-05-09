@@ -8,6 +8,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\SubmissionController;
 use App\Http\Controllers\EditorController;
+use App\Http\Controllers\DeveloperTeamController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,8 @@ Route::get('/', function () {
 })->name('welcome.index');
 
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
+
+Route::get('/developers', [DeveloperTeamController::class, 'index']) -> name('developers.index');
 
 Route::get('/about', function() {
     return view('pages.about.index');
