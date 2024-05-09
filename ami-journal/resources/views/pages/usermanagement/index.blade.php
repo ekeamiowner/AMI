@@ -24,10 +24,10 @@
     <div class="user-management-section bg-gray-100 p-6 rounded-lg shadow-md">
     <form action="{{ route('usermanagement.index') }}" method="GET" class="search-form flex items-center mb-4">
         <input type="text" name="search" class="form-input rounded-l-lg border-gray-300 py-2 px-4 focus:outline-none focus:border-blue-400" placeholder="Search users" value="{{ $search }}">
-        <button type="submit" class="btn btn-primary rounded-r-lg py-2 px-4 ml-2 bg-blue-500 hover:bg-blue-600 text-white font-bold">Search</button>
+        <button type="submit" class="btn custom-search-btn py-2 px-4 ml-2">Search</button>
     </form>
     
-    <div class="user-list">
+    <div class="user-list" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
         @foreach($users as $user)
             <div class="user-container bg-white rounded-lg shadow-md mb-4 p-4">
                 <div class="username">

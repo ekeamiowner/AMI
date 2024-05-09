@@ -1,38 +1,33 @@
-.article-container 
-{
-border: 1px solid #ccc;
-border-radius: 20px;
+.article-container {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
 
-.header-section 
-{
+.header-section {
     background-color: #f2f2f2;
     padding: 10px;
     border-radius: 20px 20px 0 0;
 }
 
-.abstract-section 
-{
+.abstract-section {
     background-color: #feff99;
     padding: 10px;
     border-radius: 0 0 20px 20px;
 }
 
-.language 
-{
+.bold {
     font-weight: bold;
 }
 
-.author-reviewer 
-{
-margin-top: 5px;
+.author-reviewer {
+    margin-top: 5px;
 }
 
 .author,
-.reviewer 
-{
-display: inline-block;
-margin-right: 10px;
+.reviewer {
+    display: inline-block;
+    margin-right: 10px;
 }
 
 .sort-link {
@@ -47,4 +42,15 @@ margin-right: 10px;
 
 .sort-link:hover {
     background-color: #f0f0f0;
+}
+
+.custom-search-btn {
+    background-color: #BEBFC2;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+}
+
+.custom-search-btn:hover {
+    background-color: #9fa0a1;
 }

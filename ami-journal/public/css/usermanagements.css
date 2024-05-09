@@ -36,3 +36,14 @@
 .action-button:hover {
     background-color: #45a049;
 }
+
+.custom-search-btn {
+    background-color: #BEBFC2;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+}
+
+.custom-search-btn:hover {
+    background-color: #9fa0a1;
+}

@@ -16,20 +16,19 @@
     </div>
     @endif
     
-    <h1>Articles</h1>
     <form action="{{ route('articles.index') }}" method="GET" class="form-inline">
-        <div class="input-group">
+        <div class="input-group" style="margin-bottom: 10px;">
             <input type="text" name="search" class="form-control" placeholder="Search articles" value="{{ $search }}">
             <div class="input-group-append">
-                <button type="submit" class="btn btn-primary">Search</button>
+                <button type="submit" class="btn custom-search-btn" style="margin-left: 5px;">Search</button>
             </div>
         </div>
     </form>
-    <br></br>
+    <div style="margin-bottom: 30px;"></div>
         @foreach($articles->where('state', 'ACCEPTED') as $article)
-            <div class="article-container">
+            <div class="article-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <div class="header-section">
-                    <h3> {{ $article->title }}</h3>
+                    <h3 class="bold"> {{ $article->title }}</h3>
                     <div class="author-reviewer">
                         <span class="author">Author: {{ optional($article->user)->name }}</span>
                         <span class="editor">Editor: {{ optional($article->editor)->name }}</span>
@@ -37,10 +36,9 @@
                 </div>
                 <div class="abstract-section">
                     <div class="abstract-content">{{ $article->abstract }}</div>
-                    <div class="language">{{ $article->language }}</div>
+                    <div class="bold">{{ $article->language }}</div>
                 </div>
             </div>
-            <hr>
         @endforeach
     <div class="pagination">
         {{ $articles->appends(['search' => $search])->links() }}

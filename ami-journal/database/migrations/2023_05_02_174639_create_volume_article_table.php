@@ -8,6 +8,7 @@ class CreateVolumeArticleTable extends Migration {
 	public function up()
 	{
 		Schema::create('volume_article', function(Blueprint $table) {
+			$table->integer('id', true)->unsigned();
 			$table->integer('volume_id')->unsigned();
 			$table->integer('article_id')->unsigned();
 			$table->integer('from_page')->unsigned();

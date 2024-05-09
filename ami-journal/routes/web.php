@@ -54,9 +54,10 @@ Route::get('/admin', function() {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('pages.profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('pages.profile.partials.update');
+    Route::post('/profile/password', [ProfileController::class, 'updatePassword'])->name('pages.profile.partials.password.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('pages.profile.partials.destroy');
 });
 
 
