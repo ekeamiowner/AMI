@@ -40,8 +40,8 @@
                 </div>
             </div>
         @endforeach
-    <div class="pagination">
-        {{ $articles->appends(['search' => $search])->links() }}
+    <div class="pagination justify-content-center">
+        {{ $articles->appends(['search' => $search])->links('pagination::bootstrap-4') }}
     </div>
 </body>
 </html>

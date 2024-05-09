@@ -17,7 +17,7 @@
         </div>
     @endif
 
-    <div class="createSubmission">
+    <div class="createSubmission" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
         <form method="POST" action="{{ route('articles.store') }}" enctype="multipart/form-data">
             @csrf 
             @method('POST')

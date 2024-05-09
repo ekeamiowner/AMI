@@ -59,8 +59,8 @@
         @endforeach
     </div>
 
-    <div class="pagination mt-4">
-        {{ $users->appends(['search' => $search])->links() }}
+    <div class="pagination mt-4 justify-content-center">
+        {{ $users->appends(['search' => $search])->links('pagination::bootstrap-4') }}
     </div>
 </div>
 
