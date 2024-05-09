@@ -32,11 +32,13 @@ class HomeController extends Controller
                 $selectedVolume = Volume::orderBy('id', 'desc')->first();
             } else {
                 $selectedVolume = Volume::latest()->first();
+                $articles = $selectedVolume->articles()->latest()->limit(5)->get();
             }
         }
     
         return view('pages.welcome.index', compact('articles', 'selectedOption', 'volumes', 'selectedVolume'));
     }
+    
     
 }
 
