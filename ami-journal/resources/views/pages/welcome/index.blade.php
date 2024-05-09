@@ -1,8 +1,5 @@
 @extends('layouts.main')
 
-@php
-$dispnum = 5;
-@endphp
 <link rel="stylesheet" href="/css/main.css">
 @section('content')
 <body style="background: rgb(255,255,255); border-bottom-width: 3px; border-bottom-style: none;">
@@ -27,15 +24,14 @@ $dispnum = 5;
                 {{-- Dropdown menu --}}
                 <div class="dropdown">
                     <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" type="button" style="background: var(--bs-body-bg); font-size: 1.1rem; color: #004863; font-weight: bold;">
-                        Browse
+                        {{ $selectedOption == 'latest' || !isset($selectedOption) ? 'Latest articles' : $selectedVolume->title }}
                     </button>
                     <div class="dropdown-menu">
-                        <!-- Latest articles option -->
-                        <a class="dropdown-item {{ $selectedOption == 'latest' ? 'active' : '' }}" href="{{ route('welcome.index') }}">Latest articles</a>
 
-                        <!-- List all volumes -->
-                        @foreach($volumes as $volume)
-                            <a class="dropdown-item" href="{{ route('welcome.index', ['option' => 'volume', 'volume_id' => $volume->id]) }}">{{ $volume->title }}</a>
+                        <a class="dropdown-item {{ $selectedOption == 'latest' ? 'active' : '' }}" href="{{ route('welcome.index', ['option' => 'latest']) }}">Latest articles</a>
+
+                        @foreach($volumes->sortByDesc('created_at') as $volume)
+                            <a class="dropdown-item {{ $selectedOption == 'volume' && $selectedVolume->id == $volume->id ? 'active' : '' }}" href="{{ route('welcome.index', ['option' => 'volume', 'volume_id' => $volume->id]) }}">{{ $volume->title }}</a>
                         @endforeach
                     </div>
                 </div>
@@ -43,41 +39,54 @@ $dispnum = 5;
         </div>
 
         <div class="row" style="background: #004863; padding: 0; margin-right: 0; margin-left: 0;">
-            <div class="col" style="padding-right: 0; padding-left: 0;">
-                <h1 style="text-align: center; color: var(--bs-white); font-size: 2.5rem;">Annales Mathematicae et Informaticae 54 (2021)</h1>
-            </div>
+        <div class="col" style="padding-right: 0; padding-left: 0;">
+            @if($selectedOption == 'latest' || !isset($selectedOption))
+                <h1 style="text-align: center; color: var(--bs-white); font-size: 2.5rem;">Latest articles</h1>
+            @else
+                <h1 style="text-align: center; color: var(--bs-white); font-size: 2.5rem;">
+                    Annales Mathematicae et Informaticae {{ $selectedVolume->title }}
+                </h1>
+            @endif
+        </div>
         </div>
         <div class="row" style="padding: 2vw; margin-right: 0; margin-left: 0; padding-left: 0; padding-right: 0;">
-            <div class="col-lg-3" style="padding: 1vw;"><img class="img-fluid" src="/img/54cover.jpg"></div>
-            <div class="col">
-                <div class="row" style="padding: 0.5vw;">
-                    <div class="col" style="background: #004863; border-radius: 15px; padding: 5px;">
-                        <h1 style="font-size: 2rem; color: var(--bs-white);">Editorial Board</h1>
-                    </div>
-                </div>
-                <div class="row" style="padding: 0.5vw;">
-                    <div class="col" style="padding-top: 3px; background: #004863; border-radius: 15px;">
-                        <p style="color: var(--bs-white); font-size: 1.2rem;">Sándor Bácsó, Sonja Gorjanc, Tibor Gyimóthy, Miklós Hoffmann, József Holovács, Tibor Juhász, László Kovács, Gergely Kovásznai, László Kozma, Kálmán Liptai, Florian Luca,<br>Giuseppe Mastroianni, Ferenc Mátyás, Ákos Pintér, Miklós Rontó, László Szalay, János Sztrik, Gary Walsh<br></p>
-                    </div>
-                </div>
-                <div class="row" style="padding: 0.5vw;">
-                    <div class="col" style="background: #004863; border-radius: 15px; padding: 5px;">
-                        <h1 style="font-size: 2rem; color: var(--bs-white);">Technical Editor</h1>
-                    </div>
-                </div>
-                <div class="row" style="padding: 0.5vw;">
-                    <div class="col" style="border-radius: 15px; background: #004863; padding: 5px;">
-                        <p style="color: var(--bs-white); font-size: 1.2rem;">Tibor Tómács</p>
-                    </div>
-                </div>
+            <div class="col-lg-3" style="padding: 1vw;">
+                @if($selectedOption != 'latest' && isset($selectedVolume))
+                    <img class="img-fluid" src="/img/covers/{{ $selectedVolume->id }}cover.jpg">
+                @endif
             </div>
+
+            @if($selectedOption != 'latest' && isset($selectedVolume))
+                <div class="col">
+                    <div class="row" style="padding: 0.5vw;">
+                        <div class="col" style="background: #004863; border-radius: 15px; padding: 5px;">
+                            <h1 style="font-size: 2rem; color: var(--bs-white);">Editorial Board</h1>
+                        </div>
+                    </div>
+                    <div class="row" style="padding: 0.5vw;">
+                        <div class="col" style="padding-top: 3px; background: #004863; border-radius: 15px;">
+                            <p style="color: var(--bs-white); font-size: 1.2rem;">Sándor Bácsó, Sonja Gorjanc, Tibor Gyimóthy, Miklós Hoffmann, József Holovács, Tibor Juhász, László Kovács, Gergely Kovásznai, László Kozma, Kálmán Liptai, Florian Luca, Giuseppe Mastroianni, Ferenc Mátyás, Ákos Pintér, Miklós Rontó, László Szalay, János Sztrik, Gary Walsh<br></p>
+                        </div>
+                    </div>
+                    <div class="row" style="padding: 0.5vw;">
+                        <div class="col" style="background: #004863; border-radius: 15px; padding: 5px;">
+                            <h1 style="font-size: 2rem; color: var(--bs-white);">Technical Editor</h1>
+                        </div>
+                    </div>
+                    <div class="row" style="padding: 0.5vw;">
+                    <div class="col" style="padding-top: 3px; background: #004863; border-radius: 15px;">
+                            <p style="color: var(--bs-white); font-size: 1.2rem;">Tibor Tómács</p>
+                        </div>
+                    </div>
+                </div>
+            @endif
         </div>
 
         {{-- Articles --}}
         <div class="container">
             @if($selectedOption == 'latest' || !isset($selectedOption))
-                {{-- Display all articles --}}
-                @foreach($articles as $article)
+                {{-- Display the latest 5 articles --}}
+                @foreach($articles->sortByDesc('updated_at')->take(5) as $article)
                     <div class="article-container-h" style="border-radius: 15px; padding: 1rem; margin-bottom: 1rem; background-color: #004863;">
                         <div class="row mx-1">
                             <div class="col">   
@@ -98,7 +107,7 @@ $dispnum = 5;
                 @endforeach
             @else
                 {{-- Display articles for the selected volume --}}
-                @foreach($selectedVolume->articles as $article)
+                @foreach($selectedVolume->articles()->where('state', 'ACCEPTED')->get() as $article)
                     <div class="article-container-h" style="border-radius: 15px; padding: 1rem; margin-bottom: 1rem; background-color: #004863;">
                         <div class="row mx-1">
                             <div class="col">   
@@ -119,13 +128,7 @@ $dispnum = 5;
                 @endforeach
             @endif
 
-            {{-- Pagination --}}
-            <div class="pagination justify-content-center">
-                {{ $articles->links('pagination::bootstrap-4') }}
-            </div>
         </div>
-
-        {{-- container end --}}
     </div>
 
     <div class="container d-sm-flex d-xl-flex justify-content-sm-center align-items-sm-center justify-content-xl-center align-items-xl-center" style="padding-top: 4vw;">

@@ -47,10 +47,11 @@
             <div class="p-2 w-100">
                 <h3 class="bold">{{ $article->title }}</h3>
                 <div class="author-reviewer">
-                    <span class="author">Author: {{ optional($article->user)->name }}</span>
-                    <span class="editor">Editor: {{ $article->editor ? $article->editor->name : '' }}</span>
-                    <span class="recommended_editor">Recommended editor: {{ $article->recommended_editor ? $article->recommended_editor->name : '' }}</span>
+                    <span class="author">Author: {{ optional($article->user)->name }}</span><br>
+                    <span class="editor">Editor: {{ $article->editor ? $article->editor->name : '-' }}</span><br>
+                    <span class="recommended_editor">Recommended editor: {{ $article->recommended_editor ? $article->recommended_editor->name : '-' }}</span>
                 </div>
+
             </div>
             <div class="p-2 flex-shrink-1 d-flex justify-content-end">
                 <a class="btn btn-warning align-self-center" role="button" aria-disabled="false">Review</a>

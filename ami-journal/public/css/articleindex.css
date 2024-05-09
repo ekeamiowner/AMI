@@ -24,8 +24,7 @@
     margin-top: 5px;
 }
 
-.author,
-.reviewer {
+.author .reviewer {
     display: inline-block;
     margin-right: 10px;
 }

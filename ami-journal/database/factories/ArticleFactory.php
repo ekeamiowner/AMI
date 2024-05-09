@@ -15,10 +15,10 @@ class ArticleFactory extends Factory
     {
         return [
             'title' => $this->faker->sentence(),
-            'user_id' => User::random(),
+            'user_id' => User::factory()->create()->id,
             'abstract' => $this->faker->paragraph(),
             'state' => $this->faker->numberBetween(0, 10),
-            'volume_id' => Volume::random()
+            'volume_id' => Volume::factory()->create()->id
         ];
     }
 }

@@ -12,7 +12,7 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         $dispnum = $request->input('dispnum', '5');
-        $selectedOption = $request->input('option', 'latest'); // Alapértelmezett opció "latest"
+        $selectedOption = $request->input('option', 'volume');
         
         $query = Article::query()->where('state', 'ACCEPTED');
         if ($dispnum == '*') {
@@ -28,11 +28,15 @@ class HomeController extends Controller
             $selectedVolume = Volume::find($selectedVolumeId);
             $articles = $selectedVolume->articles()->paginate($dispnum);
         } else {
-            $selectedVolume = Volume::latest()->first(); // Legnagyobb id-jú kötet kiválasztása
+            if ($selectedOption == 'volume') {
+                $selectedVolume = Volume::orderBy('id', 'desc')->first();
+            } else {
+                $selectedVolume = Volume::latest()->first();
+            }
         }
     
         return view('pages.welcome.index', compact('articles', 'selectedOption', 'volumes', 'selectedVolume'));
-    }    
+    }
     
 }
 

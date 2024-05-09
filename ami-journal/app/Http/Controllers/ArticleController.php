@@ -23,6 +23,10 @@ class ArticleController extends Controller
   {
       $search = $request->input('search');
       $query = Article::query();
+      
+      // Csökkenő sorrendben rendezzük a cikkeket az updated_at alapján
+      $query->orderBy('updated_at', 'desc');
+  
       if ($search) {
           $query->where(function($q) use ($search) {
               $q->where('title', 'like', "%$search%")
@@ -35,7 +39,7 @@ class ArticleController extends Controller
   
       $articles = $query->paginate(10);
   
-      return view('pages.articles.index', ['articles' => $articles , 'search' => $search]);
+      return view('pages.articles.index', ['articles' => $articles, 'search' => $search]);
   }
   
 
