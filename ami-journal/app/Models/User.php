@@ -20,7 +20,8 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
-        'password'
+        'password',
+        'admin'
     ];
 
     /**
@@ -34,4 +35,9 @@ class User extends Authenticatable
     ];
 
     public $timestamps = false;
+
+    public function isAdmin()
+    {
+        return $this->admin;
+    }
 }
