@@ -18,6 +18,7 @@ return new class extends Migration
           $table->string('name');
           $table->string('email');
           $table->string('password');
+          $table->integer('admin')->default(0);
           $table->string('remember_token')->nullable();
           $table->integer('accepted_reviewer')->default(0);
           $table->integer('completed_review')->default(0);
