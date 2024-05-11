@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 class VolumeController extends Controller 
 {
 
+  public function __construct()
+  {
+    $this->middleware('admin');
+  }
 
 
   /**

@@ -18,8 +18,13 @@
                     <td style="border-left: 2px solid black;">
                         <a href="{{ route('editor.index') }}">Editor</a>
                     </td>
+                @endif
+                @if(Auth::user()->isAdmin())
                     <td style="border-left: 2px solid black;">
                         <a href="{{ route('usermanagement.index') }}">Users</a>
+                    </td>
+                    <td style="border-left: 2px solid black;">
+                        <a href="{{ route('volumes.index') }}">Volumes</a>
                     </td>
                 @endif
             @endauth

@@ -10,6 +10,7 @@ use App\Http\Controllers\SubmissionController;
 use App\Http\Controllers\EditorController;
 use App\Http\Controllers\DeveloperTeamController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\VolumeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,8 +45,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/articles/create', [ArticleController::class, 'create'])->name('articles.create');
     Route::post('/articles/store', [ArticleController::class, 'store'])->name('articles.store');
     Route::get('/editor', [EditorController::class, 'index'])->name('editor.index');
-    Route::get('/usermanagement', [UserController::class, 'index'])->name('usermanagement.index');
-    Route::post('/usermanagement', [UserController::class, 'update'])->name('usermanagement.update');
 });
 
 Route::get('/admin', function() {
@@ -57,6 +56,12 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('pages.profile.partials.update');
     Route::post('/profile/password', [ProfileController::class, 'updatePassword'])->name('pages.profile.partials.password.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('pages.profile.partials.destroy');
+});
+
+Route::group(['middleware' => 'admin'], function () {
+    Route::get('/volumes', [VolumeController::class, 'index'])->name('volumes.index');
+    Route::get('/usermanagement', [UserController::class, 'index'])->name('usermanagement.index');
+    Route::post('/usermanagement', [UserController::class, 'update'])->name('usermanagement.update');
 });
 
 
