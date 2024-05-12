@@ -61,6 +61,7 @@
                             <option value="{{ $option }}" {{ $article->state === $option ? 'selected' : '' }}>{{ ucfirst(strtolower($option)) }}</option>
                         @endforeach
                     </select>
+                    <input type="text" name="comment" class="form-control" placeholder="Optional comment">
                     <input type="submit" value="SUBMIT">
                 </form>
             </div>

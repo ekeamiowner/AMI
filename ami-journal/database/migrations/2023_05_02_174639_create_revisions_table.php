@@ -11,9 +11,6 @@ class CreateRevisionsTable extends Migration {
 		Schema::create('revisions', function(Blueprint $table) {
 			$table->integer('id', true)->unsigned();
 			$table->integer('article_id')->unsigned();
-			$table->text('note')->nullable();
-			$table->string('pdf_path')->nullable();
-			$table->timestamp('deleted_at')->nullable(null);
 			$table->timestamps();
 		});
 	}

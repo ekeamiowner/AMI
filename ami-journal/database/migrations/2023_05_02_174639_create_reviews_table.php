@@ -12,7 +12,7 @@ class CreateReviewsTable extends Migration {
 			$table->integer('id', true)->unsigned();
 			$table->integer('user_id')->unsigned();
 			$table->integer('revision_id')->unsigned();
-			$table->tinyInteger('state')->nullable()->default(0);
+			$table->enum('state', array('SUBMITTED', 'UNDER_REVIEW', 'ACCEPTED', 'REJECTED'))->nullable();
 			$table->text('content')->nullable();
 			$table->timestamps();
 		});

@@ -45,37 +45,43 @@ class EditorController extends Controller
 
         return view('pages.editor.index', compact('articles', 'search', 'status'));
     }
+
     public function update(Request $request)
     {
         $article = Article::findOrFail($request->input('article_id'));
+    
+        if ($article->state === 'ACCEPTED' || $article->state === 'REJECTED') {
+            return back()->with('error', 'The status of this article has been finalised and cannot be modified.');
+        }
+    
         $article->state = $request->input('status');
         $article->save();
-
+    
         if ($article->state !== 'SUBMITTED') {
             $revision = new Revision();
             $revision->article_id = $article->id;
-            $revision->updated_at = null;
             $revision->created_at = now(); 
+            $revision->updated_at = now();
             $revision->save();
-
+    
             $review = new Review();
             $review->user_id = Auth::id();
             $review->revision_id = $revision->id;
-            $review->state = null;
-            $review->content = null;
-            $review->updated_at = null;
+            $review->state = $article->state;
+            $review->content = $request->input('comment');
             $review->created_at = now();
+            $review->updated_at = now();
             $review->save();
         }
-
-        if ($article->state === 'REJECTED' || $article->state === 'ACCEPTED') {
-            $user = User::where('id', Auth::id())->first();
+    
+        if (($article->state === 'REJECTED' || $article->state === 'ACCEPTED')) {
+            $user = User::findOrFail(Auth::id());
             $user->completed_review++;
             $user->save();
         }
-
-        return back();
-    }
+    
+        return back()->with('success', 'Article status successfully updated.');
+    }    
 
     public function download(Request $request)
     {
@@ -86,16 +92,16 @@ class EditorController extends Controller
         } elseif (strpos($filePath, 'latex/') === 0) {
             $column = 'latex_path';
         } else {
-            return redirect()->back()->with('error', 'Érvénytelen fájl elérési út!');
+            return redirect()->back()->with('error', 'Invalid file path!');
         }
 
         $article = Article::where($column, $filePath)->first();
         if (!$article) {
-            return redirect()->back()->with('error', 'A fájl nem található!');
+            return redirect()->back()->with('error', 'File not found!');
         }
 
         if (!$article->user) {
-            return redirect()->back()->with('error', 'A felhasználó nem található!');
+            return redirect()->back()->with('error', 'User not found!');
         }
 
         $userName = $article->user->name;
@@ -105,16 +111,17 @@ class EditorController extends Controller
         
 
         if (($filePath === null)) {
-            return redirect()->back()->with('error', 'Érvénytelen fájl!');
+            return redirect()->back()->with('error', 'Invalid file!');
         } else {
             $filePath = '\app\\' . str_replace('/', '\\', $filePath);
             if (!file_exists(storage_path($filePath))) {
-                return redirect()->back()->with('error', 'A fájl nem található!');
+                return redirect()->back()->with('error', 'File not found!');
             }
-    
+
             return response()->download(storage_path($filePath), $fileName);
         }
     }
+
 }
 
 ?>
