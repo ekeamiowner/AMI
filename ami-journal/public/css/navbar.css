@@ -1,8 +1,9 @@
-.nav, .navbar {
+.nav {
     margin: none;
     width: 100%;
     overflow: hidden;
     background-color: #feff99;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav a {
@@ -13,7 +14,7 @@
 }
 
 .nav a:hover {
-    background-color: #e3ff54;
+    background-color: #fff7cc;
     color: black;
 }
 
@@ -21,6 +22,18 @@
     color: black;
 }
 
-.card, .dropdown, .navbar {
-    position: inherit;
+.nav form button {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
 }
+
+.nav-items {
+    display: flex;
+}
+
+.nav-icons {
+    margin-left: auto;
+}
+

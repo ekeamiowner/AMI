@@ -14,7 +14,7 @@ class ArticleSeeder extends Seeder
     {
         for ($i = 1; $i <= 15; $i++) {
             Article::create([
-                'user_id' => 1,
+                'user_id' => 3,
                 'editor_id' => 2,
                 'recommended_editor_id' => 2,
                 'title' => 'Article ' . $i,
@@ -34,7 +34,7 @@ class ArticleSeeder extends Seeder
 
         for ($i = 16; $i <= 20; $i++) {
             Article::create([
-                'user_id' => 1,
+                'user_id' => 3,
                 'editor_id' => 2,
                 'recommended_editor_id' => 2,
                 'title' => 'Article ' . $i,

@@ -98,8 +98,14 @@
                                     </div>
                                 </div>
                                 <div class="abstract-section" style="font-size: 1.2rem; color: var(--bs-white);">
-                                    <div class="abstract-content-h">{{ $article->abstract }}</div>
-                                    <div class="language">{{ $article->language }}</div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="abstract-content">Published online: {{ $article->updated_at }} </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <span>DOI:</span> <span style="font-weight: bold;">{{ $article->doi }}</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -108,6 +114,11 @@
             @else
                 {{-- Display articles for the selected volume --}}
                 @foreach($selectedVolume->articles()->where('state', 'ACCEPTED')->get() as $article)
+                    @php
+                        $volumeArticle = $article->volumes->first();
+                        $fromPage = $volumeArticle ? $volumeArticle->pivot->from_page : 'N/A';
+                        $toPage = $volumeArticle ? $volumeArticle->pivot->to_page : 'N/A';
+                    @endphp
                     <div class="article-container-h" style="border-radius: 15px; padding: 1rem; margin-bottom: 1rem; background-color: #004863;">
                         <div class="row mx-1">
                             <div class="col">   
@@ -118,9 +129,20 @@
                                         {{-- <span class="editor">Editor: {{ optional($article->editor)->name }}</span> --}}
                                     </div>
                                 </div>
-                                <div class="abstract-section" style="font-size: 1.2rem;">
-                                    <div class="abstract-content-h">{{ $article->abstract }}</div>
-                                    <div class="language">{{ $article->language }}</div>
+                                <div class="abstract-section" style="font-size: 1.2rem; color: var(--bs-white);">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="abstract-content"><em>Pages: {{ $fromPage }} - {{ $toPage }}</em></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <span>DOI:</span> <span style="font-weight: bold;">{{ $article->doi }}</span>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="abstract-content text-right">{{ $article->updated_at }}</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

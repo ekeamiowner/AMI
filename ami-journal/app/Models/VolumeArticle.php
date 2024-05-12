@@ -16,4 +16,5 @@ class VolumeArticle extends Model
             ->withPivot(['from_page', 'to_page'])
             ->withTimestamps();
     }
+
 }

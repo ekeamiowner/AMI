@@ -28,15 +28,28 @@
         @foreach($articles->where('state', 'ACCEPTED') as $article)
             <div class="article-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <div class="header-section">
-                    <h3 class="bold"> {{ $article->title }}</h3>
+                    <h3 class="font-bold text-lg">{{ $article->title }}</h3>
                     <div class="author-reviewer">
-                        <span class="author">Author: {{ optional($article->user)->name }}</span>
-                        <span class="editor">Editor: {{ optional($article->editor)->name }}</span>
+                        <span>Author:</span> {{ optional($article->user)->name }}
+                    </div>
+                    <div class="author-reviewer italic">
+                        <span>Editor:</span> {{ optional($article->editor)->name }}
                     </div>
                 </div>
                 <div class="abstract-section">
-                    <div class="abstract-content">{{ $article->abstract }}</div>
-                    <div class="bold">{{ $article->language }}</div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="abstract-content">{{ $article->abstract }}</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mt-4">
+                            <span>DOI:</span><span class="bold"> {{ $article->doi }}</span>
+                        </div>
+                        <div class="col-md-6 mt-4">
+                            <div class="abstract-content text-right">{{ $article->updated_at }}</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         @endforeach
