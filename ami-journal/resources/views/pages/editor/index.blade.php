@@ -57,7 +57,7 @@
                     @method('PUT')
                     <input type="hidden" name="article_id" value="{{ $article->id }}">
                     <select name="status" class="form-select" aria-label="Status" style="border-left:2px solid lightgray">
-                        @foreach(['SUBMITTED', 'ACCEPTED', 'REJECTED', 'UNDER_REVIEW', 'ALL'] as $option)
+                        @foreach(['SUBMITTED', 'ACCEPTED', 'REJECTED', 'UNDER_REVIEW'] as $option)
                             <option value="{{ $option }}" {{ $article->state === $option ? 'selected' : '' }}>{{ ucfirst(strtolower($option)) }}</option>
                         @endforeach
                     </select>

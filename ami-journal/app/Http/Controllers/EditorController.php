@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Type;
 use App\Models\User;
+use App\Models\Review;
 use App\Models\Article;
+use App\Models\Revision;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -48,6 +50,30 @@ class EditorController extends Controller
         $article = Article::findOrFail($request->input('article_id'));
         $article->state = $request->input('status');
         $article->save();
+
+        if ($article->state !== 'SUBMITTED') {
+            $revision = new Revision();
+            $revision->article_id = $article->id;
+            $revision->updated_at = null;
+            $revision->created_at = now(); 
+            $revision->save();
+
+            $review = new Review();
+            $review->user_id = Auth::id();
+            $review->revision_id = $revision->id;
+            $review->state = null;
+            $review->content = null;
+            $review->updated_at = null;
+            $review->created_at = now();
+            $review->save();
+        }
+
+        if ($article->state === 'REJECTED' || $article->state === 'ACCEPTED') {
+            $user = User::where('id', Auth::id())->first();
+            $user->completed_review++;
+            $user->save();
+        }
+
         return back();
     }
 

@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateReviewsTable extends Migration {
 
@@ -12,7 +13,7 @@ class CreateReviewsTable extends Migration {
 			$table->integer('user_id')->unsigned();
 			$table->integer('revision_id')->unsigned();
 			$table->tinyInteger('state')->nullable()->default(0);
-			$table->text('content');
+			$table->text('content')->nullable();
 			$table->timestamps();
 		});
 	}

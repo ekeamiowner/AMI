@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateRevisionsTable extends Migration {
 
@@ -10,8 +11,8 @@ class CreateRevisionsTable extends Migration {
 		Schema::create('revisions', function(Blueprint $table) {
 			$table->integer('id', true)->unsigned();
 			$table->integer('article_id')->unsigned();
-			$table->text('note');
-			$table->string('pdf_path');
+			$table->text('note')->nullable();
+			$table->string('pdf_path')->nullable();
 			$table->timestamp('deleted_at')->nullable(null);
 			$table->timestamps();
 		});
