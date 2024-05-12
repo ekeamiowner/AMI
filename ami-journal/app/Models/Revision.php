@@ -13,9 +13,9 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Revision extends Model
 {
-    use HasFactory, ApiResource, SoftDeletes;
+    use HasFactory, ApiResource;
 
-    protected $fillable = ['note', 'pdf_path', 'article_id'];
+    protected $fillable = ['article_id'];
 
     public function article(): BelongsTo {
         return $this->belongsTo(Article::class);

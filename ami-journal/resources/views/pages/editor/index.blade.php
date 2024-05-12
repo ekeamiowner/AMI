@@ -53,8 +53,25 @@
                 </div>
 
             </div>
-            <div class="p-2 flex-shrink-1 d-flex justify-content-end">
-                <a class="btn btn-warning align-self-center" role="button" aria-disabled="false">Review</a>
+            <div class="p-2 flex-shrink-1 justify-content-end">
+                <form method="POST" action="{{ route('editor.download') }}">
+                    @csrf
+                    <button type="submit" name="file" value="{{ $article->source }}">Download PDF file</button>
+                    <button type="submit" name="file" value="{{ $article->latex_path }}">Download latex file</button>
+                </form>
+                @csrf
+                <form action="{{ route('editor.update') }}" method="POST" class="form-inline">
+                    @csrf
+                    @method('PUT')
+                    <input type="hidden" name="article_id" value="{{ $article->id }}">
+                    <select name="status" class="form-select" aria-label="Status" style="border-left:2px solid lightgray">
+                        @foreach(['SUBMITTED', 'ACCEPTED', 'REJECTED', 'UNDER_REVIEW'] as $option)
+                            <option value="{{ $option }}" {{ $article->state === $option ? 'selected' : '' }}>{{ ucfirst(strtolower($option)) }}</option>
+                        @endforeach
+                    </select>
+                    <input type="text" name="comment" class="form-control" placeholder="Optional comment">
+                    <input type="submit" value="SUBMIT">
+                </form>
             </div>
         </div>
         <div class="abstract-section">
