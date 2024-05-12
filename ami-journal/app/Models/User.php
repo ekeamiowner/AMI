@@ -21,7 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'completed_review'
+        'completed_review',
         'admin'
     ];
 

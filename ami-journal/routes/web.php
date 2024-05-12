@@ -11,6 +11,7 @@ use App\Http\Controllers\EditorController;
 use App\Http\Controllers\DeveloperTeamController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\VolumeController;
+use App\Http\Controllers\OpenArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,11 +28,13 @@ Route::get('/', [HomeController::class, 'index'])->name('welcome.index');
 
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
 
-Route::get('/developers', [DeveloperTeamController::class, 'index']) -> name('developers.index');
+Route::get('/open-article', [OpenArticleController::class, 'openArticle'])->name('open-article');
 
 Route::get('/about', function() {
     return view('pages.about.index');
 })->name('about.index');
+
+Route::get('/developers', [DeveloperTeamController::class, 'index']) -> name('developers.index');
 
 Route::group(['middleware' => 'guest'], function () {
     Route::get('/register', [AuthController::class, 'register'])->name('register');

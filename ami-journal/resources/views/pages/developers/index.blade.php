@@ -4,10 +4,12 @@
 <body style="background: rgb(255,255,255);border-bottom-width: 3px;border-bottom-style: none;">
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
         <p style="text-align: center; font-weight: bold; font-size: 24px;">Our Team:</p>
+        <br>
         
         <p style="text-align: center;">Ács Róbert</p>
         <P style="text-align: center;">Bagoly Gábor</P>
         <p style="text-align: center;">Bodnár Máté</p>
+        <p style="text-align: center;">Budai Roland</p>
         <p style="text-align: center;">Császár Martin Krisztián</p>
         <p style="text-align: center;">Dávid Buda</p>
         <p style="text-align: center;">Guba József</p>

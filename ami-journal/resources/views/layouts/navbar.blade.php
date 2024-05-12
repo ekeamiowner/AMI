@@ -8,7 +8,7 @@
         @else
             <a href="{{ route('articles.create') }}">New submission</a>
         @endguest
-        <a href="{{ route('about.index') }}">About</a>
+        <a href="{{ route('about.index') }}">About us</a>
         @auth
             @if(Auth::user()->accepted_reviewer > 0)
                 <a href="{{ route('editor.index') }}">Editor</a>

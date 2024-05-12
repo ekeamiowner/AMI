@@ -35,7 +35,10 @@
                 </div>
                 <div class="user-info mt-2">
                     @if($user->accepted_reviewer)
-                        <span class="accepted bg-green-500 text-white font-semibold py-1 px-2 rounded">Reviewer</span>
+                    <div class="flex items-center">
+                        <span class="accepted bg-green-500 text-white font-semibold py-1 px-2 rounded mr-2">Reviewer</span>
+                        <div class="font-semibold" style="background-color: #ffed4a; padding: 3px 6px; border-radius: 4px;">Completed reviews: {{ $user->completed_review }}</div>
+                    </div>
                     @else
                         <span class="not-accepted bg-red-500 text-white font-semibold py-1 px-2 rounded">Not reviewer</span>
                     @endif

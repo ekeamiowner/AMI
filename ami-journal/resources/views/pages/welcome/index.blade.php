@@ -91,7 +91,11 @@
                         <div class="row mx-1">
                             <div class="col">   
                                 <div class="header-section-h">
-                                    <h3 style="font-size: 1.5rem; font-weight: bold; color: var(--bs-white);">{{ $article->title }}</h3>
+                                    <h3 style="font-size: 1.5rem; font-weight: bold; color: var(--bs-white);">
+                                        <a href="{{ route('open-article') }}?file={{ $article->source }}" style="text-decoration: none; color: inherit;">
+                                            {{ $article->title }}
+                                        </a>
+                                    </h3>    
                                     <div class="author-reviewer">
                                         <span class="author" style="font-size: 1.2rem; color: var(--bs-white);">by {{ optional($article->user)->name }}</span> 
                                         {{-- <span class="editor">Editor: {{ optional($article->editor)->name }}</span> --}}
@@ -123,11 +127,15 @@
                         <div class="row mx-1">
                             <div class="col">   
                                 <div class="header-section-h">
-                                    <h3 style="font-size: 1.5rem; font-weight: bold; color: var(--bs-white);">{{ $article->title }}</h3>
-                                    <div class="author-reviewer">
-                                        <span class="author" style="font-size: 1.2rem;">by {{ optional($article->user)->name }}</span> 
-                                        {{-- <span class="editor">Editor: {{ optional($article->editor)->name }}</span> --}}
-                                    </div>
+                                <h3 style="font-size: 1.5rem; font-weight: bold; color: var(--bs-white);">
+                                    <a href="{{ route('open-article') }}?file={{ $article->source }}" style="text-decoration: none; color: inherit;">
+                                        {{ $article->title }}
+                                    </a>
+                                </h3>
+                                <div class="author-reviewer">
+                                    <span class="author" style="font-size: 1.2rem;">by {{ optional($article->user)->name }}</span> 
+                                    {{-- <span class="editor">Editor: {{ optional($article->editor)->name }}</span> --}}
+                                </div>
                                 </div>
                                 <div class="abstract-section" style="font-size: 1.2rem; color: var(--bs-white);">
                                     <div class="row">

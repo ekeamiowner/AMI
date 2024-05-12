@@ -62,6 +62,7 @@ class EditorController extends Controller
         }
     
         $article->state = $request->input('status');
+        $article->editor_id = Auth::id();
         $article->save();
     
         if ($article->state !== 'SUBMITTED') {
@@ -88,12 +89,13 @@ class EditorController extends Controller
         }
     
         return back()->with('success', 'Article status successfully updated.');
-    }    
+    }
+    
 
     public function download(Request $request)
     {
         $filePath = $request->input('file');
-
+    
         if (strpos($filePath, 'pdf/') === 0) {
             $column = 'source';
         } elseif (strpos($filePath, 'latex/') === 0) {
@@ -101,34 +103,32 @@ class EditorController extends Controller
         } else {
             return redirect()->back()->with('error', 'Invalid file path!');
         }
-
+    
         $article = Article::where($column, $filePath)->first();
         if (!$article) {
             return redirect()->back()->with('error', 'File not found!');
         }
-
+    
         if (!$article->user) {
             return redirect()->back()->with('error', 'User not found!');
         }
-
+    
         $userName = $article->user->name;
         $path_parts = pathinfo($filePath);
         $fileExtension = $path_parts['extension'];
-        $fileName = strtolower(str_replace(' ', '-', $userName)) . ".$fileExtension";
-        
-
-        if (($filePath === null)) {
+        $fileName = 'article.' . $fileExtension;
+    
+        if ($filePath === null) {
             return redirect()->back()->with('error', 'Invalid file!');
         } else {
             $filePath = '\app\\' . str_replace('/', '\\', $filePath);
             if (!file_exists(storage_path($filePath))) {
                 return redirect()->back()->with('error', 'File not found!');
             }
-
+    
             return response()->download(storage_path($filePath), $fileName);
         }
     }
-
 }
 
 ?>

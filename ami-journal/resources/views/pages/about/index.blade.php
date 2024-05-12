@@ -13,25 +13,9 @@
 <body>
     <div class="content">
         <div class="header" data-aos="fade-up" data-aos-duration="1000">
-            <div class="aboutcard">
-                <div class="aboutcardtitle">
-                    <h3 class="aboutcardheader">About us</h3>
-                </div>
-                <div class="aboutcardcontent">
-                    <p class="aboutcardtxt">Annales Mathematicae et Informaticae is an international journal of the Institute of Mathematics and Informatics of Eszterházy Károly University (Eger, Hungary), published by Líceum University Press.</p>
-                </div>
-            </div>
-            <div class="aboutcard">
-                <div class="aboutcardtitle">
-                    <h3 class="aboutcardheader">Aims and Scope</h3>
-                </div>
-                <div class="aboutcardcontent">
-                    <p class="aboutcardtxt">This journal is open for scientific publications in mathematics and computer science, where the field of number theory, group theory, constructive and computer aided geometry as well as theoretical and practical aspects of programming languages receive particular emphasis. Methodological papers are also welcome. Papers submitted to the journal should be written in English. The Editorial Board can accept only new and unpublished material.</p>
-                </div>
-            </div>
-            <div  class="contactcard" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="contactcard" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <div class="contactcardtitle">
-                    <h5 class="aboutcardheader">Contact</h5>
+                    <p style="font-size: 1.2rem;">Contact</p>
                 </div>
                 <div class="contactcardcontent">
                     <p class="aboutcardtxtc">Eszterházy Károly University</p>

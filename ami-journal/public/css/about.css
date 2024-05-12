@@ -1,9 +1,8 @@
 .aboutcard
 {
     border: 1px solid #ccc;
-    border-radius: 20px ;
-    margin-top: 5px;
-    margin-bottom: 20px;
+    border-radius: 20px;
+    margin-bottom: 30px; 
 }
 
 .aboutcard .aboutcardtitle
@@ -12,14 +11,16 @@
     background-color: #f2f2f2;
     padding: 10px;
     border-radius: 20px 20px 0 0;
+    font-size: 1.2rem; 
 }
 
 .aboutcard .aboutcardcontent
 {
     background-color: #feff99;
-    padding: 3px;
+    padding: 15px; 
     border-radius: 0 0 20px 20px;
     text-align: justify;
+    font-size: 1.2rem; 
 }
 
 .contactcard
@@ -43,6 +44,7 @@
     padding: 10px;
     border-radius: 0 0 20px 20px;
     text-align: justify;
+    font-size: 1.2rem; 
 }
 .content a
 {
@@ -56,6 +58,7 @@
     margin-bottom: 10px;
     width: 100%;
     overflow: hidden;
+    font-size: 1.2rem; 
 }
 
 .primaryeditors table

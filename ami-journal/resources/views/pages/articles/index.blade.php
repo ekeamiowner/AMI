@@ -28,7 +28,9 @@
         @foreach($articles->where('state', 'ACCEPTED') as $article)
             <div class="article-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <div class="header-section">
-                    <h3 class="font-bold text-lg">{{ $article->title }}</h3>
+                    <a href="{{ route('open-article') }}?file={{ $article->source }}" class="font-bold text-lg">
+                        {{ $article->title }}
+                    </a>
                     <div class="author-reviewer">
                         <span>Author:</span> {{ optional($article->user)->name }}
                     </div>
