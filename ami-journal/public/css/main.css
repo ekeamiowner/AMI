@@ -1,0 +1,21 @@
+.abstract-content-h{
+    margin-bottom: 0;
+    font-style: italic;
+}
+.header-section-h{
+    margin-bottom: 0;
+    font-size: 18px;
+}
+.article-container-h{
+    color: var(--bs-white);
+    background: #004863;
+    padding: 1vw;
+    margin-right: 1vw;
+    margin-left: 1vw;
+    border-radius: 15px;
+    border-top-width: 1px;
+    border-top-style: none;
+    border-bottom-style: none;
+    padding-right: 0;
+    padding-left: 0;
+}

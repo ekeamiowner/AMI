@@ -1,46 +1,40 @@
-.article-container {
+.user-container {
     border: 1px solid #ccc;
     border-radius: 20px;
     margin-bottom: 20px;
 }
 
-.header-section {
+.username {
     background-color: #f2f2f2;
     padding: 10px;
     border-radius: 20px 20px 0 0;
 }
 
-.abstract-section {
+.user-info {
     background-color: #feff99;
     padding: 10px;
     border-radius: 0 0 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.bold {
-    font-weight: bold;
+.user-name {
+    font-size: 18px;
 }
 
-.author-reviewer {
-    margin-top: 5px;
-}
-
-.author .reviewer {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.sort-link {
-    display: inline-block;
-    margin-right: 10px;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
+.action-button {
+    padding: 8px 15px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
     border-radius: 5px;
-    text-decoration: none;
-    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.sort-link:hover {
-    background-color: #f0f0f0;
+.action-button:hover {
+    background-color: #45a049;
 }
 
 .custom-search-btn {

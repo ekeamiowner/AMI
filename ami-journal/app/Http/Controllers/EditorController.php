@@ -14,8 +14,6 @@ use Illuminate\Support\Facades\Response;
 use App\Http\Middleware\AcceptedReviewer;
 use Illuminate\Support\Facades\Validator;
 
-
-
 class EditorController extends Controller 
 {
     public function __construct()
@@ -27,6 +25,8 @@ class EditorController extends Controller
     {
         $status = $request->input('status', 'SUBMITTED');
         $search = $request->input('search');
+        $sortField = $request->input('sort', 'title');
+        $sortDirection = $request->input('direction', 'asc');
 
         $query = Article::query();
 
@@ -39,6 +39,13 @@ class EditorController extends Controller
 
         if ($status != 'ALL') {
             $query->where('state', $status);
+        }
+
+        if ($sortField === 'recommended_editor') {
+            $query->leftJoin('users', 'users.id', '=', 'articles.recommended_editor_id')
+                ->orderByRaw('ISNULL(articles.recommended_editor_id), users.name ' . $sortDirection);
+        } else {
+            $query->orderBy($sortField, $sortDirection);
         }
 
         $articles = $query->paginate(10);

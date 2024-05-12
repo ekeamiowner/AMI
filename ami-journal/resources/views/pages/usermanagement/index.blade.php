@@ -6,9 +6,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/articleindex.css">
+    <link rel="stylesheet" href="/css/usermanagements.css">
     <title>Usermanagement</title>
-    <!-- @vite('resources/css/app.css') -->
+    @vite('resources/views/css/app.css')
 </head>
 <body>
     @if(Session::has('success'))
@@ -21,43 +21,49 @@
         {{ Session::get('error') }}
     </div>
 @endif
-    <h1>Usermanagement</h1>
-    <form action="{{ route('usermanagement.index') }}" method="GET" class="form-inline">
-        <div class="input-group">
-            <input type="text" name="search" class="form-control" placeholder="Search users" value="{{ $search }}">
-            <div class="input-group-append">
-                <button type="submit" class="btn btn-primary">Search</button>
-            </div>
-        </div>
+    <div class="user-management-section bg-gray-100 p-6 rounded-lg shadow-md">
+    <form action="{{ route('usermanagement.index') }}" method="GET" class="search-form flex items-center mb-4">
+        <input type="text" name="search" class="form-input rounded-l-lg border-gray-300 py-2 px-4 focus:outline-none focus:border-blue-400" placeholder="Search users" value="{{ $search }}">
+        <button type="submit" class="btn custom-search-btn py-2 px-4 ml-2">Search</button>
     </form>
-    <br></br>
+    
+    <div class="user-list" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
         @foreach($users as $user)
-            <div class="user-container">
-                <div class="username"><h3> {{ $user->name }}</h3></div>
-                <div class="accepted_reviewer">
+            <div class="user-container bg-white rounded-lg shadow-md mb-4 p-4">
+                <div class="username">
+                    <h3 class="user-name text-xl font-bold">{{ $user->name }}</h3>
+                </div>
+                <div class="user-info mt-2">
                     @if($user->accepted_reviewer)
-                        <span class="accepted">Reviewer</span>
+                        <span class="accepted bg-green-500 text-white font-semibold py-1 px-2 rounded">Reviewer</span>
                     @else
-                        <span class="not-accepted">Not reviewer</span>
+                        <span class="not-accepted bg-red-500 text-white font-semibold py-1 px-2 rounded">Not reviewer</span>
                     @endif
                     <form method="POST" action="{{ route('usermanagement.update') }}">
-                        <input type="hidden" name="user" value="{{$user->id}}">
                         @csrf
-                        <button type="submit">
-                            @if($user->accepted_reviewer)
-                                Withdraw
-                            @else
-                                Promote
+                        <input type="hidden" name="user" value="{{$user->id}}">
+                        @auth
+                            @if(Auth::user()->id !== $user->id)
+                                <button type="submit" class="action-button bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-2">
+                                    @if($user->accepted_reviewer)
+                                        Demote
+                                    @else
+                                        Promote
+                                    @endif
+                                </button>
                             @endif
-                        </button>
+                        @endauth
                     </form>
                 </div>
             </div>
-            <hr>
         @endforeach
-    <div class="pagination">
-        {{ $users->links() }}
     </div>
+
+    <div class="pagination mt-4 justify-content-center">
+        {{ $users->appends(['search' => $search])->links('pagination::bootstrap-4') }}
+    </div>
+</div>
+
 </body>
 </html>
 @endsection

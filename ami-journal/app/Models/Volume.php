@@ -16,13 +16,11 @@ class Volume extends Model
 
     protected $fillable = ['title', 'description', 'release_year'];
 
-    public function getTitleAttribute(): string
+    public function articles(): BelongsToMany
     {
-        return $this->title ?? "#$this->id"; // Változtatás a mezőnévben, az angol változat alapján
+        return $this->belongsToMany(Article::class, 'volume_article', 'volume_id', 'article_id')
+            ->withPivot(['from_page', 'to_page'])
+            ->withTimestamps();
     }
-
-    public function articles(): HasMany
-    {
-        return $this->hasMany(Article::class);
-    }
+    
 }

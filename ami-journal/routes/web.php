@@ -8,6 +8,9 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\SubmissionController;
 use App\Http\Controllers\EditorController;
+use App\Http\Controllers\DeveloperTeamController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\VolumeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,11 +23,11 @@ use App\Http\Controllers\EditorController;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.welcome.index');
-})->name('welcome.index');
+Route::get('/', [HomeController::class, 'index'])->name('welcome.index');
 
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
+
+Route::get('/developers', [DeveloperTeamController::class, 'index']) -> name('developers.index');
 
 Route::get('/about', function() {
     return view('pages.about.index');
@@ -44,8 +47,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/editor', [EditorController::class, 'index'])->name('editor.index');
     Route::put('/editor/update', [EditorController::class, 'update'])->name('editor.update');
     Route::post('/editor/download', [EditorController::class, 'download'])->name('editor.download');
-    Route::get('/usermanagement', [UserController::class, 'index'])->name('usermanagement.index');
-    Route::post('/usermanagement/update', [UserController::class, 'update'])->name('usermanagement.update');
 });
 
 Route::get('/admin', function() {
@@ -53,9 +54,18 @@ Route::get('/admin', function() {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('pages.profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('pages.profile.partials.update');
+    Route::post('/profile/password', [ProfileController::class, 'updatePassword'])->name('pages.profile.partials.password.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('pages.profile.partials.destroy');
 });
+
+Route::group(['middleware' => 'admin'], function () {
+    Route::get('/volumes', [VolumeController::class, 'index'])->name('volumes.index');
+    Route::get('/usermanagement', [UserController::class, 'index'])->name('usermanagement.index');
+    Route::post('/usermanagement', [UserController::class, 'update'])->name('usermanagement.update');
+    Route::post('/usermanagement/update', [UserController::class, 'update'])->name('usermanagement.update');
+});
+
 
 require __DIR__.'/auth.php';

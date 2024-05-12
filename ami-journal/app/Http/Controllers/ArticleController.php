@@ -21,18 +21,27 @@ class ArticleController extends Controller
    */
   public function index(Request $request)
   {
-    $search = $request->input('search');
-    $query = Article::query();
-    if ($search) {
-        $query->where('title', 'like', "%$search%")
-                ->where('state', 'ACCEPTED')
-              ->orWhere('abstract', 'like', "%$search%");
-    }
-
-    $articles = $query->paginate(10);
-
-    return view('pages.articles.index', ['articles' => $articles , 'search' => $search]);
+      $search = $request->input('search');
+      $query = Article::query();
+      
+      // Csökkenő sorrendben rendezzük a cikkeket az updated_at alapján
+      $query->orderBy('updated_at', 'desc');
+  
+      if ($search) {
+          $query->where(function($q) use ($search) {
+              $q->where('title', 'like', "%$search%")
+                  ->orWhere('abstract', 'like', "%$search%");
+          })
+          ->where('state', 'ACCEPTED');
+      } else {
+          $query->where('state', 'ACCEPTED');
+      }
+  
+      $articles = $query->paginate(10);
+  
+      return view('pages.articles.index', ['articles' => $articles, 'search' => $search]);
   }
+  
 
   /**
    * Show the form for creating a new resource.
@@ -89,9 +98,9 @@ class ArticleController extends Controller
         ]);
 
         if ($article) {
-            Session::flash('success', 'A cikket sikeresen feltöltötte, a szerkesztők hamarosan felülvizsgálják');
+            Session::flash('success', 'The article has been successfully uploaded, the editors will review it soon');
         } else {
-            Session::flash('error', 'Hiba történt a feltöltés során');
+            Session::flash('error', 'An error occurred during upload');
         }
         
         return redirect()->route('articles.index');

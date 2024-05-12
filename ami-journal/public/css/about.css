@@ -3,11 +3,12 @@
     border: 1px solid #ccc;
     border-radius: 20px ;
     margin-top: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 .aboutcard .aboutcardtitle
 {
+    font-weight: bold;
     background-color: #f2f2f2;
     padding: 10px;
     border-radius: 20px 20px 0 0;
@@ -30,6 +31,7 @@
 
 .contactcard .contactcardtitle
 {
+    font-weight: bold;
     background-color: #B6D7E4;
     padding: 10px;
     border-radius: 20px 20px 0 0;

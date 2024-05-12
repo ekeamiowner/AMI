@@ -22,6 +22,7 @@ class User extends Authenticatable
         'email',
         'password',
         'completed_review'
+        'admin'
     ];
 
     /**
@@ -35,4 +36,9 @@ class User extends Authenticatable
     ];
 
     public $timestamps = false;
+
+    public function isAdmin()
+    {
+        return $this->admin;
+    }
 }

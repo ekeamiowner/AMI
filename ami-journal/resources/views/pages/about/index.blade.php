@@ -3,89 +3,90 @@
 @section('content')
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/about.css">
-        <title>About</title>
-    </head>
-    <body>
-        <div class="content">
-            <div class="header">
-                <div class="aboutcard">
-                    <div class="aboutcardtitle">
-                        <h3 class="aboutcardheader">About us</h3>
-                    </div>
-                    <div class="aboutcardcontent">
-                        <p class="aboutcardtxt">Annales Mathematicae et Informaticae is an international journal of the Institute of Mathematics and Informatics of Eszterházy Károly University (Eger, Hungary), published by Líceum University Press.</p>
-                    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/about.css">
+    <title>About</title>
+    @vite('resources/views/css/app.css')
+</head>
+<body>
+    <div class="content">
+        <div class="header" data-aos="fade-up" data-aos-duration="1000">
+            <div class="aboutcard">
+                <div class="aboutcardtitle">
+                    <h3 class="aboutcardheader">About us</h3>
                 </div>
-                <div class="aboutcard">
-                    <div class="aboutcardtitle">
-                        <h3 class="aboutcardheader">Aims and Scope</h3>
-                    </div>
-                    <div class="aboutcardcontent">
-                        <p class="aboutcardtxt">This journal is open for scientific publications in mathematics and computer science, where the field of number theory, group theory, constructive and computer aided geometry as well as theoretical and practical aspects of programming languages receive particular emphasis. Methodological papers are also welcome. Papers submitted to the journal should be written in English. The Editorial Board can accept only new and unpublished material.</p>
-                    </div>
+                <div class="aboutcardcontent">
+                    <p class="aboutcardtxt">Annales Mathematicae et Informaticae is an international journal of the Institute of Mathematics and Informatics of Eszterházy Károly University (Eger, Hungary), published by Líceum University Press.</p>
                 </div>
-                <div  class="contactcard">
-                    <div class="contactcardtitle">
-                        <h5 class="aboutcardheader">Contact</h5>
-                    </div>
-                    <div class="contactcardcontent">
-                        <p class="aboutcardtxtc">Eszterházy Károly University</p>
-                        <p class="aboutcardtxtc">Institute of Mathematics and Informatics</p>
-                        <p class="aboutcardtxtc">H-3300 Eger, Leányka u. 4</p>
-                        <p class="aboutcardtxtc">Hungary</p>
-                        <p class="aboutcardtxtc">Tel/Fax: +36-36-520478</p>
-                        <div class="contactcardhref">
-                            <a  href="https://mailhide.io/e/zoXKu">E-mail</a>
-                        </div>
+            </div>
+            <div class="aboutcard">
+                <div class="aboutcardtitle">
+                    <h3 class="aboutcardheader">Aims and Scope</h3>
+                </div>
+                <div class="aboutcardcontent">
+                    <p class="aboutcardtxt">This journal is open for scientific publications in mathematics and computer science, where the field of number theory, group theory, constructive and computer aided geometry as well as theoretical and practical aspects of programming languages receive particular emphasis. Methodological papers are also welcome. Papers submitted to the journal should be written in English. The Editorial Board can accept only new and unpublished material.</p>
+                </div>
+            </div>
+            <div  class="contactcard" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="contactcardtitle">
+                    <h5 class="aboutcardheader">Contact</h5>
+                </div>
+                <div class="contactcardcontent">
+                    <p class="aboutcardtxtc">Eszterházy Károly University</p>
+                    <p class="aboutcardtxtc">Institute of Mathematics and Informatics</p>
+                    <p class="aboutcardtxtc">H-3300 Eger, Leányka u. 4</p>
+                    <p class="aboutcardtxtc">Hungary</p>
+                    <p class="aboutcardtxtc">Tel/Fax: +36-36-520478</p>
+                    <div class="contactcardhref">
+                        <a  href="https://mailhide.io/e/zoXKu">E-mail</a>
                     </div>
                 </div>
             </div>
-            <div class="primaryeditors">
-                <table>
-                    <td>
-                        <div class="editor">
-                            <img  src="{{ asset('img/primary-editors/mh.jpg') }}">
-                            <a class="name" href="https://hoffmannmiklos.uni-eszterhazy.hu/en">Miklós Hoffmann</a>
-                            <h5 class="post">(Editor-in-Chief)</h5>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="editor">
-                            <img  src="{{ asset('img/primary-editors/tj.jpg') }}">
-                            <a class="name" href="http://juhasztibor.uni-eger.hu/">Tibor Juhász</a>
-                            <h5 class="post">(Managing Editor)</h5>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="editor">
-                            <img  src="{{ asset('img/primary-editors/gk.png') }}">
-                            <a class="name" href="https://sites.google.com/site/gkovasz/">Gergely Kovásznai</a>
-                            <h5 class="post">(Managing Editor)</h5>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="editor">
-                            <img  src="{{ asset('img/primary-editors/tt.png') }}">
-                            <a class="name" href="https://tomacstibor.uni-eszterhazy.hu/">Tibor Tómács</a>
-                            <h5 class="post">(Technical Editor)</h5>
-                        </div>
-                    </td>
-                </table>
-            </div>
-            <div class="other-editors">
-                <div class="aboutcard">
-                    <div class="aboutcardtitle">
-                        <a href="https://inf.unideb.hu/hu/node/1025">Sándor Bácsó</a>
+        </div>
+        <div class="primaryeditors" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+            <table>
+                <td>
+                    <div class="editor">
+                        <img  src="{{ asset('img/primary-editors/mh.jpg') }}">
+                        <a class="name" href="https://hoffmannmiklos.uni-eszterhazy.hu/en">Miklós Hoffmann</a>
+                        <h5 class="post">(Editor-in-Chief)</h5>
                     </div>
-                    <div class="aboutcardcontent">
-                        <p>Institute of Mathematics and Informatics, University of Debrecen, Debrecen, Hungary</p>
+                </td>
+                <td>
+                    <div class="editor">
+                        <img  src="{{ asset('img/primary-editors/tj.jpg') }}">
+                        <a class="name" href="http://juhasztibor.uni-eger.hu/">Tibor Juhász</a>
+                        <h5 class="post">(Managing Editor)</h5>
                     </div>
+                </td>
+                <td>
+                    <div class="editor">
+                        <img  src="{{ asset('img/primary-editors/gk.png') }}">
+                        <a class="name" href="https://sites.google.com/site/gkovasz/">Gergely Kovásznai</a>
+                        <h5 class="post">(Managing Editor)</h5>
+                    </div>
+                </td>
+                <td>
+                    <div class="editor">
+                        <img  src="{{ asset('img/primary-editors/tt.png') }}">
+                        <a class="name" href="https://tomacstibor.uni-eszterhazy.hu/">Tibor Tómács</a>
+                        <h5 class="post">(Technical Editor)</h5>
+                    </div>
+                </td>
+            </table>
+        </div>
+        <div class="other-editors" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="aboutcard">
+                <div class="aboutcardtitle">
+                    <a href="https://inf.unideb.hu/hu/node/1025">Sándor Bácsó</a>
                 </div>
-                <div class="aboutcard">
+                <div class="aboutcardcontent">
+                    <p>Institute of Mathematics and Informatics, University of Debrecen, Debrecen, Hungary</p>
+                </div>
+            </div>
+            <div class="aboutcard">
                     <div class="aboutcardtitle">
                         <a href="http://www.grad.hr/sgorjanc/">Sonja Gorjanc</a>
                     </div>
@@ -199,6 +200,7 @@
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
 </html>
 @endsection

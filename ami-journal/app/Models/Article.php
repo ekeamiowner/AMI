@@ -62,9 +62,10 @@ class Article extends Model
 
     public function volumes()
     {
-        return $this->belongsToMany(Volume::class, 'volume_article', 'article_id', 'volume_id');
+        return $this->belongsToMany(Volume::class, 'volume_article', 'article_id', 'volume_id')
+            ->withPivot(['from_page', 'to_page']);
     }
-
+    
     public function reviews()
     {
         return $this->hasMany(Review::class);
