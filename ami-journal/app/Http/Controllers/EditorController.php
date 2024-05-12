@@ -43,12 +43,12 @@ class EditorController extends Controller
 
         return view('pages.editor.index', compact('articles', 'search', 'status'));
     }
-    public function update($id)
+    public function update(Request $request)
     {
-        $article = Article::where('id', 'like', "$id");
-
-
-        return view('pages.editor.show', ['article' => $article]);
+        $article = Article::findOrFail($request->input('article_id'));
+        $article->state = $request->input('status');
+        $article->save();
+        return back();
     }
 
     public function download(Request $request)

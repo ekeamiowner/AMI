@@ -42,10 +42,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/articles/create', [ArticleController::class, 'create'])->name('articles.create');
     Route::post('/articles/store', [ArticleController::class, 'store'])->name('articles.store');
     Route::get('/editor', [EditorController::class, 'index'])->name('editor.index');
-    Route::put('/editor', [EditorController::class, 'update'])->name('editor.update');
-    Route::post('/editor', [EditorController::class, 'download'])->name('editor.download');
+    Route::put('/editor/update', [EditorController::class, 'update'])->name('editor.update');
+    Route::post('/editor/download', [EditorController::class, 'download'])->name('editor.download');
     Route::get('/usermanagement', [UserController::class, 'index'])->name('usermanagement.index');
-    Route::post('/usermanagement', [UserController::class, 'update'])->name('usermanagement.update');
+    Route::post('/usermanagement/update', [UserController::class, 'update'])->name('usermanagement.update');
 });
 
 Route::get('/admin', function() {
