@@ -36,10 +36,12 @@ class ArticleController extends Controller
       } else {
           $query->where('state', 'ACCEPTED');
       }
+
   
       $articles = $query->paginate(10);
   
-      return view('pages.articles.index', ['articles' => $articles, 'search' => $search]);
+      return view('pages.articles.index', ['articles' => $articles, 'search' => $search,
+    ]);
   }
   
 

@@ -2,6 +2,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 @section('content')
+
 <body style="background: rgb(255,255,255); border-bottom-width: 3px; border-bottom-style: none;">
     <div class="container" data-aos="fade" data-aos-duration="1000" data-aos-once="true" style="padding-top: 5vw;">
         <div class="row">
@@ -37,7 +38,7 @@
                 </div>
             </div>
         </div>
-
+        
         <div class="row" style="background: #004863; padding: 0; margin-right: 0; margin-left: 0;">
         <div class="col" style="padding-right: 0; padding-left: 0;">
             @if($selectedOption == 'latest' || !isset($selectedOption))
@@ -55,6 +56,7 @@
                     <img class="img-fluid" src="/img/covers/{{ $selectedVolume->id }}cover.jpg">
                 @endif
             </div>
+            
 
             @if($selectedOption != 'latest' && isset($selectedVolume))
                 <div class="col">
@@ -97,7 +99,7 @@
                                         </a>
                                     </h3>    
                                     <div class="author-reviewer">
-                                        <span class="author" style="font-size: 1.2rem; color: var(--bs-white);">by {{ optional($article->user)->name }}</span> 
+                                        <span class="author" style="font-size: 1.2rem; color: var(--bs-white);">{{ optional($article->type)->name }} by {{ optional($article->user)->name }}</span> 
                                         {{-- <span class="editor">Editor: {{ optional($article->editor)->name }}</span> --}}
                                     </div>
                                 </div>
@@ -114,52 +116,99 @@
                             </div>
                         </div>
                     </div>
+                    
                 @endforeach
             @else
                 {{-- Display articles for the selected volume --}}
-                @foreach($selectedVolume->articles()->where('state', 'ACCEPTED')->get() as $article)
-                    @php
-                        $volumeArticle = $article->volumes->first();
-                        $fromPage = $volumeArticle ? $volumeArticle->pivot->from_page : 'N/A';
-                        $toPage = $volumeArticle ? $volumeArticle->pivot->to_page : 'N/A';
-                    @endphp
-                    <div class="article-container-h" style="border-radius: 15px; padding: 1rem; margin-bottom: 1rem; background-color: #004863;">
-                        <div class="row mx-1">
-                            <div class="col">   
-                                <div class="header-section-h">
-                                <h3 style="font-size: 1.5rem; font-weight: bold; color: var(--bs-white);">
-                                    <a href="{{ route('open-article') }}?file={{ $article->source }}" style="text-decoration: none; color: inherit;">
-                                        {{ $article->title }}
-                                    </a>
-                                </h3>
-                                <div class="author-reviewer">
-                                    <span class="author" style="font-size: 1.2rem;">by {{ optional($article->user)->name }}</span> 
-                                    {{-- <span class="editor">Editor: {{ optional($article->editor)->name }}</span> --}}
-                                </div>
-                                </div>
-                                <div class="abstract-section" style="font-size: 1.2rem; color: var(--bs-white);">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="abstract-content"><em>Pages: {{ $fromPage }} - {{ $toPage }}</em></div>
+                    <h3 style="font-size: 1.5rem; font-weight: bold; color: var(--bs-white);">Research Papers<h3>
+
+                        @foreach($selectedVolume->articles()->where('state', 'ACCEPTED',)->where('type_id', 1)->get()  as $article )
+                            @php
+                                $volumeArticle = $article->volumes->first();
+                                $fromPage = $volumeArticle ? $volumeArticle->pivot->from_page : 'N/A';
+                                $toPage = $volumeArticle ? $volumeArticle->pivot->to_page : 'N/A';
+                            @endphp
+                            
+                                <div class="article-container-h" style="border-radius: 15px; padding: 1rem; margin-bottom: 1rem; background-color: #004863;">
+                                    <div class="row mx-1">
+                                        <div class="col">   
+                                            <div class="header-section-h">
+                                            <h3 style="font-size: 1.5rem; font-weight: bold; color: var(--bs-white);">
+                                                <a href="{{ route('open-article') }}?file={{ $article->source }}" style="text-decoration: none; color: inherit;">
+                                                    {{ $article->title }}
+                                                </a>
+                                            </h3>
+                                            <div class="author-reviewer">
+                                                <span class="author" style="font-size: 1.2rem;">by {{ optional($article->user)->name }}</span> 
+                                                {{-- <span class="editor">Editor: {{ optional($article->editor)->name }}</span> --}}
+                                            </div>
+                                            </div>
+                                            <div class="abstract-section" style="font-size: 1.2rem; color: var(--bs-white);">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="abstract-content"><em>Pages: {{ $fromPage }} - {{ $toPage }}</em></div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <span>DOI:</span> <span style="font-weight: bold;">{{ $article->doi }}</span>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="abstract-content text-right">{{ $article->updated_at }}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <span>DOI:</span> <span style="font-weight: bold;">{{ $article->doi }}</span>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="abstract-content text-right">{{ $article->updated_at }}</div>
+                                </div>
+                        @endforeach
+                    <h3 style="font-size: 1.5rem; font-weight: bold; color: var(--bs-white);">Methodological Papers<h3>
+                        @foreach($selectedVolume->articles()->where('state', 'ACCEPTED',)->where('type_id', 2)->get()  as $article )
+                            @php
+                                $volumeArticle = $article->volumes->first();
+                                $fromPage = $volumeArticle ? $volumeArticle->pivot->from_page : 'N/A';
+                                $toPage = $volumeArticle ? $volumeArticle->pivot->to_page : 'N/A';
+                            @endphp
+                            
+                                <div class="article-container-h" style="border-radius: 15px; padding: 1rem; margin-bottom: 1rem; background-color: #004863;">
+                                    <div class="row mx-1">
+                                        <div class="col">   
+                                            <div class="header-section-h">
+                                            <h3 style="font-size: 1.5rem; font-weight: bold; color: var(--bs-white);">
+                                                <a href="{{ route('open-article') }}?file={{ $article->source }}" style="text-decoration: none; color: inherit;">
+                                                    {{ $article->title }}
+                                                </a>
+                                            </h3>
+                                            <div class="author-reviewer">
+                                                <span class="author" style="font-size: 1.2rem;">by {{ optional($article->user)->name }}</span> 
+                                                {{-- <span class="editor">Editor: {{ optional($article->editor)->name }}</span> --}}
+                                            </div>
+                                            </div>
+                                            <div class="abstract-section" style="font-size: 1.2rem; color: var(--bs-white);">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="abstract-content"><em>Pages: {{ $fromPage }} - {{ $toPage }}</em></div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <span>DOI:</span> <span style="font-weight: bold;">{{ $article->doi }}</span>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="abstract-content text-right">{{ $article->updated_at }}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
+                        @endforeach
             @endif
 
         </div>
     </div>
+    
+    
 
     <div class="container d-sm-flex d-xl-flex justify-content-sm-center align-items-sm-center justify-content-xl-center align-items-xl-center" style="padding-top: 4vw;">
         <img class="img-fluid" data-aos="fade" data-aos-duration="1000" data-aos-once="true" src="/img/EKCU.png" style="width: 50%;">
