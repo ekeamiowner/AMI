@@ -20,7 +20,9 @@ class VolumeController extends Controller
    */
   public function index()
   {
-    
+    $volumes = Volume::with('articles')->get();
+
+        return view('pages.volumes.index', compact('volumes'));
   }
 
   /**
