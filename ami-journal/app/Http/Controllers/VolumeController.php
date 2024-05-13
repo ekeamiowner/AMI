@@ -57,6 +57,12 @@ class VolumeController extends Controller
 
   }
 
+  public function updateArticles(Request $request, Volume $volume)
+{
+    $volume->articles()->sync($request->articles); // A sync metódus frissíti a kapcsolatokat a kiválasztott cikkek alapján
+
+    return redirect()->route('volumes.index')->with('success', 'Cikkek frissítve.');
+}
   /**
    * Display the specified resource.
    *
