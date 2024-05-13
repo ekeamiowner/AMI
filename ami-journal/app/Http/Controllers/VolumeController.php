@@ -32,7 +32,7 @@ class VolumeController extends Controller
    */
   public function create()
   {
-    
+    return view('pages.volumes.create');
   }
 
   /**
@@ -42,7 +42,18 @@ class VolumeController extends Controller
    */
   public function store(Request $request)
   {
-    
+    $request->validate([
+      'title' => 'required|max:255',
+      // További validációs szabályok szükség szerint
+  ]);
+
+  $volume = new Volume();
+  $volume->title = $request->title;
+  // További attribútumok beállítása szükség szerint
+  $volume->save();
+
+  return redirect()->route('volumes.index')->with('success', 'Volume created successfully.');
+
   }
 
   /**
