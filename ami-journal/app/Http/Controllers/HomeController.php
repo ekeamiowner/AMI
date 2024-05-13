@@ -32,7 +32,7 @@ class HomeController extends Controller
                 $selectedVolume = Volume::orderBy('id', 'desc')->first();
             } else {
                 $selectedVolume = Volume::latest()->first();
-                $articles = $selectedVolume->articles()->latest()->limit(5)->get();
+                $articles = Article::where('state', 'ACCEPTED')->orderByDesc('updated_at')->take(5)->get();
             }
         }
         

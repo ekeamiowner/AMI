@@ -52,10 +52,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/editor/download', [EditorController::class, 'download'])->name('editor.download');
 });
 
-Route::get('/admin', function() {
-    return view('adminpanel.adminpanel');
-});
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('pages.profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('pages.profile.partials.update');
@@ -70,7 +66,9 @@ Route::group(['middleware' => 'admin'], function () {
     Route::post('/usermanagement/update', [UserController::class, 'update'])->name('usermanagement.update');
 });
 
-
-
+/* Route::get('/admin', function() {
+    return view('adminpanel.adminpanel');
+});
+*/
 
 require __DIR__.'/auth.php';

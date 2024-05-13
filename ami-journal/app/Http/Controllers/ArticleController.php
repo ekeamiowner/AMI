@@ -24,7 +24,6 @@ class ArticleController extends Controller
       $search = $request->input('search');
       $query = Article::query();
       
-      // Csökkenő sorrendben rendezzük a cikkeket az updated_at alapján
       $query->orderBy('updated_at', 'desc');
   
       if ($search) {
@@ -37,7 +36,6 @@ class ArticleController extends Controller
           $query->where('state', 'ACCEPTED');
       }
 
-  
       $articles = $query->paginate(10);
   
       return view('pages.articles.index', ['articles' => $articles, 'search' => $search,
@@ -56,7 +54,6 @@ class ArticleController extends Controller
         $recommended_editors = User::where('accepted_reviewer', 1)->get();
         return view('pages.articles.create', ['types' => $types], ['recommended_editors' => $recommended_editors]);
     }
-
 
     public function store(Request $request)
     {
