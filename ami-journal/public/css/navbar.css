@@ -1,4 +1,7 @@
 .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: none;
     width: 100%;
     overflow: hidden;
@@ -34,6 +37,7 @@
 }
 
 .nav-icons {
-    margin-left: auto;
+    display: flex;
+    align-items: center;
 }
 

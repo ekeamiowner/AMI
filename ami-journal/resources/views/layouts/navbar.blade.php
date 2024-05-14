@@ -26,7 +26,7 @@
             Logout
         </button>
     </form>
-    <a class="nav-icons">
+    <div class="nav-icons">
         @guest
             <a href="{{ route('login') }}">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
@@ -47,5 +47,5 @@
                 </svg>
             </a>
         @endguest
-    </a>
+    </div>
 </div>
