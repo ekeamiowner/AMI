@@ -21,7 +21,6 @@ class Volume extends Model
         return $this->belongsToMany(Article::class, 'volume_article', 'volume_id', 'article_id')
             ->withPivot(['from_page', 'to_page'])
             ->withTimestamps();
-            return $this->hasMany(Article::class);
     }
     
 }

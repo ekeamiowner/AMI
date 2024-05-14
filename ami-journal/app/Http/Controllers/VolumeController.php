@@ -21,9 +21,7 @@ class VolumeController extends Controller
    */
   public function index()
   {
-    $volumes = Volume::with('articles')->get();
 
-        return view('pages.volumes.index', compact('volumes'));
   }
 
   /**
@@ -33,7 +31,7 @@ class VolumeController extends Controller
    */
   public function create()
   {
-    return view('pages.volumes.create');
+
   }
 
   /**
@@ -43,26 +41,13 @@ class VolumeController extends Controller
    */
   public function store(Request $request)
   {
-    $request->validate([
-      'title' => 'required|max:255',
-      // További validációs szabályok szükség szerint
-  ]);
-
-  $volume = new Volume();
-  $volume->title = $request->title;
-  // További attribútumok beállítása szükség szerint
-  $volume->save();
-
-  return redirect()->route('volumes.index')->with('success', 'Volume created successfully.');
-
+    
   }
 
   public function updateArticles(Request $request, Volume $volume)
-{
-    $volume->articles()->sync($request->articles); // A sync metódus frissíti a kapcsolatokat a kiválasztott cikkek alapján
-
-    return redirect()->route('volumes.index')->with('success', 'Cikkek frissítve.');
-}
+  {
+      
+  }
   /**
    * Display the specified resource.
    *

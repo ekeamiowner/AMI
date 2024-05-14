@@ -71,10 +71,4 @@ Route::group(['middleware' => 'admin'], function () {
 });
 */
 
-Route::get('/volumes', 'VolumeController@index')->name('volumes.index');
-Route::get('/volumes/create', 'VolumeController@create')->name('volumes.create');
-Route::post('/volumes', 'VolumeController@store')->name('volumes.store');
-Route::get('/volumes/{volume}/store', [VolumeController::class, 'storePage'])->name('volumes.storePage');
-Route::put('/volumes/{volume}/updateArticles', [VolumeController::class, 'updateArticles'])->name('volumes.updateArticles');
-
 require __DIR__.'/auth.php';
