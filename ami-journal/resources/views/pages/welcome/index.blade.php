@@ -24,7 +24,7 @@
                 {{-- Dropdown menu --}}
                 <div class="dropdown">
                     <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" type="button" style="background: var(--bs-body-bg); font-size: 1.1rem; color: #004863; font-weight: bold;">
-                    {{ $selectedOption == 'latest' || !isset($selectedOption) || is_null($selectedVolume) ? 'Latest articles' : $selectedVolume->title }}
+                        {{ $selectedOption == 'latest' || !isset($selectedOption) ? 'Latest articles' : $selectedVolume->title }}
                     </button>
                     <div class="dropdown-menu">
 
