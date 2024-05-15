@@ -20,7 +20,9 @@
                     <p>Revision ID: {{ $review->revision_id }}</p>
                     <p>Created At: {{ $review->created_at }}</p>
                     <p>Article ID: {{ $review->revision->article_id }}</p>
-                    <p>User: {{ $review->user->name }}</p>
+                    <p>Article Author: {{ $review->article->user->name }}</p>
+                    <p>Article Title: {{ $review->article->title }}</p>
+                    <p>Reviewer: {{ $review->user->name }}</p>
                     <p>Content: {{ $review->content }}</p>
                     <p>State: {{ $review->state }}</p>
                 </div>
