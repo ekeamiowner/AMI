@@ -17,6 +17,9 @@
                 <a href="{{ route('usermanagement.index') }}">Users</a>
                 <a href="{{ route('volumes.index') }}">Volumes</a>
             @endif
+            @if(Auth::user()->accepted_reviewer > 0 || Auth::user()->isAdmin())
+                <a href="{{ route('pages.reviews.index') }}">Reviews</a>
+            @endif
         @endauth
     </div>
     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

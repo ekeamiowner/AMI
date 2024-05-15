@@ -1,17 +1,18 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AboutController;
-use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\SubmissionController;
 use App\Http\Controllers\EditorController;
-use App\Http\Controllers\DeveloperTeamController;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\VolumeController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SubmissionController;
 use App\Http\Controllers\OpenArticleController;
+use App\Http\Controllers\DeveloperTeamController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,6 +51,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/editor', [EditorController::class, 'index'])->name('editor.index');
     Route::put('/editor/update', [EditorController::class, 'update'])->name('editor.update');
     Route::post('/editor/download', [EditorController::class, 'download'])->name('editor.download');
+    Route::get('/reviews', [ReviewController::class, 'index'])->name('pages.reviews.index')->middleware('accepted.reviewer');
 });
 
 Route::middleware('auth')->group(function () {
@@ -65,6 +67,7 @@ Route::group(['middleware' => 'admin'], function () {
     Route::post('/usermanagement', [UserController::class, 'update'])->name('usermanagement.update');
     Route::post('/usermanagement/update', [UserController::class, 'update'])->name('usermanagement.update');
 });
+
 
 /* Route::get('/admin', function() {
     return view('adminpanel.adminpanel');
