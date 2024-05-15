@@ -2,10 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Review;
 use Illuminate\Http\Request;
+use App\Http\Middleware\AcceptedReviewer;
 
 class ReviewController extends Controller 
 {
+  public function __construct()
+    {
+        $this->middleware(AcceptedReviewer::class);
+    }
 
   /**
    * Display a listing of the resource.
@@ -14,7 +20,8 @@ class ReviewController extends Controller
    */
   public function index()
   {
-    
+    $reviews = Review::with(['user', 'revision', 'article'])->paginate(10);
+    return view('pages.reviews.index', compact('reviews'));
   }
 
   /**
