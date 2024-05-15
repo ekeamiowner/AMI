@@ -103,8 +103,8 @@
 @endforeach
 
 
-<div class="pagination justify-content-center">
-    {{ $articles->appends(['search' => $search, 'status' => $status])->links('pagination::bootstrap-4') }}
+<div class="py-6">
+    {{ $articles->appends(['search' => $search, 'status' => $status])->links() }}
 </div>
 
 @endsection

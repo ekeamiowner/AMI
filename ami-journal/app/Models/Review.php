@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-
 class Review extends Model
 {
     use HasFactory, ApiResource;
@@ -24,8 +23,4 @@ class Review extends Model
         return $this->belongsTo(Revision::class);
     }
 
-    public function article(): BelongsTo
-    {
-        return $this->belongsTo(Article::class, 'revision_id', 'id');
-    }
 }

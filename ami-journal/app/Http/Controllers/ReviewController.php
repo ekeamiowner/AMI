@@ -20,8 +20,8 @@ class ReviewController extends Controller
    */
   public function index()
   {
-    $reviews = Review::with(['user', 'revision', 'article'])->paginate(10);
-    return view('pages.reviews.index', compact('reviews'));
+      $reviews = Review::with(['user', 'revision.article'])->latest()->paginate(10);
+      return view('pages.reviews.index', compact('reviews'));
   }
 
   /**
