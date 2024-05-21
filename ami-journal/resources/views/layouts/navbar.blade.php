@@ -4,9 +4,9 @@
         <a href="{{ route('welcome.index') }}">Home</a>
         <a href="{{ route('articles.index') }}">Browse</a>
         @guest
-            <a href="{{ route('login') }}">New submission</a>
+            <a href="{{ route('login') }}">New Submission</a>
         @else
-            <a href="{{ route('articles.create') }}">New submission</a>
+            <a href="{{ route('articles.create') }}">New Submission</a>
             <a class="nav-link" href="{{ route('submissions.index') }}">My Submissions</a>
         @endguest
         <a href="{{ route('about.index') }}">About us</a>

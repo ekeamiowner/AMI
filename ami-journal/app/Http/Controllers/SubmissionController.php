@@ -25,26 +25,41 @@ class SubmissionController extends Controller
     public function update(Request $request, Article $article)
     {
         $request->validate([
-            'file' => 'required|file|mimes:pdf,tex',
+            'title' => 'required|string|max:255',
+            'pdf_file' => 'nullable|file|mimes:pdf',
+            'latex_file' => 'nullable|file|mimes:tex',
         ]);
     
-        if ($request->hasFile('file')) {
-            $file = $request->file('file');
-            $extension = $file->getClientOriginalExtension();
-            
-            $directory = $extension == 'pdf' ? 'pdf' : 'latex';
-            $filename = time() . '_' . $file->getClientOriginalName();
-            $path = $file->storeAs($directory, $filename);
+        $titleChanged = $request->input('title') !== $article->title;
+        $pdfFileUploaded = $request->hasFile('pdf_file');
+        $latexFileUploaded = $request->hasFile('latex_file');
     
-            if ($extension == 'pdf') {
-                $article->update(['source' => $path, 'status' => 'UPDATED']);
-            } elseif ($extension == 'tex') {
-                $article->update(['latex_path' => $path, 'status' => 'UPDATED']);
-            }
+        if (!$titleChanged && !$pdfFileUploaded && !$latexFileUploaded) {
+            return redirect()->back()->with('error', 'No changes detected.');
         }
     
-
+        if ($titleChanged) {
+            $article->update(['title' => $request->input('title')]);
+        }
+    
+        if ($pdfFileUploaded) {
+            $pdfFile = $request->file('pdf_file');
+            $pdfFilename = time() . '_' . $pdfFile->getClientOriginalName();
+            $pdfPath = $pdfFile->storeAs('pdf', $pdfFilename);
+    
+            $article->update(['source' => $pdfPath, 'status' => 'UPDATED']);
+        }
+    
+        if ($latexFileUploaded) {
+            $latexFile = $request->file('latex_file');
+            $latexFilename = time() . '_' . $latexFile->getClientOriginalName();
+            $latexPath = $latexFile->storeAs('latex', $latexFilename);
+    
+            $article->update(['latex_path' => $latexPath, 'status' => 'UPDATED']);
+        }
+    
         return redirect()->route('submissions.index')->with('success', 'Article updated successfully.');
     }
+    
 
 }

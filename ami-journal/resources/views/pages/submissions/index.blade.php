@@ -1,4 +1,3 @@
-<!-- resources/views/submissions/index.blade.php -->
 @extends('layouts.main')
 
 @section('content')
@@ -9,6 +8,12 @@
             {{ session('success') }}
         </div>
     @endif
+
+    <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-4" role="alert">
+        <p class="font-bold">Warning:</p>
+        <p>Only articles with the status "UNDER_REVIEW" can be modified.</p>
+    </div>
+
     <table class="table-auto w-full">
         <thead>
             <tr>
@@ -25,6 +30,8 @@
                     <td class="border px-4 py-2">
                         @if ($article->state == 'UNDER_REVIEW')
                             <a href="{{ route('submissions.edit', $article) }}" class="btn btn-primary">Update</a>
+                        @else
+                            <span>No actions available</span>
                         @endif
                     </td>
                 </tr>
