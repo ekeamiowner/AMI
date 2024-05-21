@@ -7,6 +7,7 @@
             <a href="{{ route('login') }}">New submission</a>
         @else
             <a href="{{ route('articles.create') }}">New submission</a>
+            <a class="nav-link" href="{{ route('submissions.index') }}">My Submissions</a>
         @endguest
         <a href="{{ route('about.index') }}">About us</a>
         @auth
