@@ -10,9 +10,9 @@ use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\VolumeController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\SubmissionController;
 use App\Http\Controllers\OpenArticleController;
 use App\Http\Controllers\DeveloperTeamController;
+use App\Http\Controllers\SubmissionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,6 +52,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::put('/editor/update', [EditorController::class, 'update'])->name('editor.update');
     Route::post('/editor/download', [EditorController::class, 'download'])->name('editor.download');
     Route::get('/reviews', [ReviewController::class, 'index'])->name('pages.reviews.index')->middleware('accepted.reviewer');
+    Route::get('/my-submissions', [SubmissionController::class, 'index'])->name('submissions.index');
+    Route::get('/my-submissions/{article}/edit', [SubmissionController::class, 'edit'])->name('submissions.edit');
+    Route::put('/my-submissions/{article}', [SubmissionController::class, 'update'])->name('submissions.update');
 });
 
 Route::middleware('auth')->group(function () {
