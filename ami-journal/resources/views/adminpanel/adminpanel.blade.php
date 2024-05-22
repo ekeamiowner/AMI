@@ -21,6 +21,7 @@
                             <path d="M13 16H12V12H11M12 8H12.01M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                         <h4 class="card-title">Attention!</h4>
+                        <h4 class="card-title">Attention!</h4>
                         <h6 class="text-muted card-subtitle mb-2">Be careful! Accepting a document will instantly upload it to the homepage!</h6>
                         <p class="card-text">In this section you can accept, reject or send back to modify the documents which the users already uploaded. Once you accept a document it will instantly appear on the homescreen. If you would like to change anything you should navigate to the Existing publications menu.&nbsp;</p><a class="card-link" href="#">Link</a><a class="card-link" href="#">Link</a>
                     </div>
@@ -32,6 +33,11 @@
                         <div class="row" style="margin: 10px;background: #204755;border-radius: 14px;margin-top: 16px;">
                             <div class="col">
                                 <p style="color: rgb(255,255,255);">Name - Article</p>
+                            </div>
+                        </div>
+                        <div class="row" style="margin: 10px;background: #204755;border-radius: 14px;margin-top: 16px;">
+                            <div class="col">
+                                <p style="color: rgb(255,255,255);">Name - Article<br></p>
                             </div>
                         </div>
                         <div class="row" style="margin: 10px;background: #204755;border-radius: 14px;margin-top: 16px;">
