@@ -66,6 +66,16 @@
                             <path d="M12 10V16M12 16L9 13M12 16L15 13M17 21H7C5.89543 21 5 20.1046 5 19V5C5 3.89543 5.89543 3 7 3H12.5858C12.851 3 13.1054 3.10536 13.2929 3.29289L18.7071 8.70711C18.8946 8.89464 19 9.149 19 9.41421V19C19 20.1046 18.1046 21 17 21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                     </div>
+                    <div class="col" style="text-align: center;border-left: 2px solid rgb(33, 37, 41);">
+                        <h1 style="font-size: 32px;margin-top: 3vw;">Name - Article</h1><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="font-size: 129px;margin-top: 2vw;">
+                            <path d="M12 10V16M12 16L9 13M12 16L15 13M17 21H7C5.89543 21 5 20.1046 5 19V5C5 3.89543 5.89543 3 7 3H12.5858C12.851 3 13.1054 3.10536 13.2929 3.29289L18.7071 8.70711C18.8946 8.89464 19 9.149 19 9.41421V19C19 20.1046 18.1046 21 17 21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 5vw;margin-bottom: 1vw;">
+                    <div class="col text-center"><button class="btn btn-primary" type="button" style="background: #204755;">Accept</button></div>
+                    <div class="col text-center"><button class="btn btn-primary" type="button" style="background: #204755;">Send to Modify</button></div>
+                    <div class="col text-center"><button class="btn btn-primary" type="button" style="background: #204755;">Reject</button></div>
                 </div>
                 <div class="row" style="margin-top: 5vw;margin-bottom: 1vw;">
                     <div class="col text-center"><button class="btn btn-primary" type="button" style="background: #204755;">Accept</button></div>
