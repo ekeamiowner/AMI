@@ -15,33 +15,46 @@ class HomeController extends Controller
         $selectedOption = $request->input('option', 'volume');
     
         $query = Article::query()->where('state', 'ACCEPTED');
-        if ($dispnum == '*') {
+        if ($dispnum == '*') 
+        {
             $articles = $query->paginate('*');
-        } else {
+        } 
+        else 
+        {
             $articles = $query->paginate(intval($dispnum));
         }
     
         $volumes = Volume::all();
     
         $selectedVolumeId = $request->input('volume_id', null);
-        if ($selectedVolumeId) {
+        if ($selectedVolumeId) 
+        {
             $selectedVolume = Volume::find($selectedVolumeId);
             $articles = $selectedVolume->articles()->paginate($dispnum);
-        } else {
-            if ($selectedOption == 'volume') {
+        } 
+        else 
+        {
+            if ($selectedOption == 'volume') 
+            {
                 $selectedVolume = Volume::orderBy('id', 'desc')->first();
-            } else {
+            } 
+            else 
+            {
                 $selectedVolume = Volume::latest()->first();
                 $articles = Article::where('state', 'ACCEPTED')->orderByDesc('updated_at')->take(5)->get();
             }
         }
         
-        foreach ($articles as $article) {
+        foreach ($articles as $article) 
+        {
             $volumeArticle = $article->volumes->first();
-            if ($volumeArticle) {
+            if ($volumeArticle) 
+            {
                 $article->from_page = $volumeArticle->pivot->from_page;
                 $article->to_page = $volumeArticle->pivot->to_page;
-            } else {
+            } 
+            else 
+            {
                 $article->from_page = 'N/A';
                 $article->to_page = 'N/A';
             }

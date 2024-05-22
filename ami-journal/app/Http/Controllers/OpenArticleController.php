@@ -11,20 +11,27 @@ class OpenArticleController extends Controller
     {
         $filePath = $request->input('file');
     
-        if (strpos($filePath, 'pdf/') === 0) {
+        if (strpos($filePath, 'pdf/') === 0) 
+        {
             $column = 'source';
-        } elseif (strpos($filePath, 'latex/') === 0) {
+        } 
+        elseif (strpos($filePath, 'latex/') === 0) 
+        {
             $column = 'latex_path';
-        } else {
+        } 
+        else 
+        {
             return redirect()->back()->with('error', 'Invalid file path!');
         }
     
         $article = Article::where($column, $filePath)->first();
-        if (!$article) {
+        if (!$article) 
+        {
             return redirect()->back()->with('error', 'File not found!');
         }
     
-        if (!$article->user) {
+        if (!$article->user) 
+        {
             return redirect()->back()->with('error', 'User not found!');
         }
     
@@ -33,11 +40,15 @@ class OpenArticleController extends Controller
         $fileExtension = $path_parts['extension'];
         $fileName = 'article.' . $fileExtension;
     
-        if ($filePath === null) {
+        if ($filePath === null) 
+        {
             return redirect()->back()->with('error', 'Invalid file!');
-        } else {
+        } 
+        else 
+        {
             $filePath = '\app\\' . str_replace('/', '\\', $filePath);
-            if (!file_exists(storage_path($filePath))) {
+            if (!file_exists(storage_path($filePath))) 
+            {
                 return redirect()->back()->with('error', 'File not found!');
             }
     

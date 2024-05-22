@@ -26,13 +26,17 @@ class ArticleController extends Controller
       
       $query->orderBy('updated_at', 'desc');
   
-      if ($search) {
-          $query->where(function($q) use ($search) {
+      if ($search) 
+      {
+          $query->where(function($q) use ($search) 
+          {
               $q->where('title', 'like', "%$search%")
                   ->orWhere('abstract', 'like', "%$search%");
           })
           ->where('state', 'ACCEPTED');
-      } else {
+      } 
+      else 
+      {
           $query->where('state', 'ACCEPTED');
       }
 
@@ -96,9 +100,12 @@ class ArticleController extends Controller
             'latex_path' => $latex_path,
         ]);
 
-        if ($article) {
+        if ($article) 
+        {
             Session::flash('success', 'The article has been successfully uploaded, the editors will review it soon');
-        } else {
+        } 
+        else 
+        {
             Session::flash('error', 'An error occurred during upload');
         }
         

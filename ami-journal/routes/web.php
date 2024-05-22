@@ -31,20 +31,23 @@ Route::get('/articles', [ArticleController::class, 'index'])->name('articles.ind
 
 Route::get('/open-article', [OpenArticleController::class, 'openArticle'])->name('open-article');
 
-Route::get('/about', function() {
+Route::get('/about', function() 
+{
     return view('pages.about.index');
 })->name('about.index');
 
 Route::get('/developers', [DeveloperTeamController::class, 'index']) -> name('developers.index');
 
-Route::group(['middleware' => 'guest'], function () {
+Route::group(['middleware' => 'guest'], function () 
+{
     Route::get('/register', [AuthController::class, 'register'])->name('register');
     Route::post('/register', [AuthController::class, 'registerPost'])->name('register');
     Route::get('/login', [AuthController::class, 'login'])->name('login');
     Route::post('/login', [AuthController::class, 'loginPost'])->name('login');
 });
 
-Route::group(['middleware' => 'auth'], function () {
+Route::group(['middleware' => 'auth'], function () 
+{
     Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('/articles/create', [ArticleController::class, 'create'])->name('articles.create');
     Route::post('/articles/store', [ArticleController::class, 'store'])->name('articles.store');
@@ -57,14 +60,16 @@ Route::group(['middleware' => 'auth'], function () {
     Route::put('/my-submissions/{article}', [SubmissionController::class, 'update'])->name('submissions.update');
 });
 
-Route::middleware('auth')->group(function () {
+Route::middleware('auth')->group(function () 
+{
     Route::get('/profile', [ProfileController::class, 'edit'])->name('pages.profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('pages.profile.partials.update');
     Route::post('/profile/password', [ProfileController::class, 'updatePassword'])->name('pages.profile.partials.password.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('pages.profile.partials.destroy');
 });
 
-Route::group(['middleware' => 'admin'], function () {
+Route::group(['middleware' => 'admin'], function () 
+{
     Route::get('/volumes', [VolumeController::class, 'index'])->name('volumes.index');
     Route::get('/usermanagement', [UserController::class, 'index'])->name('usermanagement.index');
     Route::post('/usermanagement', [UserController::class, 'update'])->name('usermanagement.update');

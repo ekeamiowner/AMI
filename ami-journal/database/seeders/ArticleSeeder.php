@@ -12,7 +12,8 @@ class ArticleSeeder extends Seeder
 {
     public function run()
     {
-        for ($i = 1; $i <= 5; $i++) {
+        for ($i = 1; $i <= 5; $i++) 
+        {
             Article::create([
                 'user_id' => 3,
                 'editor_id' => 2,
@@ -32,7 +33,8 @@ class ArticleSeeder extends Seeder
             ]);
         }
 
-        for ($i = 6; $i <= 10; $i++) {
+        for ($i = 6; $i <= 10; $i++) 
+        {
             Article::create([
                 'user_id' => 3,
                 'editor_id' => 2,
@@ -52,7 +54,8 @@ class ArticleSeeder extends Seeder
             ]);
         }
 
-        for ($i = 11; $i <= 13; $i++) {
+        for ($i = 11; $i <= 13; $i++) 
+        {
             Article::create([
                 'user_id' => 3,
                 'editor_id' => 2,
@@ -72,7 +75,8 @@ class ArticleSeeder extends Seeder
             ]);
         }
 
-        for ($i = 14; $i <= 15; $i++) {
+        for ($i = 14; $i <= 15; $i++) 
+        {
             Article::create([
                 'user_id' => 3,
                 'editor_id' => 2,
@@ -92,7 +96,8 @@ class ArticleSeeder extends Seeder
             ]);
         }
 
-        for ($i = 16; $i <= 20; $i++) {
+        for ($i = 16; $i <= 20; $i++) 
+        {
             Article::create([
                 'user_id' => 3,
                 'editor_id' => 2,

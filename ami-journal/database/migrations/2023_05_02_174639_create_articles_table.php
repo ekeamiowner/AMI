@@ -4,11 +4,13 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateArticlesTable extends Migration {
+class CreateArticlesTable extends Migration 
+{
 
 	public function up()
 	{
-		Schema::create('articles', function(Blueprint $table) {
+		Schema::create('articles', function(Blueprint $table) 
+		{
 			$table->integer('id', true)->unsigned();
 			$table->integer('user_id')->unsigned();
 			$table->integer('editor_id')->nullable()->unsigned()->default(null);

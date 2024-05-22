@@ -18,7 +18,8 @@ class UserController extends Controller
     {
         $search = $request->input('search');
         $query = User::query();
-        if ($search) {
+        if ($search) 
+        {
             $query->where('name', 'like', "%$search%");
         }
 
@@ -32,22 +33,29 @@ class UserController extends Controller
         $userId = $request->input('user');
         $user = User::find($userId);
 
-        if (!$user) {
+        if (!$user) 
+        {
             return redirect()->back()->with('error', 'User not found.');
         }
 
-        if ($user->accepted_reviewer !== null) {
+        if ($user->accepted_reviewer !== null) 
+        {
             $user->accepted_reviewer = !$user->accepted_reviewer;
             $user->save();
-        } else {
+        } 
+        else 
+        {
             return redirect()->back()->with('error', '"accepted_reviewer" is null.');
         }
         
-        if($user->accepted_reviewer){
+        if($user->accepted_reviewer)
+        {
             session()->flash('success', "$user->name successfully promoted to reviewer.");
         }
-        else session()->flash('success', "$user->name's rights successfully demoted.");
-        
+        else 
+        {
+            session()->flash('success', "$user->name's rights successfully demoted.");
+        }
 
         $users = User::paginate(10);
         return view('pages.usermanagement.index', ['users' => $users , 'search' => '']);

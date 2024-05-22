@@ -16,7 +16,8 @@ class AcceptedReviewer
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if ($request->user() && $request->user()->accepted_reviewer != 1) {
+        if ($request->user() && $request->user()->accepted_reviewer != 1) 
+        {
             abort(403, 'Unauthorized action.');
         }
 

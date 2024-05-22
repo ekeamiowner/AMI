@@ -10,7 +10,8 @@ class ArticleTypeSeeder extends Seeder
 {
     public function run(): void
     {
-        Article::all()->each(function (Article $article){
+        Article::all()->each(function (Article $article)
+        {
             /**@var Type $type */
             $type = Type::random();
             $article->type_id = $type->id;

@@ -30,21 +30,27 @@ class EditorController extends Controller
 
         $query = Article::query();
 
-        if ($search) {
-            $query->where(function ($query) use ($search) {
+        if ($search) 
+        {
+            $query->where(function ($query) use ($search) 
+            {
                 $query->where('title', 'like', "%$search%")
                     ->orWhere('abstract', 'like', "%$search%");
             });
         }
 
-        if ($status != 'ALL') {
+        if ($status != 'ALL') 
+        {
             $query->where('state', $status);
         }
 
-        if ($sortField === 'recommended_editor') {
+        if ($sortField === 'recommended_editor') 
+        {
             $query->leftJoin('users', 'users.id', '=', 'articles.recommended_editor_id')
                 ->orderByRaw('ISNULL(articles.recommended_editor_id), users.name ' . $sortDirection);
-        } else {
+        } 
+        else 
+        {
             $query->orderBy($sortField, $sortDirection);
         }
 
@@ -57,7 +63,8 @@ class EditorController extends Controller
     {
         $article = Article::findOrFail($request->input('article_id'));
     
-        if ($article->state === 'ACCEPTED' || $article->state === 'REJECTED') {
+        if ($article->state === 'ACCEPTED' || $article->state === 'REJECTED') 
+        {
             return back()->with('error', 'The status of this article has been finalised and cannot be modified.');
         }
     
@@ -65,7 +72,8 @@ class EditorController extends Controller
         $article->editor_id = Auth::id();
         $article->save();
     
-        if ($article->state !== 'SUBMITTED') {
+        if ($article->state !== 'SUBMITTED') 
+        {
             $revision = new Revision();
             $revision->article_id = $article->id;
             $revision->created_at = now(); 
@@ -82,7 +90,8 @@ class EditorController extends Controller
             $review->save();
         }
     
-        if (($article->state === 'REJECTED' || $article->state === 'ACCEPTED')) {
+        if (($article->state === 'REJECTED' || $article->state === 'ACCEPTED')) 
+        {
             $user = User::findOrFail(Auth::id());
             $user->completed_review++;
             $user->save();
@@ -96,20 +105,27 @@ class EditorController extends Controller
     {
         $filePath = $request->input('file');
     
-        if (strpos($filePath, 'pdf/') === 0) {
+        if (strpos($filePath, 'pdf/') === 0) 
+        {
             $column = 'source';
-        } elseif (strpos($filePath, 'latex/') === 0) {
+        } 
+        elseif (strpos($filePath, 'latex/') === 0) 
+        {
             $column = 'latex_path';
-        } else {
+        } 
+        else 
+        {
             return redirect()->back()->with('error', 'Invalid file path!');
         }
     
         $article = Article::where($column, $filePath)->first();
-        if (!$article) {
+        if (!$article) 
+        {
             return redirect()->back()->with('error', 'File not found!');
         }
     
-        if (!$article->user) {
+        if (!$article->user) 
+        {
             return redirect()->back()->with('error', 'User not found!');
         }
     
@@ -118,11 +134,15 @@ class EditorController extends Controller
         $fileExtension = $path_parts['extension'];
         $fileName = 'article.' . $fileExtension;
     
-        if ($filePath === null) {
+        if ($filePath === null) 
+        {
             return redirect()->back()->with('error', 'Invalid file!');
-        } else {
+        } 
+        else 
+        {
             $filePath = '\app\\' . str_replace('/', '\\', $filePath);
-            if (!file_exists(storage_path($filePath))) {
+            if (!file_exists(storage_path($filePath))) 
+            {
                 return redirect()->back()->with('error', 'File not found!');
             }
     

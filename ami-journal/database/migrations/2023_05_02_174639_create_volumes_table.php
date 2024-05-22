@@ -3,11 +3,13 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateVolumesTable extends Migration {
+class CreateVolumesTable extends Migration 
+{
 
 	public function up()
 	{
-		Schema::create('volumes', function(Blueprint $table) {
+		Schema::create('volumes', function(Blueprint $table) 
+		{
 			$table->integer('id', true)->unsigned();
 			$table->string('title')->nullable()->default(null);
 			$table->text('description');

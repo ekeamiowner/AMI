@@ -34,15 +34,18 @@ class SubmissionController extends Controller
         $pdfFileUploaded = $request->hasFile('pdf_file');
         $latexFileUploaded = $request->hasFile('latex_file');
     
-        if (!$titleChanged && !$pdfFileUploaded && !$latexFileUploaded) {
+        if (!$titleChanged && !$pdfFileUploaded && !$latexFileUploaded) 
+        {
             return redirect()->back()->with('error', 'No changes detected.');
         }
     
-        if ($titleChanged) {
+        if ($titleChanged) 
+        {
             $article->update(['title' => $request->input('title')]);
         }
     
-        if ($pdfFileUploaded) {
+        if ($pdfFileUploaded) 
+        {
             $pdfFile = $request->file('pdf_file');
             $pdfFilename = time() . '_' . $pdfFile->getClientOriginalName();
             $pdfPath = $pdfFile->storeAs('pdf', $pdfFilename);
@@ -50,7 +53,8 @@ class SubmissionController extends Controller
             $article->update(['source' => $pdfPath, 'status' => 'UPDATED']);
         }
     
-        if ($latexFileUploaded) {
+        if ($latexFileUploaded) 
+        {
             $latexFile = $request->file('latex_file');
             $latexFilename = time() . '_' . $latexFile->getClientOriginalName();
             $latexPath = $latexFile->storeAs('latex', $latexFilename);
