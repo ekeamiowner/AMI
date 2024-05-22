@@ -60,6 +60,19 @@
                 </select>
             </div>
             <div class="form-row">
+                <label for="recommended_editor_id">Select reviewer (optional):</label>
+                <select name="recommended_editor_id" id="recommended_editor_id">
+                    <option value="">No preference</option>
+                    @foreach ($recommended_editors as $editor)
+                        <option value="{{ $editor->id }}">{{ $editor->name }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="upload2">Upload LaTeX file:</label>
+                <input type="file" name="upload2" id="upload2">
+            </div>
+            <div class="form-row">
                 <button type="submit">Submit</button>
             </div>
         </form>
